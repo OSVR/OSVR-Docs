@@ -1,4 +1,4 @@
-## Step 0. "Factoring"
+## "Factoring"
 
 Factoring refers to identifying aspects of your device and associating them with existing (ideally) or new (if required) interface classes. Think of your device like a number or polynomial: factoring breaks it down into the aspects that are combined (multiplied) to provide full functionality. It's an important task that affects how easy it is for applications (new and old) to use the capabilities of your device.
 
