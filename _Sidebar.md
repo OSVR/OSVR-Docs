@@ -1,4 +1,4 @@
 - [[Home]]
-- VR Knowledge Nuggets
+- [[VR Knowledge Nuggets]]
   - [[Tracking|Tracking Knowledge Nuggets]]
   - [[Display|Display Knowledge Nuggets]]
