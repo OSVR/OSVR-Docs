@@ -6,4 +6,4 @@ Sorry for these not really being nuggets, but more of citations/link lists.
 
 - Posts by Oliver Kreylos:
   - [How to Measure Your IPD](http://doc-ok.org/?p=898) - just follow the "TL;DR" version at the top.
-  - 
+  - Importance of correct calibration of HMDs: [post 1](http://doc-ok.org/?p=756), [post 2 - followup](http://doc-ok.org/?p=764) The video in the first post is also quite interesting and useful.
