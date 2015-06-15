@@ -2,7 +2,7 @@
 
 Sorry for these not really being nuggets, but more of citations/link lists.
 
-- Warren Robinett and Jannick P. Rolland. 1992. A computational model for the stereoscopic optics of a head-mounted display. Presence: Teleoper. Virtual Environ. 1, 1 (January 1992), 45-62. See [citation](http://dl.acm.org/citation.cfm?id=128951), [Google scholar search for full text](https://scholar.google.com/scholar?cluster=2992207312910025339&hl=en&as_sdt=0,16)
+- Warren Robinett and Jannick P. Rolland. 1992. A computational model for the stereoscopic optics of a head-mounted display. Presence: Teleoper. Virtual Environ. 1, 1 (January 1992), 45-62. See [citation](http://dl.acm.org/citation.cfm?id=128951), the UNC tech report version [TR 91-009](http://www.cs.unc.edu/techreports/91-009.pdf)
 
 - Follow-up tech report, with more full documentation of the UNC Vlib design, etc: Robinett, W., & Holloway, R. (1994). The Visual Display Transformation for Virtual Reality. Chapel Hill, NC, USA: University of North Carolina at Chapel Hill. Retrieved from http://www.cs.unc.edu/techreports/94-031.pdf
 
