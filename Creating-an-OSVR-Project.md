@@ -40,8 +40,13 @@ If you're on Windows, you might have to create this as `.gitignore.` to get Expl
 - <https://github.com/github/gitignore>
 - <https://www.gitignore.io/>
 
-#### `.clang-format`
+#### `.clang-format` or comparable
 For C++-based projects, make sure to include a clang-format configuration file. You can use the one from OSVR-Core for consistency. Then, **make sure you run clang-format before each commit!** It keeps the diffs clean and readable.
+
+For projects in other languages, please make sure you have a code formatter chosen, config file in version control, and documented in `CONTRIBUTING.md`.
+
+#### `.editorconfig`
+This serves as a bit of a subset of the formatting config, but is also more universal (more general directives, multiple file format support, wide cross-editor support). See <http://editorconfig.org/> for details.
 
 ## Source code files
 ### Boilerplate generator
