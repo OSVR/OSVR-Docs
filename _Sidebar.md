@@ -1,4 +1,5 @@
 - [[Home]]
+- [[Creating an OSVR Project]]
 - [[VR Knowledge Nuggets]]
   - [[Tracking|Tracking Knowledge Nuggets]]
   - [[Display|Display Knowledge Nuggets]]
