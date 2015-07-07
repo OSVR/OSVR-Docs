@@ -50,7 +50,7 @@ This serves as a bit of a subset of the formatting config, but is also more univ
 
 ## Source code files
 ### Boilerplate generator
-For C headers and C++ source and header files, we have a boilerplate generator that takes care of producing include guards, stock license headers and file description headers, etc. <http://opengoggles.org/internal/generate-cpp-boilerplate/> It's somewhat crude at the moment and probably ripe for replacement, but it does work pretty well, especially if you integrate it with your send-to menu on Windows or script it on posix.
+For C headers and C++ source and header files, we have a boilerplate generator that takes care of producing include guards, stock license headers and file description headers, etc. <http://tools.getosvr.org/boilerplate/> It's somewhat crude at the moment and probably ripe for replacement, but it does work pretty well, especially if you integrate it with your send-to menu on Windows or script it on posix.
 
 ### Each source file: stock ASL2.0 copyright and license header
 The general format of this is as follows, note that you'll want to prefix each line (or wrap the block) in language-specific comment characters: a text editor capable of search/replace with regex is handy here (`sed 's:^:// :'` for the command-line users with C++-style comments...). Also, **do not include the brackets in the final text, they should be replaced along with their placeholder contents**
