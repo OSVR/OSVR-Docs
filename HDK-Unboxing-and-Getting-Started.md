@@ -28,10 +28,11 @@ Added device: com_osvr_Multiserver/OSVRHackerDevKit0
 
 You can minimize this window, but make sure to keep it running as long as you'll be using OSVR applications.
 
-For best results, any time you power-cycle the HMD, give the internal tracker a chance to calibrate its compass by waving the headset in a figure-eight pattern for a few seconds before running any application. See [this example calibration video](https://drive.google.com/open?id=0Bzy5Dldyh1hWbVpCeGZFdHBEWE0) - pretty quick and simple.
-
 [OSVR-Core]: https://github.com/OSVR/OSVR-Core/
 [using]: http://osvr.github.io/using/
+
+### Orientation Tracker Calibration
+For best results, any time you power-cycle the HMD, give the internal tracker a chance to calibrate its compass by waving the headset in a figure-eight pattern for a few seconds before running any application. See [this example calibration video](https://drive.google.com/open?id=0Bzy5Dldyh1hWbVpCeGZFdHBEWE0) - pretty quick and simple.
 
 ### Adjust the Optics
 This [diagram of HDK optics adjustments](https://drive.google.com/open?id=0Bzy5Dldyh1hWUUoxWGhTbDFlaHc) (PDF) shows what the adjustments are. You'll want to adjust them while wearing the display and with an image displayed on the screen (plugged in, etc), but one eye at a time (close the other eye). You can use your glasses (or lack thereof) to estimate approximately where you'll want to start the focus control at, then adjusting the IPD until the lens feels and looks "centered" with your eye and all parts of the screen are equally sharp.
