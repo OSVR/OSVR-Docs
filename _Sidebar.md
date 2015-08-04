@@ -1,4 +1,5 @@
 - [[Home]]
+- [[HDK Getting Started|HDK Unboxing and Getting Started]]
 - [[Creating an OSVR Project]]
 - [[Troubleshooting]]
 - [[VR Knowledge Nuggets]]
