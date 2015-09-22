@@ -13,7 +13,7 @@ If you're starting from scratch, you might consider using our [DEV Boxstarter in
 You can use [Chocolatey][] (aka "choco") manually to just install the packages required. The packages that aren't in the main choco repo are hosted on a MyGet repo [osvr-deps](https://www.myget.org/gallery/osvr-deps). Once you install choco (see their website for instructions), run the following commands at an admin `cmd`/PowerShell prompt to add the the extra repo and install the dependencies.
 
 ```cmd
-choco source add --name="osvr-deps" -s="https://www.myget.org/F/osvr-deps/api/v2"
+choco source add --name="osvr-deps" -s="https://www.myget.org/F/osvr-deps/"
 choco install -y cmake OpenCV
 ```
 
