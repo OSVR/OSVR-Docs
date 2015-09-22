@@ -45,6 +45,8 @@ You will want to install `clang-format` (and let it put itself on your path): it
 
 If you're using VS Community or one of the paid VS editions, install the clang-format plugin for Visual Studio from the same place. This will let you type the chord `Ctrl-R, Ctrl-F` to format the selected lines right in VS, which is handy.
 
+You can add a shortcut to `clang-format` individual files using `Send to` command on Windows. Open `run` and type in `shell:sendto` which will open a folder with current `Send to` menu items or go to `C:/Users/USERNAME/AppData/Roaming/Microsoft/Windows/SendTo` . Either copy and paste `format-file.cmd` file from `OSVR-Core/devtools` to `SendTo` folder or create a shortcut to that script and copy to that folder. Then you can right click on individual files and `Send to -> format-file.cmd` to clang-format that file.
+
 ### Other useful Choco packages
 
 There are a number of other packages you might consider installing from Chocolatey, the following is just a sampling of ones we've found useful (in many cases, useful enough to add them to the boxstarter installers):
