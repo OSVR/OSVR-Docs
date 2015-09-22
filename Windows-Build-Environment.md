@@ -1,7 +1,7 @@
 **Note**: If you're just building a plugin or client application/engine integration/game, you don't actually need to compile this from source - you can (and are encouraged to) use the binary snapshots. See <http://osvr.github.io> for downloads.
 
-## Typical build environment: Visual Studio 2013
-You can use Express for Windows Desktop, or, if you meet the license criteria, Community.
+## Typical compiler: Visual Studio 2013
+You can use Express for Windows Desktop, or, if you meet the license criteria, Community. No matter which method you choose, you'll need to install jsoncpp and libfunctionality on your own: see <http://wiki.osvr.com/doku.php?id=startingcore>
 
 ### Method 1: Bare PC
 If you're starting from scratch, you might consider using our [DEV Boxstarter installer](http://access.osvr.com/binary/boxstarter), which uses [Boxstarter][] and [Chocolatey][] to quickly install required dependencies (chiefly OpenCV 2.4.x and Boost for actual library dependencies, as well as CMake) as well as recommended tools (Git, notepad++, etc.) You'll still need to install Visual Studio on your own.
@@ -18,6 +18,34 @@ choco install -y cmake OpenCV
 ```
 
 and, depending on if you want to build 32-bit or 64-bit, add one or both of the following package names to that last install line or a new one: `boost-x86-msvc2013` (32-bit), `boost-x64-msvc2013` (64-bit)
+
+## Alternate build environment: MSYS2/MinGW64
+While we don't distribute binaries built with GCC from MSYS2/MinGW64, it's often a useful test of code quality: having more compilers build the same code tends to root out problems and questionable code.
+
+First, download and run the MSYS2 installer: <http://msys2.github.io/> and follow the instructions on that page to update it.
+
+Then, you'll want to install the packages for the build - the command to install packages in MSYS2 is `pacman -s [yourpackagenames]` . Not all of these are strictly necessary (some are optional deps) but it'll get you started. For a 32-bit-build, replace `x86_64` with `i686`.  All you need after this is libfunctionality, which you'll have to build from source (sorry). You'll be able to then open a MinGW 32 or 64-bit shell (accordingly with your choice) and run `cmake` using either the `MSYS Makefiles` generator or the `Ninja` generator, the latter being much faster.
+
+```
+mingw-w64-x86_64-SDL2
+mingw-w64-x86_64-boost
+mingw-w64-x86_64-cmake
+mingw-w64-x86_64-gcc
+mingw-w64-x86_64-glew
+mingw-w64-x86_64-jsoncpp
+mingw-w64-x86_64-make
+mingw-w64-x86_64-ninja
+mingw-w64-x86_64-opencv
+```
+
+## Other dev tools
+
+### Clang-Format
+You will want to install `clang-format` (and let it put itself on your path): it comes with [Windows binary snapshots of LLVM](http://llvm.org/builds/)  (Get the normal installer, not the 64-bit version). Periodically update this, though note that the format might slightly change between releases so don't be surprised if it suggests changes to files you recently formatted when you update.
+
+If you're using VS Community or one of the paid VS editions, install the clang-format plugin for Visual Studio from the same place. This will let you type the chord `Ctrl-R, Ctrl-F` to format the selected lines right in VS, which is handy.
+
+### Other useful Choco packages
 
 There are a number of other packages you might consider installing from Chocolatey, the following is just a sampling of ones we've found useful (in many cases, useful enough to add them to the boxstarter installers):
 
