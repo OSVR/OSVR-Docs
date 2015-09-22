@@ -6,8 +6,6 @@ You can use Express for Windows Desktop, or, if you meet the license criteria, C
 ### Method 1: Bare PC
 If you're starting from scratch, you might consider using our [DEV Boxstarter installer](http://access.osvr.com/binary/boxstarter), which uses [Boxstarter][] and [Chocolatey][] to quickly install required dependencies (chiefly OpenCV 2.4.x and Boost for actual library dependencies, as well as CMake) as well as recommended tools (Git, notepad++, etc.) You'll still need to install Visual Studio on your own.
 
-
-
 [Boxstarter]: http://www.boxstarter.org/
 [Chocolatey]: https://chocolatey.org/
 
@@ -24,3 +22,5 @@ and, depending on if you want to build 32-bit or 64-bit, add one or both of the 
 There are a number of other packages you might consider installing from Chocolatey, the following is just a sampling of ones we've found useful (in many cases, useful enough to add them to the boxstarter installers):
 
 > `git git-credential-winstore 7zip notepadplusplus notepad2-mod python2 powershell4 poshgit nuget.commandline`
+
+**Note**: When installing Git, we recommend either using `choco install -y git -params '"/GitOnlyOnPath /NoAutoCrlf"'` or running `git config --global core.autocrlf false` to avoid having Git mangle line endings. See also <https://help.github.com/articles/dealing-with-line-endings/>
