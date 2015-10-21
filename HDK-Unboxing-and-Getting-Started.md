@@ -3,7 +3,7 @@
 Please note the "last-modified" date on this page - OSVR is a fast moving set of projects, so limitations mentioned here may no longer apply when you read this.
 
 ## Caveats/Limitations
-- As of early August, while the optical ("positional") tracking hardware is ready and shipping, the video-based tracking code itself to make use of it is still being polished. Until that's ready, unless you would like to contribute to the effort (see a branch of [OSVR-Core][] for the code and <http://osvr.github.io> for the dev mailing list), you can operate the unit without any of the camera/sync hardware plugged in or connected. You'll have orientation tracking from the built-in IMU coming over the headset's USB cable. (The positional tracker plug-in is shipped with the binary snapshots but not loaded by default.)
+- As of mid October, although the optical ("positional") tracking hardware is ready and shipping, the video-based tracking code to make use of it is still being polished.  You can read [here](https://github.com/OSVR/OSVR-Core/blob/master/plugins/videobasedtracker/doc/Running.md) about how to use pre-alpha video-only tracking if you like to live on the bleeding edge.  We're actively developing a sensor-fusion tracker that combines video with inertial data.  Until that's ready, you can operate the unit without any of the camera/sync hardware plugged in or connected. You'll have orientation tracking from the built-in IMU coming over the headset's USB cable. (The positional tracker plug-in is shipped with the binary snapshots but not loaded by default.)
 - The driver/service currently shows a console window that can be minimized, but should not be closed while you're using OSVR applications. A more appealing or invisible interface is coming.
 
 ## Setup
