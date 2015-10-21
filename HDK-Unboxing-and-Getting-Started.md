@@ -15,6 +15,9 @@ Once you have the headset, HDMI, power plugged in, the HMD should be recognized 
 
 It will likely show up as a 1080x1920 "Portrait" display by default. However, at this time most applications don't work with it in that mode, so you'll want to select the 1920x1080 resolution instead. (This doesn't mean you have to change the "Rotation" setting - just choose the alternate resolution and the HMD will perform the rotation internally.)
 
+### Install the driver pack (optional, recommended)
+If you're on Windows, there's a driver pack installer that can improve your experience. While not necessary for basic use, it does provide better names for devices in the Device Manager, groups device components logically with corresponding icons in the "Devices and Printers" window, and on Windows 8.1 and earlier, is required to use the OSVR HDK control software to upgrade firmware, etc. (Windows 10 already includes the appropriate driver there, but the other benefits still apply.)  You can get the latest release here: <https://github.com/OSVR/OSVR-HDK-Windows-Drivers/releases> with some (continually slightly outdated) documentation if you get stuck here: <https://github.com/OSVR/OSVR-HDK-Windows-Drivers/blob/master/Inf-Installer-Instructions/README.md> (typically the driver pack has more functionality associated with it than described in those docs).
+
 ### Get OSVR Server
 OSVR Server is part of the OSVR software framework, and provides the system for accessing device data, configuring peripherals, etc. The HDK drivers come bundled in the main OSVR Core package (which includes the server), and your HDK can be auto-detected, so you won't need to edit any config files unless you want to connect additional input devices.
 
