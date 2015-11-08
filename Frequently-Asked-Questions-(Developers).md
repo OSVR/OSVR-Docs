@@ -1,7 +1,7 @@
 # Frequently Asked Questions
 This is an ad-hoc page to answer most frequently asked questions regarding the use of the OSVR HDK.
 
-***Note that we've a very important firmware update for HDK v1.2. Please see p
+***Note that we've a very important firmware update for HDK v1.2. Please see the point directly below.
 
 1. My tracker seems to be disconnecting, help!
 
