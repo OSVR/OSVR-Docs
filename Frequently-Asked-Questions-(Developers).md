@@ -5,7 +5,7 @@ This is an ad-hoc page to answer most frequently asked questions regarding the u
 
 1. My tracker seems to be disconnecting, help!
 
-  > We've released a firmware update for the HDKs that make the tracking significantly more stable, along with other features. Download the zip file [here](https://www.dropbox.com/s/eve1kuv88z8gsv3/OSVR%20HDK%20FW%20Updater.zip?dl=0)
+  > We've released a firmware update for the HDKs that make the tracking significantly more stable, along with other features. Download the zip file [here](https://www.dropbox.com/s/z17ahfev7yzvol0/HDK-Upgrade-Bundle.zip?dl=0)
 
 2. Where can I find the relevant software for download?
 
