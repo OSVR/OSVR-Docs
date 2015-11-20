@@ -59,3 +59,5 @@ This should **not** be done if your controller is explicitly single-handed or mi
 ## Check similar devices' descriptors for reference
 
 While not all descriptors are guaranteed to be of the highest theoretical purity, they do give an indication of existing practice, especially when multiple descriptors are considered.
+
+See <http://osvr.github.io/compatibility/> for a syndicated/aggregated list of device compatibility that includes links to the device descriptors associated with each entry.
