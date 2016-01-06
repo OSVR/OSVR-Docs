@@ -35,7 +35,9 @@ Once the config is saved, you don't need to run the calibration utility again un
 
 The effect of performing this calibration in practical terms is to increase range somewhat, reduce jitter, and improve reliability of tracking.  You can repeat the calibration at any time: the calibration app always starts from scratch. Also, you're not forgoing the benefits of autocalibration by using the calibration utility: autocalibration is still part of the tracking algorithm, you just seed it with more accurate starting data when you have a saved calibration.
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/MObPn_U4IYg" frameborder="0" allowfullscreen></iframe>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=MObPn_U4IYg
+" target="_blank"><img src="http://img.youtube.com/vi/MObPn_U4IYg/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="420" height="315" border="10" /></a>
 
 ### Notes
 You don't need to recalibrate the beacons if you move the camera, it's only if you switch tracked devices (HDKs), or perhaps switch cameras (in case the distortion is subtly different and somehow getting incorporated into the calibration).
