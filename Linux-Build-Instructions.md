@@ -33,7 +33,7 @@ Once you have the tools above, you can build the following libraries before you 
 
 `git clone --recursive https://github.com/VRPN/jsoncpp`
 
-`cmake .. -DJSONCPP_WITH_CMAKE_PACKAGE=ON -DJSONCPP_LIB_BUILD_SHARED=OFF -DCMAKE_CXX_FLAGS=-fPIC`  
+`cmake .. -DJSONCPP_WITH_CMAKE_PACKAGE=ON -DJSONCPP_LIB_BUILD_SHARED=OFF -DCMAKE_CXX_FLAGS="-fPIC -std=c++11"`  
 
 Don't forget `make install` after building jsoncpp.
 
