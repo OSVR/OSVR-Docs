@@ -21,7 +21,7 @@ If you're on Windows, there's a driver pack installer that can improve your expe
 ### Get OSVR Server
 OSVR Server is part of the OSVR software framework, and provides the system for accessing device data, configuring peripherals, etc. The HDK drivers come bundled in the main OSVR Core package (which includes the server), and your HDK can be auto-detected, so you won't need to edit any config files unless you want to connect additional input devices.
 
-There are two ways of getting the OSVR Server: the installer and build snapshots. Since the installer is not currently automatically updated, the best way is to download an OSVR Core snapshot, linked from the [Using OSVR][using] page. If you're using a 64-bit version of Windows, either 32 or 64 bit will work (and be compatible with both 32 and 64-bit applications), so just pick one.  (Linux users: please see the [OSVR-Core][] repository for build instructions.)
+There are two ways of getting the OSVR Server: the installer and build snapshots. Since the installer is not currently automatically updated, the best way is to download an OSVR Core snapshot, linked from the [Using OSVR][using] page. If you're using a 64-bit version of Windows, either 32 or 64 bit will work (and be compatible with both 32 and 64-bit applications), so just pick one.  (Linux users: please see the [OSVR-Core][] repository for [build instructions](https://github.com/OSVR/OSVR-Core/wiki/Linux-Build-Instructions).)
 
 In any case, running the `osvr_server` application should open a command-line window displaying some messages. If everything is working right, you'll see a line that says something like:
 
