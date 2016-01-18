@@ -28,12 +28,13 @@ In any case, running the `osvr_server` application should open a command-line wi
 ```
 Added device: com_osvr_Multiserver/OSVRHackerDevKit0
 ```
+If you are on Linux on Mac and do not get this output line, refer to the [known issues].
 
 You can minimize this window, but make sure to keep it running as long as you'll be using OSVR applications.
 
 [OSVR-Core]: https://github.com/OSVR/OSVR-Core/
 [using]: http://osvr.github.io/using/
-
+[known issues]: https://github.com/OSVR/OSVR-Core/wiki/Linux-Build-Instructions#known-issues-temporary
 ### Adjust the Optics (HDK 1.0, 1.1, 1.2)
 [[assets/HDK-optics-adjustment.png]]
 
