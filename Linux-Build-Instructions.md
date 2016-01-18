@@ -49,7 +49,7 @@ Finally just `make`, and watch it build (or grab a soda and read through more [O
 
 ### Known issues *(temporary)*
 
-If you do not get the `Added device: com_osvr_Multiserver/OSVRHackerDevKit0` when running `osvr-server` this means that you need to update VRPN with an updated HIDAPI version (See [issue #338] for more information). To do so, checkout and build the branch [non-windows-workaround] :
+If you do not get the `Added device: com_osvr_Multiserver/OSVRHackerDevKit0` when running `osvr-server` this means that you need to update VRPN with an updated HIDAPI version (See [issue #338] for more information). To do so, checkout and build the branch [non-windows-workaround] in your source directory:
 ```
 git fetch origin non-windows-workaround
 git checkout non-windows-workaround
