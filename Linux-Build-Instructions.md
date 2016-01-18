@@ -47,4 +47,19 @@ To get OSVR-Core you'll need to clone it from the main repo (don't forget `--rec
 
 Finally just `make`, and watch it build (or grab a soda and read through more [OSVR tutorials], like how to build apps with Unity or Unreal)
 
+### Known issues *(temporary)*
+
+If you do not get the `Added device: com_osvr_Multiserver/OSVRHackerDevKit0` when running `osvr-server` this means that you need to update VRPN with an updated HIDAPI version (See [issue #338] for more information). To do so, checkout and build the branch [non-windows-workaround] :
+```
+git fetch origin non-windows-workaround
+git checkout non-windows-workaround
+git submodule update
+make -j4
+```
+If you are using one of the [HDK headsets], you will also need to run `osvr-server` as root, or you can install the following udev rules (See [issue #330] for more information): https://gist.github.com/rpavlik/98d21e14a7e6eeb52e95
+
 [OSVR tutorials]:http://osvr.github.io/build-with/
+[issue #338]:https://github.com/OSVR/OSVR-Core/issues/338
+[non-windows-workaround]:https://github.com/OSVR/OSVR-Core/tree/non-windows-workaround
+[HDK headsets]:http://www.razerzone.com/osvr-hacker-dev-kit
+[issue #330]:https://github.com/OSVR/OSVR-Core/issues/330
