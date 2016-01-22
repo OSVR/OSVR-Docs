@@ -10,6 +10,7 @@
 ## Configuring OSVR
 - Calibrating the video-based tracker
 ## Troubleshooting
+- [Device-specific information](Troubleshooting/DeviceSpecific.md)
 
 # Integrating with Game Engines
 
