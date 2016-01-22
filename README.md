@@ -13,10 +13,10 @@
 
 # Integrating with Game Engines
 
-- Unity
+- [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md)
 - Unreal
 - Monogame
-- OpenVR/SteamVR
+- [OpenVR/SteamVR](https://gitter.im/OSVR/SteamVR-OSVR)
 - Blender
 - WebVR
 - CryEngine
