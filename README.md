@@ -23,8 +23,8 @@
 - OpenGL
 
 # Developing with OSVR
-## Setting up the development environment
-## Creating an OSVR project
+- Setting up the development environment
+- Creating an OSVR project
 
 # Extending OSVR
 - [Adding a New HMD](Extending-OSVR/AddingHMD.md)
@@ -34,5 +34,5 @@
 - Porting to a New Operating System
 
 # VR Knowledge Nuggets
-## Tracking
-## Displays
+- Tracking
+- Displays
