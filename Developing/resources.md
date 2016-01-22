@@ -36,3 +36,19 @@ For all these items, there's a further wiki page if you click on the name.
   * **[CMake](cmake.md)** is a very good build system (generator) - it's used by all the C++ code related to OSVR, and recommended for third-party contributions as well.
 
   * The **[Boost C++ libraries](boost.md)** are valuable. They're internally used in OSVR-Core (some built libraries statically linked), and also required by the C++ wrappers for PluginKit and ClientKit (header-only libraries used).
+
+# Boxstarter 
+
+[Boxstarter](http://boxstarter.org|Boxstarter) is a handy tool that builds on https://chocolatey.org/|Chocolatey, which is the closest thing Windows has to a Linux-style package manager. As the name suggests, Boxstarter is designed to get a new system fully installed in an automated way.
+
+There are OSVR Boxstarter scripts [maintained on GitHub](https://github.com/OSVR/OSVR-Boxstarter) that get automatically built and uploaded by the CI server. We bundle Boxstarter and our scripts into self-extracting compressed installers, which are uploaded to http://access.osvr.com/binary/boxstarter.
+
+As of this writing, there are three "flavors" of Boxstarter installer available to download, each designed for a different target audience. Many software packages installed are common between multiple installers.
+
+  * **GENERAL**: This flavor is for those not doing C++ development (for instance, Unity developers) or for easy deployment/config of demo machines. Primarily contains "tools".
+  * **DEV**: This flavor is for those doing C++ development, particularly on the core. It includes the external dependencies required to build the core from scratch.
+  * **CI**: These are used to prepare Jenkins CI build nodes for the OSVR CI. They might be useful to you in setting up your own CI, though you'll have to change at least the jenkins-updater package.
+
+(The .7z file seen on access.osvr.com is the contents of the installer, but you almost certainly don't want that on its own without the corresponding command line that comes with the installer to launch the right Boxstarter script. It's uploaded for troubleshooting and testing purposes.)
+
+All these packages install Chocolatey locally on your machine, as well as add the package source entries for the re-usable packages installed, so you can use Chocolatey to install other packages or keep things up to date.
