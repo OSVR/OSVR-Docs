@@ -2,13 +2,16 @@
 
 # Getting Started
 ## Installing OSVR
-- Windows
-- Linux
+- [Windows](Getting-Started/Installing/windows.md)
+- [Linux](Getting-Started/Installing/linux.md)
 - Android
-- OS X
+- [OS X](Getting-Started/Installing/osx.md)
+
 ## Running the OSVR Server
+
 ## Configuring OSVR
 - Calibrating the video-based tracker
+
 ## Troubleshooting
 - [Device-specific information](Troubleshooting/DeviceSpecific.md)
 
