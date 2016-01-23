@@ -17,25 +17,25 @@
 
 # Integrating with Game Engines
 
-- [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md)
-- Unreal
-- Monogame
+- [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md) ; [Tutorial video](https://www.youtube.com/watch?v=TtLn6XpEisw)
+- [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md) ; [Tutorial video](https://www.youtube.com/watch?v=u4Y9pUisL1M)
 - [OpenVR/SteamVR](https://gitter.im/OSVR/SteamVR-OSVR)
-- Blender
+- [Blender](https://github.com/BlendOSVR/OSVR-Blender)
 - WebVR
 - CryEngine
+- [Monogame: video](https://www.youtube.com/watch?v=doOOLaIuj48)
 - OpenGL
 
 # Developing with OSVR
 - Setting up the development environment
-- Creating an OSVR project
+- [Creating an OSVR project](Developing/creating.md)
 - [Useful resources and tools](Developing/resources.md)
 
 # Extending OSVR
 - [Adding a New HMD](Extending-OSVR/AddingHMD.md)
 - Adding a new Device
-- Writing an OSVR Plugin
-- Writing an OSVR Client
+- [Writing an OSVR Plugin](http://resource.osvr.com/docs/OSVR-Core/TopicWritingDevicePlugin.html)
+- [Writing an OSVR Client](http://resource.osvr.com/docs/OSVR-Core/TopicWritingClientApplication.html)
 - Porting to a New Operating System
 
 # Roadmap
@@ -44,5 +44,5 @@
 - Additional development priorities suggested by the core OSVR team can be [found here](Roadmap/additional.md).
 
 # VR Knowledge Nuggets
-- Tracking
-- Displays
+- [Tracking](VR-Knowledge-Nuggets/tracking.md)
+- [Displays](VR-Knowledge-Nuggets/displays.md)
