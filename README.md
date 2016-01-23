@@ -9,6 +9,7 @@
 
 ## Installing OSVR
 - [Windows](Getting-Started/Installing/windows.md)
+  - [Download pre-compiled binaries and drivers](http://osvr.github.io/using/)
 - [Linux](Getting-Started/Installing/linux.md); [Build instructions](https://github.com/OSVR/OSVR-Core/wiki/Linux-Build-Instructions)
 - Android
 - [OS X](Getting-Started/Installing/osx.md)
@@ -24,8 +25,12 @@
 
 # Integrating with Game Engines
 
-- [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md) ; [Tutorial video](https://www.youtube.com/watch?v=TtLn6XpEisw)
-- [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md) ; [Tutorial video](https://www.youtube.com/watch?v=u4Y9pUisL1M)
+- [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md) 
+  - [Tutorial video](https://www.youtube.com/
+watch?v=TtLn6XpEisw)
+  - [Migrating Oculus Unity apps to OSVR](http://access.osvr.com/binary/download/misc_assets/Migrating%20Unity%20applications%20from%20Oculus%20to%20OSVR%20Mar-11-15.pdf)
+- [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md) 
+  - [Tutorial video](https://www.youtube.com/watch?v=u4Y9pUisL1M)
 - [OpenVR/SteamVR](https://gitter.im/OSVR/SteamVR-OSVR)
 - [Blender](https://github.com/BlendOSVR/OSVR-Blender)
 - WebVR

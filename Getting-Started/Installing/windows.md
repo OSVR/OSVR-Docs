@@ -9,7 +9,7 @@ heading: Installing OSVR for Windows
 
 ## Install precompiled binaries
 
-You may download precompiled binaries of OSVR for Windows from our [snapshots page](http://access.osvr.com/binary/osvr-core).
+You may download precompiled binaries of OSVR for Windows from our [snapshots page](http://osvr.github.io/using/).
 
 ## Building OSVR from source
 
