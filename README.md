@@ -3,8 +3,8 @@
 # Getting Started
 - [Introduction to OSVR](http://osvr.github.io/whitepapers/introduction_to_osvr/)
 - [OSVR feature list](featurelist.md)
-- List of supported devices, engines and operating systems [is here](http://osvr.github.io/compatibility/)
-- List of OSVR partners [is here](http://osvr.org/partner.html)
+- [List of supported devices, engines and operating systems ](http://osvr.github.io/compatibility/)
+- [List of OSVR partners](http://osvr.org/partner.html)
 - [OSVR presentations and speaker notes](http://osvr.github.io/presentations/)
 
 
@@ -82,8 +82,8 @@ watch?v=TtLn6XpEisw)
 - email "support at osvr.org" to be addressed by core developers
 - [Visit the OSVR development chat rooms](https://gitter.im/orgs/OSVR/rooms)
 
-##Paid support
-Some companies such as [Sensics](http://sensics.com/contact-us/) also provide premium support services for OSVR such as phone support, system engineering, authoring drivers, phone support or integration help. If you require support beyond the free support options, consider contacting the premium providers.
+## Paid support
+Some companies such as [Sensics](http://sensics.com/contact-us/) provide premium support services for OSVR including phone support, system engineering, authoring drivers or integration help. If you require support beyond the free support options, consider contacting the premium providers.
 
 # Additional information
 - [OSVR mailing lists and newsletters](http://osvr.github.io/mailing-lists/)
