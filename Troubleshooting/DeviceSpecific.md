@@ -30,6 +30,7 @@ In version 2 and 3 reports:
 - 10-11: Gyroscope X axis velocity in radians/sensics
 - 12-13: Gyroscope X axis velocity in radians/sensics
 - 14-15: Gyroscope X axis velocity in radians/sensics
+- 16-31: reserved for future use
 
 Each velocity is presented as signed, 16-bit fixed point, 2’s complement number with a Q point of 9
 
