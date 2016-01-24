@@ -13,4 +13,4 @@ The OSVR HDK is usually driven by applications that generate different left and 
   - When viewing the regular desktop from within the HMD
   - When using an application that does not render side-by-side
 
-The user can control which of these modes is being used using the OSVR HDK Configuration utility (Todo: add link). In the utility, use the "Toggle side-by-side" button
+The user can control which of these modes is being used using the [OSVR HDK Configuration utility](../Utilities/OSVRControl.md). In the utility, use the "Toggle side-by-side" button

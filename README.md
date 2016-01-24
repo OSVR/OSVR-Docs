@@ -20,18 +20,23 @@
 - [Calibrating the video-based tracker](https://github.com/OSVR/OSVR-Core/wiki/Video-Based-Tracking-Calibration)
 - Device-specific configuration
   - [OSVR HDK](Configuring/osvrhdk.md)
+- [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
 
+## Utilities
+- [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer/blob/master/README.md)
+- [OSVR Control](Utilities/OSVRControl.md)
+- OSVR_print_tree
 ## Troubleshooting
 - [Device-specific information](Troubleshooting/DeviceSpecific.md)
 - [Performance optimization using Event Tracing for Windows](http://osvr.github.io/presentations/20150901-Intro-ETW-OSVR/)
 
 # Integrating with Game Engines
 
-- [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md) 
+- [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md)
   - [Tutorial video](https://www.youtube.com/
 watch?v=TtLn6XpEisw)
   - [Migrating Oculus Unity apps to OSVR](http://access.osvr.com/binary/download/misc_assets/Migrating%20Unity%20applications%20from%20Oculus%20to%20OSVR%20Mar-11-15.pdf)
-- [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md) 
+- [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md)
   - [Tutorial video](https://www.youtube.com/watch?v=u4Y9pUisL1M)
 - [OpenVR/SteamVR](https://gitter.im/OSVR/SteamVR-OSVR)
 - [Blender](https://github.com/BlendOSVR/OSVR-Blender)
@@ -57,7 +62,7 @@ watch?v=TtLn6XpEisw)
 
 # Roadmap
 - In September 2015, RoadToVR published an article by [Yuval Boger](https://twitter.com/osvrguy) of Sensics about the OSVR roadmap. It is an excellent starting point to understand the OSVR big picture and roadmap. [The article can be found here](http://www.roadtovr.com/osvr-roadmap-creating-an-ecosystem-of-interoperable-vr-hardware-and-software/).
-- The [OSVR Waffle Board](Roadmap/waffle.md) contains an overview of issues currently in GitHub issue trackers for all OSVR framework projects. 
+- The [OSVR Waffle Board](Roadmap/waffle.md) contains an overview of issues currently in GitHub issue trackers for all OSVR framework projects.
 - Additional development priorities suggested by the core OSVR team can be [found here](Roadmap/additional.md).
 
 # Getting Support
@@ -71,7 +76,7 @@ Some companies such as [Sensics](http://sensics.com/contact-us/) also provide pr
 
 # Additional information
 - [OSVR mailing lists and newsletters](http://osvr.github.io/mailing-lists/)
-- [OSVR marketing Web site](http://www.osvr.org) 
+- [OSVR marketing Web site](http://www.osvr.org)
 - VR Knowledge Nuggets
   - [Tracking](VR-Knowledge-Nuggets/tracking.md)
   - [Displays](VR-Knowledge-Nuggets/displays.md)
