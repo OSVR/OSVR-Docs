@@ -18,6 +18,8 @@
 
 ## Configuring OSVR
 - [Calibrating the video-based tracker](https://github.com/OSVR/OSVR-Core/wiki/Video-Based-Tracking-Calibration)
+- Device-specific configuration
+  - [OSVR HDK](Configuring/osvrhdk.md)
 
 ## Troubleshooting
 - [Device-specific information](Troubleshooting/DeviceSpecific.md)
@@ -63,6 +65,7 @@ watch?v=TtLn6XpEisw)
 - Post an issue on the [OSVR Github projects](https://github.com/osvr) to be addressed by the OSVR community
 - email "support at osvr.org" to be addressed by core developers
 - [Visit the OSVR development chat rooms](https://gitter.im/orgs/OSVR/rooms)
+
 ##Paid support
 Some companies such as [Sensics](http://sensics.com/contact-us/) also provide premium support services for OSVR such as phone support, system engineering, authoring drivers, phone support or integration help. often for an hourly fee. If you require support beyond the free support options, consider contacting the premium providers.
 
