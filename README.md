@@ -34,6 +34,8 @@
 - OSVR_reset_yaw
 
 ## Troubleshooting
+- [OSVR server](Troubleshooting/OSVRServer.md)
+- [Render Manager](Troubleshooting/RenderManager.md)
 - [Device-specific information](Troubleshooting/DeviceSpecific.md)
 - [Performance optimization using Event Tracing for Windows](http://osvr.github.io/presentations/20150901-Intro-ETW-OSVR/)
 
@@ -58,6 +60,8 @@ watch?v=TtLn6XpEisw)
 - [Directory of projects](http://osvr.github.io/contributing/)
 - [Creating an OSVR project](Developing/creating.md)
 - [Useful resources and tools](Developing/resources.md)
+- Device-specific information
+  - [OSVR HDK interface](developing/OSVRhdk.md)
 
 # Extending OSVR
 - [Adding a New HMD](Extending-OSVR/AddingHMD.md)
@@ -79,7 +83,7 @@ watch?v=TtLn6XpEisw)
 - [Visit the OSVR development chat rooms](https://gitter.im/orgs/OSVR/rooms)
 
 ##Paid support
-Some companies such as [Sensics](http://sensics.com/contact-us/) also provide premium support services for OSVR such as phone support, system engineering, authoring drivers, phone support or integration help. often for an hourly fee. If you require support beyond the free support options, consider contacting the premium providers.
+Some companies such as [Sensics](http://sensics.com/contact-us/) also provide premium support services for OSVR such as phone support, system engineering, authoring drivers, phone support or integration help. If you require support beyond the free support options, consider contacting the premium providers.
 
 # Additional information
 - [OSVR mailing lists and newsletters](http://osvr.github.io/mailing-lists/)
@@ -87,3 +91,4 @@ Some companies such as [Sensics](http://sensics.com/contact-us/) also provide pr
 - VR Knowledge Nuggets
   - [Tracking](VR-Knowledge-Nuggets/tracking.md)
   - [Displays](VR-Knowledge-Nuggets/displays.md)
+- [The VRGuy's blog](http://www.vrguy.net) often covers OSVR-related topics
