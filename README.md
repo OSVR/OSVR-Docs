@@ -2,6 +2,7 @@
 
 # Getting Started
 - [Introduction to OSVR](http://osvr.github.io/whitepapers/introduction_to_osvr/)
+- [OSVR feature list](featurelist.md)
 - List of supported devices, engines and operating systems [is here](http://osvr.github.io/compatibility/)
 - List of OSVR partners [is here](http://osvr.org/partner.html)
 - [OSVR presentations and speaker notes](http://osvr.github.io/presentations/)
@@ -26,6 +27,9 @@
 - [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer/blob/master/README.md)
 - [OSVR Control](Utilities/OSVRControl.md)
 - OSVR_print_tree
+- [Distortioizer](https://github.com/OSVR/distortionizer/blob/master/README.md) helps measure distortion parameters for HMDs
+- [Latency tester](https://github.com/sensics/Latency-Test). Open-source arduino-based latency tester
+
 ## Troubleshooting
 - [Device-specific information](Troubleshooting/DeviceSpecific.md)
 - [Performance optimization using Event Tracing for Windows](http://osvr.github.io/presentations/20150901-Intro-ETW-OSVR/)
