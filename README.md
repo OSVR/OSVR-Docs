@@ -44,6 +44,8 @@
 - [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md)
   - [Tutorial video](https://www.youtube.com/
 watch?v=TtLn6XpEisw)
+  - [Unity VR demos](https://github.com/OSVR/Unity-VR-Samples) are OSVR versions of the standard VR demos that ship with Unity 5.3
+  - [Palace demo](https://github.com/OSVR/OSVR-Unity-Palace-Demo) is a Unity demo illustrating how to use the Unity OSVR plugin
   - [Migrating Oculus Unity apps to OSVR](http://access.osvr.com/binary/download/misc_assets/Migrating%20Unity%20applications%20from%20Oculus%20to%20OSVR%20Mar-11-15.pdf)
 - [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md)
   - [Tutorial video](https://www.youtube.com/watch?v=u4Y9pUisL1M)
