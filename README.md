@@ -29,6 +29,8 @@
 - OSVR_print_tree
 - [Distortioizer](https://github.com/OSVR/distortionizer/blob/master/README.md) helps measure distortion parameters for HMDs
 - [Latency tester](https://github.com/sensics/Latency-Test). Open-source arduino-based latency tester
+- [PathTreeExport](http://resource.osvr.com/docs/OSVR-Core/md_doc_PathTreeExport.html)
+- OSVR_reset_yaw
 
 ## Troubleshooting
 - [Device-specific information](Troubleshooting/DeviceSpecific.md)
