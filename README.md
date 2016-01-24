@@ -12,7 +12,7 @@
 - [Windows](Getting-Started/Installing/windows.md)
   - [Download pre-compiled binaries and drivers](http://osvr.github.io/using/)
 - [Linux](Getting-Started/Installing/linux.md); [Build instructions](https://github.com/OSVR/OSVR-Core/wiki/Linux-Build-Instructions)
-- Android
+- [Android](https://github.com/OSVR/OSVR-Android-Build#readme)
 - [OS X](Getting-Started/Installing/osx.md)
 
 ## Running the OSVR Server
