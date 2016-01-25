@@ -32,11 +32,16 @@ The only fields you must modify are:
 To use a display descriptor with an OSVR server config file, you add or edit the `"display": "???.json"` line. See, for example, [a server config that specifies the display descriptor for the Sensics dSight HMD](https://github.com/OSVR/OSVR-Core/blob/master/apps/sample-configs/osvr_server_config.dSight.json). (If no display line is specified, then a default is used.) A useful minimal sample to test your display descriptor (does not test distortion) would be the OpenGLSample in the OSVR-Core distribution (requires SDL), which places you in a cube.
 
 ## Adding Distortion Correction
-In many cases, displays have some degree of distortion that should be compensated for ahead of time through predistortion. OSVR has a number of parameterizations of distortion, suited to different types of distortion, and different tools for measuring them.
+In many cases, displays have some degree of distortion that should be compensated for ahead of time through predistortion. OSVR has a number of parameterizations of distortion, suited to different types of distortion, and different tools for measuring them.  All of these modes can be specified in the server configuration files and read using the OSVR-Core libraries and several of them are implemented in the OSVR-RenderManager interface.
 
-K1 distortion testing - using a non-RM path of a Unity app
+A theoretical description of distortion correction and its relationship to projection and viewing can be found in the [distortion document](../Configuring/distortion.md) and a program to construct the distortion parameters based on a mapping from angles to screen coordinates can be found in the [AnglesToConfig documentation](https://github.com/OSVR/distortionizer/blob/master/angles_to_config/doc/anglesToConfig.md).
+
+The modes as of 1/25/2016 include:
+
+- K1 parameter distortion - Based on quadratic distortion from a center for red, green, and blue (Implemented on a non-RenderManager path of OSVR-Unity).
 Other distortion params - RM apps - typically the D3D Present Mode example.
-[ How can the author test that this is working?]
+
+[@todo How can the author test that this is working?]
 
 
 ## Supporting Direct Rendering
