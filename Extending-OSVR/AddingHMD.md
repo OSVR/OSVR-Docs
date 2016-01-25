@@ -36,13 +36,34 @@ In many cases, displays have some degree of distortion that should be compensate
 
 A theoretical description of distortion correction and its relationship to projection and viewing can be found in the [distortion document](../Configuring/distortion.md) and a program to construct the distortion parameters based on a mapping from angles to screen coordinates can be found in the [AnglesToConfig documentation](https://github.com/OSVR/distortionizer/blob/master/angles_to_config/doc/anglesToConfig.md).
 
-The modes as of 1/25/2016 include:
+The Core modes (implemented on a non-RenderManager path of OSVR-Unity) as of 1/25/2016 include:
 
-- K1 parameter distortion - Based on quadratic distortion from a center for red, green, and blue (Implemented on a non-RenderManager path of OSVR-Unity).
-Other distortion params - RM apps - typically the D3D Present Mode example.
+- K1-parameter-based distortion - Based on quadratic distortion from a center for red, green, and blue.
 
-[@todo How can the author test that this is working?]
+The RenderManager modes as of 1/25/2016 include:
 
+- Chromatic General-polynomial-based distortion - Based on radial distortion around a defined center of projection for reg, green, and blue.  See the description in Rendermanager.h for details on how this is specified.
+- Monochromatic point samples - Based on an arbitrary mapping from angles to screen-space locations, often from a lens simulation performed on the optics.  See the [distortion document](../Configuring/distortion.md) for a description.
+- Chromatic point samples - Based on an arbitrary mapping from angles to screen-space locations for red, green, and blue, often from a lens simulation performed on the optics.  See the [distortion document](../Configuring/distortion.md) for a description.
+
+The process of constructing a configuration file that uses point-sampled distortion correction is described near the end of the [AnglesToConfig documentation](https://github.com/OSVR/distortionizer/blob/master/angles_to_config/doc/anglesToConfig.md).  The basic approach is to construct an appropriate server-side configuration file (with a matching client-side file if needed) and then run the standard OSVR server with that configuration file.  Any RenderManager-based client will then perform the specified distortion correction during rendering.
+
+A snippet from a configuration file that specifies general-polynomial-based distortion follows:
+
+    {
+      "display": {
+        "hmd": {
+          "distortion": {
+            "type": "rgb_symmetric_polynomials",
+            "distance_scale_x": 1,
+            "distance_scale_y": 1,
+            "polynomial_coeffs_red": [ 0, 1, 0.25 ],
+            "polynomial_coeffs_green": [ 0, 1, 0.32 ],
+            "polynomial_coeffs_blue": [ 0, 1, 0.40 ]
+          }
+        }
+      }
+    }
 
 ## Supporting Direct Rendering
 The final step is direct-to-HMD rendering: bypassing operating system and window management overhead, removing the display from being a part of the extended desktop, and drawing directly to it using the graphics driver. OSVR's RenderManager handles both non-direct advanced rendering (timewarp, advanced predistortion, etc.) available with just a regular display descriptor as above, as well as optional direct mode support, which is generally only available on some combinations of hardware vendors and software platforms.
