@@ -94,3 +94,6 @@ Some companies such as [Sensics](http://sensics.com/contact-us/) provide premium
   - [Tracking](VR-Knowledge-Nuggets/tracking.md)
   - [Displays](VR-Knowledge-Nuggets/displays.md)
 - [The VRGuy's blog](http://www.vrguy.net) often covers OSVR-related topics
+
+# Sample projects that integrate OSVR into them
+- [OSVR plugin for FreePie](https://github.com/thomasgauthier/FreePIE-OSVR)
