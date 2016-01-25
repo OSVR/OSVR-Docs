@@ -24,7 +24,7 @@ The only fields you must modify are:
 	- `hmd.device.Note`
 - The basic optics:
 	- `hmd.field_of_view.monocular_horizontal`
-	- `hmd.field_of_view.monocular_vertica`
+	- `hmd.field_of_view.monocular_vertical`
 	- `hmd.field_of_view.overlap` if the screens are not aligned (gross generalization)
 - The basic display control/input data:
 	- In the resolution entry, the `width` and `height`, and, if yours isn't a single input horizontal side-by-side, `display_mode` and potentially `video_inputs`.
