@@ -2,7 +2,7 @@
 
 **Warning:** This is an in-process working draft document as of 11/16/2015.  It was designed using Brooks' Maxim: "It is better to be specific and wrong than to be vague."  If you see a statement here that you do not believe to be true, or an approach that seems suboptimal, please email russ@sensics.com so it can be fixed.
 
-This document describes the OSVR distortion correction, which happens after the display is rendered onto a planar rectangle. See the [projection and view matrices document](./Projection-and-View-Matrices) for how to handle this phase of rendering.
+This document describes the OSVR distortion correction, which happens after the display is rendered onto a planar rectangle. See the [projection and view matrices document](./projectionAndViewMatrices.md) for how to handle this phase of rendering.
 
 ## Overview
 

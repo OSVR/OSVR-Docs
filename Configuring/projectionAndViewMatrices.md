@@ -2,7 +2,7 @@
 
 **Warning:** This is an in-process working draft document as of 11/3/2015.  It was designed using Brooks' Maxim: "It is better to be specific and wrong than to be vague."  If you see a statement here that you do not believe to be true, or an approach that seems suboptimal, please email russ@sensics.com so it can be fixed.
 
-This document describes the OSVR viewing transformations, including the projection matrix and the portions of the modelview matrix required to set the viewpoint. See the [distortion document](./Distortion.md) for how to handle distortion correction (non-ideal lenses, non-planar display surfaces).
+This document describes the OSVR viewing transformations, including the projection matrix and the portions of the modelview matrix required to set the viewpoint. See the [distortion document](./distortion.md) for how to handle distortion correction (non-ideal lenses, non-planar display surfaces).
 
 The discussion below ignores the effects of eye tracking, and it also ignores the fact that the center of projection of the eye is not the same as its center of rotation.  For any particular view direction, the center of projection is along the viewing direction in front of the center of rotation, so the approximation is slight.  **With eye tracking** the only change is to move the eye position from the center of rotation of the eye to the center of its entrance pupil.
 
@@ -59,7 +59,7 @@ The algorithm for determining the projection and viewing transforms remains the 
 
 Some head-mounted displays, such as the *OSVR HDK*, let the user adjust the location of the lenses to make room to insert eyeglasses into the display and to adjust the width so that their pupils stay within the *exit pupil* of the lens (the region where it behaves like an ideal lens).
 
-An example from a lens system used in early versions of the OSVR HDK: As the lens moves with respect to the real screen, the position and size of the image of the screen move with respect to the eye.  As the lens is moved closer to the screen (further from the eye), the image of the screen appears to get larger, producing a larger field of view.  As the lens was moved to the left, the image of the screen appeared to move to the right.  When the lens is left stationary and the eye is moved within the exit pupil, the image of the screen appears to remain the same.  (When the eye is moved outside the exit pupil, distortion is seen; distortion is described in the [distortion document](./Distortion.md).)
+An example from a lens system used in early versions of the OSVR HDK: As the lens moves with respect to the real screen, the position and size of the image of the screen move with respect to the eye.  As the lens is moved closer to the screen (further from the eye), the image of the screen appears to get larger, producing a larger field of view.  As the lens was moved to the left, the image of the screen appeared to move to the right.  When the lens is left stationary and the eye is moved within the exit pupil, the image of the screen appears to remain the same.  (When the eye is moved outside the exit pupil, distortion is seen; distortion is described in the [distortion document](./distortion.md).)
 
 ### Idealized-Lens Solution
 
@@ -77,7 +77,7 @@ The **OSVR screen specification for HMDs with ideal lenses** describes the locat
 
 ![Undistorted screen coordinates](./images/undistorted_screen_coords.png)
 
-The **OVR screen specification for HMDs whose lenses introduce distortion**, along with the specification for **fixed curved screens** is described in the [distortion document](./Distortion.md).  The basic approach is for the distortion correction to map pixels from the physical display onto an image of a rectangle (or subset of a rectangle) and then to use three corners of this rectangular image (which may not be visible) as described above.
+The **OVR screen specification for HMDs whose lenses introduce distortion**, along with the specification for **fixed curved screens** is described in the [distortion document](./distortion.md).  The basic approach is for the distortion correction to map pixels from the physical display onto an image of a rectangle (or subset of a rectangle) and then to use three corners of this rectangular image (which may not be visible) as described above.
 
 **Discarded Designs:** Other options for screen description that were considered and discarded include: (1) Center of screen, orientation of screen, screen width and height (discarded because of the difficulty in specifying orientation).  (2) Four corners of the screen (discarded because it further over-specifies the geometry and can lead to inconsistent specification).
 
