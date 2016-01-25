@@ -84,6 +84,8 @@ Distortion correction does pre-distortion using a look-up for every point in the
 
 Suppose that either through direct measurement with a camera or through ray-tracing in the optical design for a head-mounted display, you produce a mapping between physical points on the display screen and angles from the center of the eye, for a given IPD.  This mapping can be arbitrary, so long as it is a function (does not contain folds) and may come as a grid of points.  For this example, we will assume the angles are specified in degrees from views looking along the -Z axis in head space (straight forward) and the positions on the display are specified as distances in millimeters from the point on the display that corresponds to the point that would be see at angle (0,0).  Further, we assume that the focal distance to the visible screen is around 2 meters (some portions being closer, and some further).
 
+(What follows here is a theoretical treatment, a program that implements this is described in the [AnglesToConfig program documentation](https://github.com/OSVR/distortionizer/blob/master/angles_to_config/doc/anglesToConfig.md)).
+
 ### Step 1: Determine canonical screen and overfill
 
 This procedure is implemented in the **angles_to_config** directory in the OSVR Distortionizer project. (This procedure, and planar projection in general, will only work for displays whose monocular horizontal field of view is less than 180 degrees.)
