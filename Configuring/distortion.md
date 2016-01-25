@@ -1,7 +1,5 @@
 # OSVR Distortion Correction
 
-**Warning:** This is an in-process working draft document as of 11/16/2015.  It was designed using Brooks' Maxim: "It is better to be specific and wrong than to be vague."  If you see a statement here that you do not believe to be true, or an approach that seems suboptimal, please email russ@sensics.com so it can be fixed.
-
 This document describes the OSVR distortion correction, which happens after the display is rendered onto a planar rectangle. See the [projection and view matrices document](./projectionAndViewMatrices.md) for how to handle this phase of rendering.
 
 ## Overview
@@ -88,10 +86,65 @@ Suppose that either through direct measurement with a camera or through ray-trac
 
 ### Step 1: Determine canonical screen and overfill
 
+This procedure is implemented in the **angles_to_config** directory in the OSVR Distortionizer project. (This procedure, and planar projection in general, will only work for displays whose monocular horizontal field of view is less than 180 degrees.)
+
+We determine the four edges of the canonical screen and the required overfill in a way that can be expressed within the current OSVR RenderManager.  The normal to the screen must lie in the X-Z plane with the screen lying half above and half below the Y=0 axis.  It is specified with a horizontal and vertical field of view, a center of projection where the perpendicular line from the eye meets the screen, and a rotation around the eye around the Y axis.
+
+The **eye-space location** of each point in the configuration file is computing using polar coordinates, using the 2-meter focus estimate as the radius for each point, the longitudinal angle (positive spin around the Y axis with 0 facing forward), and the latitudinal angle (positive up).
+
+The **X screen-space extents** are defined by the lines perpendicular to the Y axis passing through:
+* **left:** the point location whose reprojection into the Y=0 plane has the most-positive angle (note that this may not be the point with the largest longitudinal coordinate, because of the impact of changing latitude on X-Z position).
+* **right:** the point location whose reprojection into the Y=0 plane has the most-negative angle (note that this may not be the point with the smallest longitudinal coordinate, because of the impact of changing latitude on X-Z position).
+
+The **Y screen-space extents** are symmetric and correspond to the lines parallel to the screen X axis that are within the plane of the X line specifying the axis extents at the largest magnitude angle up or down from the horizontal.  We determine this by finding the point with the largest-magnitude Y value when it is projected into the plane of the screen as determined by the X screen-space extents.
+
+Because the projections of all of the points in the set will lie within these screen-space extents, implying that no points from outside this region correspond to any point on the physical screen, the overfill factor for the screen can be 1 (there does not need to be additional overfill).
+
 ### Step 2: Specifying the screen in the config file
+
+We convert these into the specifications used in the current OSVR config-file format.  (In the future, this will be replaced by specifying the head-space location of three of the four screen corners, as described in the projection and viewing document.)  The current description includes the specification of a horizontal and vertical field of view, a center of projection (which is the normalized location on the screen where the line through the eye point perpendicular to the screen pierces the screen) and the percent overlap.
+
+![Determine Canonical Screen](./images/determine_canonical.png)
+
+* **display/hmd/field_of_view/monocular_horizontal:** This is computed as if the screen is being viewed by an eyepoint located along the line perpendicular to the center of the screen.  We determine it using the half-screen width and the perpendicular distance from the origin to the plane of the screen.  The ratio of these specify the tangent of half of the horizontal field of view.
+* **display/hmd/field_of_view/monocular_vertical:** This is computed as if the screen is being viewed by an eyepoint located along the line perpendicular to the center of the screen.  We determine it using the half-screen height and the perpendicular distance from the origin to the plane of the screen.  The ratio of these specify the tangent of half of the vertical field of view.
+* **display/hmd/field_of_view/overlap_percent:** This is computed as if the screen is being viewed by an eyepoint located along the line perpendicular to the center of the screen and as if both eyes were co-located (IPD = 0).  (Note; the resulting viewing transform does not make this assumption, just the current algorithm to map from overlap_percent to angle.)
+* **display/hmd/eyes[1]/center_proj_x:** This is computed as the fraction of the way from the left side of the screen to the right side where the line through the eye perpendicular to the screen crosses the screen.
 
 ### Step 3: Mapping from physical screen coordinates
 
-### Step 4: Producing distortion map
+Given points in the physical screen, the distortion map provides the coordinates of the corresponding point on the canonical rectangular screen (or perhaps outside the screen, in the overfill region or beyond).  This determines the appropriate point to display at this location on the screen.  This is done in two steps:
+* **Step 3A:** Map from physical-display coordinate to angle using the provided table.
+* **Step 3B:** Map from angle to virtual-screen coordinate by projecting the ray from the eye onto the plane of the canonical screen.  Then determine the screen-space X and Y coordinates (X = 0 at left and 1 at the right, Y = 0 at the bottom and 1 at the top).
 
-@todo This will include the mapping from texture coordinates.
+Doing this mapping for points other than those specified in the table requires interpolation for display points between those specified and extrapolation for points outside their convex hull.
+
+### Step 4: Producing distortion map in config file
+
+The configuration file format allows the specification of a variety of distortions, identified by the **display/hmd/distortion/type** variable.  We'll be assuming that the red, green, and blue components of the distortion are all the same, so using the type "mono_point_samples".  This means that we need to specify just one distortion mesh, which maps from normalized (X,Y) coordinates in a the physical display ([0,0] at the lower-left corner, [1,1] at the upper right) into normalized coordinates in a canonical rectangle that has an overfill value of 1 (no additional overfill).  Values may map outside the range [0,0]-[1,1] due to the distortion; they will map initially into the overfill area and then eventually beyond if there is insufficient overfill.  For our approach above, none of the points will map outside this range, because all visible display points maps to locations that lie within the projected area of the canonical screen even with an overfill factor of 1.
+
+We compute the input normalized coordinates for the mesh by normalizing the table's display coordinates to convert them from millimeters to screen fractions, subtracting the coordinates of the lower-left corner of the screen and dividing each axis by the screen dimension.  We compute the output coordinates as describe in Step 3.
+
+We then store the unordered set of points into the **display/hmd/distortion/mono_point_samples** array, which has a vector of elements, each of which has two elements, the first of which is the 2D coordinates in normalized physical-screen coordinates and the second of which is the 2D coordinates in the canonical-screen coordinates.
+
+An example output, which is a partial description of and HMD, follows.  It provides the identity mapping.
+
+    {
+      "display": {
+        "hmd": {
+          "distortion": {
+            "type": "mono_point_samples",
+            "mono_point_samples": [
+              [ [0,0], [0,0] ],
+              [ [1,0], [1,0] ],
+              [ [0,1], [0,1] ],
+              [ [1,1], [1,1] ]
+            ]
+          }
+        }
+      }
+    }
+
+The RenderManager uses this set of unordered point samples to compute a mesh by using a bilinear fit to the nearest 3 non-coplanar points to determine each of the coordinates for each point in space that must be sampled to produce a mesh with the specified number of points.
+
+@todo Mesh

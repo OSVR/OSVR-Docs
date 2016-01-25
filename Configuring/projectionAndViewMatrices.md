@@ -1,7 +1,5 @@
 # OSVR viewing transformations
 
-**Warning:** This is an in-process working draft document as of 11/3/2015.  It was designed using Brooks' Maxim: "It is better to be specific and wrong than to be vague."  If you see a statement here that you do not believe to be true, or an approach that seems suboptimal, please email russ@sensics.com so it can be fixed.
-
 This document describes the OSVR viewing transformations, including the projection matrix and the portions of the modelview matrix required to set the viewpoint. See the [distortion document](./distortion.md) for how to handle distortion correction (non-ideal lenses, non-planar display surfaces).
 
 The discussion below ignores the effects of eye tracking, and it also ignores the fact that the center of projection of the eye is not the same as its center of rotation.  For any particular view direction, the center of projection is along the viewing direction in front of the center of rotation, so the approximation is slight.  **With eye tracking** the only change is to move the eye position from the center of rotation of the eye to the center of its entrance pupil.
