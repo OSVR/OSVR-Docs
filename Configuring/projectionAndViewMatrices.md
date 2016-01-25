@@ -12,7 +12,7 @@ This requires determining the location of each eye and screen in the same coordi
 
 When we are dealing with fixed-screen displays: head-tracked stereo on a monitor, CAVE displays, or VR desk designs, the screen remain fixed in room space and the eyes move around.  When we are dealing with head-mounted displays, each screen moves along with the eyes and remains at the same location in eye space.  Although this affects how we track and determine these locations, it does not affect the basic mathematics involved.
 
-To make the discussion easier to draw and easier to understand, it is presented initially for the 1D case.  (The 3D case has orthogonal solutions for the two screen directions, but adds two more orientations.)
+To make the discussion easier to draw and easier to understand, it is presented initially for the 2D case.  (The 3D case has orthogonal solutions for the two screen directions, but adds two more orientations.)
 
 ## Without Lenses
 
@@ -66,6 +66,8 @@ So long as the viewer's pupil remains in the exit pupil of the lens (the *exit p
 If the viewer's pupil goes beyond the exit pupil of the lens, causing distortion, then the HMD lens locations should be adjusted, or the lenses swapped out and then the system recalibrated and re-specified as described below.
 
 ## Specification
+
+(The following describes the theoretical, most-general description of a screen, for a description of how to specify these parameters in the current OSVR configuration files, see @todo).
 
 **Fixed Rectangular Screen:** The specification of rectangular fixed-screen systems is done by specifying the room-space coordinates of the lower-left, lower-right, and upper-left corners in meters.  In the case where the vectors from the lower-left corner to the lower-right and upper-left corners are not orthogonal, the projection of the upper-left coordinate onto the plane perpendicular to the vector from the lower-left to lower-right corner will be used as the upper-left corner (which will reduce the screen height).  These coordinates are specified in meters.
 
