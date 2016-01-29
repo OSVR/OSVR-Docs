@@ -39,6 +39,16 @@
 - [Device-specific information](Troubleshooting/DeviceSpecific.md)
 - [Performance optimization using Event Tracing for Windows](http://osvr.github.io/presentations/20150901-Intro-ETW-OSVR/)
 
+# Developing with OSVR
+- Setting up the development environment
+  - [Windows](https://github.com/OSVR/OSVR-Core/wiki/Windows-Build-Environment)
+- [Directory of projects](http://osvr.github.io/contributing/)
+- [Creating an OSVR project](Developing/creating.md)
+- [OSVR interfaces](Developing/interfaces.md)
+- [Useful resources and tools](Developing/resources.md)
+- Device-specific information
+  - [OSVR HDK interface](developing/OSVRhdk.md)
+
 # Integrating with Game Engines
 
 - [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md)
@@ -55,15 +65,6 @@ watch?v=TtLn6XpEisw)
 - CryEngine
 - [Monogame: video](https://www.youtube.com/watch?v=doOOLaIuj48)
 - OpenGL
-
-# Developing with OSVR
-- Setting up the development environment
-  - [Windows](https://github.com/OSVR/OSVR-Core/wiki/Windows-Build-Environment)
-- [Directory of projects](http://osvr.github.io/contributing/)
-- [Creating an OSVR project](Developing/creating.md)
-- [Useful resources and tools](Developing/resources.md)
-- Device-specific information
-  - [OSVR HDK interface](developing/OSVRhdk.md)
 
 # Extending OSVR
 - [Adding a New HMD](Extending-OSVR/AddingHMD.md)
@@ -93,7 +94,15 @@ Some companies such as [Sensics](http://sensics.com/contact-us/) provide premium
 - VR Knowledge Nuggets
   - [Tracking](VR-Knowledge-Nuggets/tracking.md)
   - [Displays](VR-Knowledge-Nuggets/displays.md)
-- [The VRGuy's blog](http://www.vrguy.net) often covers OSVR-related topics
+- [The VRGuy's blog](http://www.vrguy.net) often covers OSVR-related topics and includes tutorials such as:
+  - [What is geometric distortion (and why should you care)?](http://vrguy.blogspot.com/2013/07/what-is-geometric-distortion-and-why.html)
+  - [Converting diagonal FOV and aspect ratio to horizontal and vertical FOV](http://vrguy.blogspot.com/2013/04/converting-diagonal-field-of-view-and.html)
+  - [TV screen size vs. goggle field of view](http://vrguy.blogspot.com/2013/04/tv-screen-size-vs-goggle-field-of-view.html)
+  - [How things work: the dual-elements optics of the OSVR HDK](http://vrguy.blogspot.com/2015/01/how-things-work-dual-element-optics-of.html)
+  - [What is binocular overlap and why should you care?](http://vrguy.blogspot.com/2013/05/what-is-binocular-overlap-and-why.html)
+  - [What you should know about head trackers](http://vrguy.blogspot.com/2013/05/what-you-should-know-about-head-trackers.html)
+  - [An overview of positional tracking technologies for VR](http://vrguy.blogspot.com/2014/05/an-overview-of-positional-tracking.html)
+
 
 # Sample projects that integrate OSVR into them
 - [OSVR plugin for FreePie](https://github.com/thomasgauthier/FreePIE-OSVR)
