@@ -17,6 +17,10 @@
 - [OS X](Getting-Started/Installing/osx.md)
 
 ## Running the OSVR Server
+Running the OSVR server just requires passing it a configuration file. For example:
+**osvr_server osvr_server_config.json**
+
+if no parameter is specified, a default file is used
 
 ## Configuring OSVR
 - [Calibrating the video-based tracker](https://github.com/OSVR/OSVR-Core/wiki/Video-Based-Tracking-Calibration)
@@ -25,7 +29,7 @@
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
 
 ## Utilities
-- [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer/blob/master/README.md)
+- [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer/blob/master/README.md) ; [another documentation page](http://osvr.github.io/doc/tracker-viewer/)
 - [OSVR Control](Utilities/OSVRControl.md)
 - OSVR_print_tree
 - [Distortioizer](https://github.com/OSVR/distortionizer/blob/master/README.md) helps measure distortion parameters for HMDs
