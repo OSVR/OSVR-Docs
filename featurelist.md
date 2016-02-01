@@ -31,6 +31,7 @@ Just like a multi-function printer can be viewed by Windows as one physical devi
 - Direct render
 - Distortion correction
 - Predictive tracking
+- Vsync timing reports
 
 # Plugin architecture
 - Plugins loaded at runtime
