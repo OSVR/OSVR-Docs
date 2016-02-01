@@ -29,6 +29,7 @@ Just like a multi-function printer can be viewed by Windows as one physical devi
 # High-performance rendering support
 - Time warp
 - Direct render
+- Front-buffer rendering
 - Distortion correction
 - Predictive tracking
 - Vsync timing reports
@@ -40,6 +41,7 @@ Just like a multi-function printer can be viewed by Windows as one physical devi
 # Portable
 - Cross-platform code that can compile on multiple operating systems: Windows, Linux, Android, OS X and others.
 - Cross-library rendering that can display using Direct3D11, OpenGL, Unity, Unreal, WebGL, Blender Game Engine, and others.
+- Cross-display configuration that can enable an application to run on different HMDs without change, and also run in debug mode on a mono window.
 
 # Programming model
 OSVR supports both:
