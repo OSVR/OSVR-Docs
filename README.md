@@ -3,9 +3,13 @@
 # Introduction to OSVR
 - [Introduction to OSVR](http://osvr.github.io/whitepapers/introduction_to_osvr/)
 - [OSVR feature list](featurelist.md)
+  - [Notes on Android support](Introduction/Android.md)
+  - [Notes on Linux support](Introduction/Linux.md)
+  - [Notes on OSX support](Introduction/OSX.md)
 - [List of supported devices, engines and operating systems ](http://osvr.github.io/compatibility/)
 - [List of OSVR partners](http://osvr.org/partner.html)
 - [OSVR presentations and speaker notes](http://osvr.github.io/presentations/)
+
 
 # Using OSVR
 ## Getting Started
@@ -26,6 +30,7 @@ if no parameter is specified, a default file is used
 
 ## Configuring OSVR
 - [Calibrating the video-based tracker](https://github.com/OSVR/OSVR-Core/wiki/Video-Based-Tracking-Calibration)
+- [Local and distributed client/server configuations](Configuring/LocalAndRemote.md)
 - Device-specific configuration
   - [OSVR HDK](Configuring/osvrhdk.md)
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
