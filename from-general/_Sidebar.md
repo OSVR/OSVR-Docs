@@ -1,7 +1,0 @@
-- [[Home]]
-- [[HDK Getting Started|HDK Unboxing and Getting Started]]
-- [[Creating an OSVR Project]]
-- [[Troubleshooting]]
-- [[VR Knowledge Nuggets]]
-  - [[Tracking|Tracking Knowledge Nuggets]]
-  - [[Display|Display Knowledge Nuggets]]
