@@ -1,12 +1,14 @@
 # OSVR Developer Documentation
 
-# Getting Started
+# Introduction to OSVR
 - [Introduction to OSVR](http://osvr.github.io/whitepapers/introduction_to_osvr/)
 - [OSVR feature list](featurelist.md)
 - [List of supported devices, engines and operating systems ](http://osvr.github.io/compatibility/)
 - [List of OSVR partners](http://osvr.org/partner.html)
 - [OSVR presentations and speaker notes](http://osvr.github.io/presentations/)
 
+# Using OSVR
+## Getting Started
 
 ## Installing OSVR
 - [Windows](Getting-Started/Installing/windows.md)
