@@ -13,7 +13,7 @@
 
 # Using OSVR
 ## Getting Started
-- [Unboxing and getting started](Getting-Started/HDK/HDK-Unboxing-and-Getting-Started.md)
+- [HDK Unboxing and Getting Starting](Getting-Started/HDK/HDK-Unboxing-and-Getting-Started.md)
 
 ## Installing OSVR
 - [Windows](Getting-Started/Installing/windows.md)
@@ -30,20 +30,23 @@ Running the OSVR server just requires passing it a configuration file. For examp
 if no parameter is specified, a default file is used
 
 ## Configuring OSVR
-- [Calibrating the video-based tracker](https://github.com/OSVR/OSVR-Core/wiki/Video-Based-Tracking-Calibration)
+- [Calibrating the video-based tracker](Getting-Started/HDK/Video-Based-Tracking-Calibration.md)
 - [Local and distributed client/server configuations](Configuring/LocalAndRemote.md)
 - Device-specific configuration
   - [OSVR HDK](Configuring/osvrhdk.md)
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
 
 ## Utilities
-- [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer/blob/master/README.md) ; [another documentation page](http://osvr.github.io/doc/tracker-viewer/)
+- Bundled with OSVR-Core binary snapshots/included in the OSVR-Core source tree:
+  - osvr_print_tree
+  - osvr_reset_yaw
+  - osvr_list_usbserial
+  - [PathTreeExport](http://resource.osvr.com/docs/OSVR-Core/md_doc_PathTreeExport.html)
+- [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer/blob/master/README.md)
+  - [Additional Tracker Viewer documentation](http://osvr.github.io/doc/tracker-viewer/)
 - [OSVR Control](Utilities/OSVRControl.md)
-- OSVR_print_tree
-- [Distortioizer](https://github.com/OSVR/distortionizer/blob/master/README.md) helps measure distortion parameters for HMDs
-- [Latency tester](https://github.com/sensics/Latency-Test). Open-source arduino-based latency tester
-- [PathTreeExport](http://resource.osvr.com/docs/OSVR-Core/md_doc_PathTreeExport.html)
-- OSVR_reset_yaw
+- [Distortionizer](https://github.com/OSVR/distortionizer/blob/master/README.md) helps measure distortion parameters for HMDs
+- [Latency tester](https://github.com/sensics/Latency-Test). Open-source Arduino-based latency tester
 
 ## Troubleshooting
 - [OSVR server](Troubleshooting/OSVRServer.md)
