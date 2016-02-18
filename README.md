@@ -55,6 +55,8 @@ if no parameter is specified, a default file is used
 - Setting up the development environment
   - [Windows](https://github.com/OSVR/OSVR-Core/wiki/Windows-Build-Environment)
 - [Directory of projects](http://osvr.github.io/contributing/)
+- [Doxygen-generated developer documentation of OSVR-Core](http://resource.osvr.com/docs/OSVR-Core/)
+- [Doxygen-generated internal documentation of OSVR-Core](http://resource.osvr.com/internal-docs/OSVR-Core-Implementation/)
 - [Creating an OSVR project](Developing/creating.md)
 - [OSVR interfaces](Developing/interfaces.md)
 - [Useful resources and tools](Developing/resources.md)
@@ -68,6 +70,7 @@ if no parameter is specified, a default file is used
 watch?v=TtLn6XpEisw)
   - [Unity VR demos](https://github.com/OSVR/Unity-VR-Samples) are OSVR versions of the standard VR demos that ship with Unity 5.3
   - [Palace demo](https://github.com/OSVR/OSVR-Unity-Palace-Demo) is a Unity demo illustrating how to use the Unity OSVR plugin
+  - [Unity version of Palace demo](http://github.com/OSVR/OSVR-Unity-Palace-Demo/blob/androidPalace/README.md) including APK and compilation notes
   - [Migrating Oculus Unity apps to OSVR](http://access.osvr.com/binary/download/misc_assets/Migrating%20Unity%20applications%20from%20Oculus%20to%20OSVR%20Mar-11-15.pdf)
 - [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md)
   - [Tutorial video](https://www.youtube.com/watch?v=u4Y9pUisL1M)
@@ -100,6 +103,20 @@ watch?v=TtLn6XpEisw)
 
 ## Paid support
 Some companies such as [Sensics](http://sensics.com/contact-us/) provide premium support services for OSVR including phone support, system engineering, authoring drivers or integration help. If you require support beyond the free support options, consider contacting the premium providers.
+
+# Participate
+A list of OSVR developer chat rooms is [here](https://gitter.im/orgs/OSVR/rooms)
+
+Some existing rooms:
+- [General subjects](https://gitter.im/OSVR/OSVR-General)
+- [Unity](https://gitter.im/OSVR/OSVR-Unity)
+- [Unreal](https://gitter.im/OSVR/OSVR-Unreal)
+- [SteamVR](https://gitter.im/OSVR/SteamVR-OSVR)
+- [OSVR Core](https://gitter.im/OSVR/OSVR-Core)
+
+[Combined OSVR issue tracker](https://waffle.io/osvr/osvr-core)
+
+[Map of OSVR projects](http://osvr.github.io/contributing/)
 
 # Additional information
 - [OSVR mailing lists and newsletters](http://osvr.github.io/mailing-lists/)
