@@ -28,11 +28,11 @@
 Running the OSVR server just requires passing it a configuration file. For example:
 **osvr_server osvr_server_config.json**
 
-if no parameter is specified, a default file is used
+if no parameter is specified, a default file is used.
 
 ## Configuring OSVR
 - [Calibrating the video-based tracker](Getting-Started/HDK/Video-Based-Tracking-Calibration.md)
-- [Local and distributed client/server configuations](Configuring/LocalAndRemote.md)
+- [Local and distributed client/server configurations](Configuring/LocalAndRemote.md)
 - Device-specific configuration
   - [OSVR HDK](Configuring/osvrhdk.md)
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
