@@ -2,13 +2,25 @@
 
 Please note the "last-modified" date on this page - OSVR is a fast moving set of projects, so limitations mentioned here may no longer apply when you read this.
 
+## Identifying your Device
+The main varieties of HDK in the wild are the HDK 1.2 and the HDK 1.3. Both varieties came in a cardboard box with carry handle and OSVR branding and generally shipped with an IR tracking camera kit.
+
+> Note: If you got yours before mid-2015, particularly if it didn't come in a fancy assembly-line box with an IR camera, it appears to have an LCD screen instead of an OLED screen, then it might be an earlier prototype. You can generally treat it just like a 1.2, except that you'll want to avoid upgrading the firmware without contacting support: we wouldn't want you to install OLED firmware on an LCD unit, and because the Hacker Development Kit is designed to be hackable even down to the display, that's possible.
+
+The main exterior difference between the 1.3 and preceding versions is the adjustments for the optics, so it's the easiest way to identify what you have if you are unsure:
+
+- The HDK 1.2 and earlier have thumbscrew-adjusters underneath each eye, with pupil-distance and focus adjustment. This image is from a 1.1, but the mechanism on the 1.2 is effectively the same. ![HDK pre-1.3 optics adjustment knob](HDK11.jpg)
+- The HDK 1.3 have simple sliders underneath each eye for focus adjustment (modified optics for a larger eyebox removed the need for adjustable pupil distance.). ![HDK 1.3 optics adjustment slider](HDK13-ID.jpg)
+
+Additionally, there are some differences generally noted between the chipsets shipped in the belt boxes with 1.2 units and 1.3 units, so once you have the driver pack installed (if you're using Windows), that can also help remind you, but the mechanical differences are the most reliable.
+
 ## Caveats/Limitations
 - The current default configuration file on Windows assumes an HDK 1.3, direct mode rendering, and fused IMU and video-based (aka positional) tracking. If you are using a 1.2 (thumbscrew-adjusters on the lenses, not sliders), or can't/don't want to use direct mode, you'll want to switch config files. There are config files with self-documenting names included.
 - The OSVR Server currently shows a console window that can be minimized, but should not be closed while you're using OSVR applications. A more appealing or invisible interface is coming.
 
 ## Setup
 
-### Connect the HDK
+### Connect the HDK and IR Camera
 There are a few connections to make: the headset to the beltbox, power from the wall to the beltbox, and HDMI and USB between the beltbox and your computer. Order does not particularly matter. You'll want to make sure that you have the beltbox held or clipped in such a way that cables don't tug during use.
 
 If you're using the video-based tracker, make sure you get the sync cables set up at this point as well, too.
@@ -17,8 +29,36 @@ Once you have the headset, HDMI, power plugged in, the HMD should be recognized 
 
 It will likely show up as a 1080x1920 "Portrait" display by default. This is the highest-performance mode. However, at this time most applications don't work with it in that mode, so you'll want to select the 1920x1080 resolution instead. (This doesn't mean you have to change the "Rotation" setting - just choose the alternate resolution and the HMD will perform the rotation internally.)
 
-### Install the driver pack (optional, recommended)
-If you're on Windows, there's a driver pack installer that can improve your experience. While not necessary for basic use, it does provide better names for devices in the Device Manager, groups device components logically with corresponding icons in the "Devices and Printers" window, and on Windows 8.1 and earlier, is required to use the OSVR HDK control software to upgrade firmware, etc. (Windows 10 already includes the appropriate driver there, but the other benefits still apply.)  You can get the latest release here: <https://github.com/OSVR/OSVR-HDK-Windows-Drivers/releases> with some (continually slightly outdated) documentation if you get stuck here: <https://github.com/OSVR/OSVR-HDK-Windows-Drivers/blob/master/Inf-Installer-Instructions/README.md> (typically the driver pack has more functionality associated with it than described in those docs).
+You'll also want to connect the IR camera at this point, if nothing else so that you can update the firmware. Unfortunately, at this time the IR camera firmware updater only runs on Windows.
+
+### Windows: Install the driver pack (optional, but recommended)
+If you're on Windows, there's a driver pack installer that can improve your experience. While not strictly necessary for basic use, it does provide better names for devices in the Device Manager, groups device components logically with corresponding icons in the "Devices and Printers" window, and on Windows 8.1 and earlier, is required to use the OSVR HDK control software to upgrade firmware, etc. (Windows 10 already includes the appropriate driver there, but the other benefits still apply.)
+
+You can get the latest release here: <https://github.com/OSVR/OSVR-HDK-Windows-Drivers/releases>. Download and install it before moving on.
+
+### Check/update firmware
+There are several parts of the system that have firmware that can be updated.
+
+**The IR Camera firmware** is very important to update, as newer firmware can provide substantially improved performance as well as compatibility with Linux, OS X, and other software packages besides the OSVR Server video tracking plugin. On Windows, with drivers 1.2.6 or newer, from Start, type "Devices and Printers" and press Enter, and you should see a number of OSVR-related icons matching what you have plugged in.
+
+If your icon for the IR Camera looks like this:
+
+![IR camera needs upgrade icon](camera-needs-upgrade.png)
+
+right-click it, and choose the "Get firmware upgrade" option. (Alternately you can go to <http://osvr.github.io/using/>)
+
+![IR camera context menu](camera-context-menu.png)
+
+Once there, you'll want to find the download for the IR camera firmware upgrader: it will be marked with this symbol: ![IR Camera Updater symbol](ircamera-updater.png)
+
+> Non-Windows users: While you unfortunately can't do the upgrade on your system, you can check and see the firmware version, as it's part of the USB hardware ID. The vendor ID is 0x0bda, product ID is 0x57e8, and the firmware version is whatever is listed in the `bcdDevice` field (which shows up as `REV_` on Windows).
+> On Linux, `lsusb -v -d 0bda:57e8` gets lots of information on the device, and `lsusb -v -d 0bda:57e8 | grep bcdDevice` shows just the revision: 0.07 for version 7, the latest at this writing. If it's smaller, then the firmware needs an update.
+
+**The HDK main processor** also has firmware.
+
+If you have an HDK 1.2, the most recent firmware you'll want to install is version **1.84** - newer versions contain code specific to the different OLED screen in the 1.3. See the instructions for a special [HDK 1.2 upgrade procedure](HDK-1.2-Firmware-Update.md) that will automatically install this firmware, as well as automating the process of updating the processor's VID/PID in case you have an early unit where these were faulty.
+
+On both the 1.2 and 1.3, the OSVR HDK Control utility on Windows is the best way to upgrade firmware and adjust some special features of the HMD. Go to <http://osvr.github.io/using/> to get it. It can also report the current version of firmware that you have installed, etc.
 
 ### Get OSVR Server
 OSVR Server is part of the OSVR software framework, and provides the system for accessing device data, configuring peripherals, etc. The HDK drivers come bundled in the main OSVR Core package (which includes the server), and your HDK can be auto-detected, so you won't need to edit any config files unless you want to connect additional input devices.
