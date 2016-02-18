@@ -1,15 +1,8 @@
----
-
-title: Installing OSVR for Linux
-heading: Installing OSVR for Linux
-
----
-
 # Installing OSVR for Linux
 
 ## Building OSVR from source
 
-Note: full instructions for building OSVR from scratch on Ubuntu 14.4 [can be found here](https://github.com/OSVR/OSVR-Core/wiki/Linux-Build-Instructions#known-issues-temporary)
+Note: These are fairly generic build instructions that require you to know how to install libraries and their developer packages on your disribution. Full instructions for building OSVR from scratch on Linuxes resembling Ubuntu 14.04 or Debian 8 [can be found here](Linux-Build-Instructions.md)
 
 1. *Prerequisites.* Many of the prerequisites may be available in your Linux distributions repositories. If you prefer to install them manually, the list of prerequisites follows:
   * [CMake](https://cmake.org/)
@@ -40,19 +33,3 @@ Note: full instructions for building OSVR from scratch on Ubuntu 14.4 [can be fo
     $ make
     $ make install
     ```
-
-## Next steps
-
-<ul class="arrows">
-    <li><a href="http://resource.osvr.com/docs/OSVR-Core/">Peruse the OSVR reference documentation</a></li>
-    <li><a href="/doc/unity">Integrate OSVR with Unity</a></li>
-    <li><a href="/doc/unreal">Integrate OSVR with Unreal</a></li>
-    <li><a href="/doc/client">Integrate OSVR with your own application</a></li>
-    <li><a href="/doc/plugin">Write an OSVR plugin</a></li>
-</ul>
-
-## Support
-
-If you need further assistance with installing OSVR, email us at [`support@osvr.org`](mailto:support@osvr.org).
-
-
