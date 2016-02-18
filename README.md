@@ -120,6 +120,5 @@ Some companies such as [Sensics](http://sensics.com/contact-us/) provide premium
   - [What you should know about head trackers](http://vrguy.blogspot.com/2013/05/what-you-should-know-about-head-trackers.html)
   - [An overview of positional tracking technologies for VR](http://vrguy.blogspot.com/2014/05/an-overview-of-positional-tracking.html)
 
-
-# Sample projects that integrate OSVR into them
+# Sample third-party projects that integrate OSVR into them
 - [OSVR plugin for FreePie](https://github.com/thomasgauthier/FreePIE-OSVR)
