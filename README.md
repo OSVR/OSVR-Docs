@@ -19,7 +19,8 @@
 - [Windows](Getting-Started/Installing/windows.md)
   - [Download pre-compiled binaries and drivers](http://osvr.github.io/using/)
   - [Install and test RenderManager](installing/RenderManager.md)
-- [Linux](Getting-Started/Installing/linux.md); [Build instructions](https://github.com/OSVR/OSVR-Core/wiki/Linux-Build-Instructions)
+- [Linux](Getting-Started/Installing/Linux-Build-Instructions.md)
+  - [Very generic instructions](Getting-Started/Installing/linux.md)
 - [Android](https://github.com/OSVR/OSVR-Android-Build#readme)
 - [OS X](Getting-Started/Installing/osx.md)
 
@@ -56,7 +57,7 @@ if no parameter is specified, a default file is used
 
 # Developing with OSVR
 - Setting up the development environment
-  - [Windows](https://github.com/OSVR/OSVR-Core/wiki/Windows-Build-Environment)
+  - [Windows](Developing/Windows-Build-Environment.md)
 - [Directory of projects](http://osvr.github.io/contributing/)
 - [Creating an OSVR project](Developing/creating.md)
 - [OSVR interfaces](Developing/interfaces.md)
@@ -84,8 +85,8 @@ watch?v=TtLn6XpEisw)
 
 # Extending OSVR
 - [Adding a New HMD](Extending-OSVR/AddingHMD.md)
-- [Adding a new Device](https://github.com/OSVR/OSVR-Core/wiki/Adding-a-New-Device)
-  - [Best practices for device descriptor](https://github.com/OSVR/OSVR-Core/wiki/Device-Descriptor-Practices)
+- [Adding a new Device](Extending-OSVR/Adding-a-New-Device.md)
+  - [Best practices for device descriptor](Extending-OSVR/Device-Descriptor-Practices.md)
 - [Writing an OSVR Plugin](http://resource.osvr.com/docs/OSVR-Core/TopicWritingDevicePlugin.html)
 - [Writing an OSVR Client](http://resource.osvr.com/docs/OSVR-Core/TopicWritingClientApplication.html)
 - Porting to a New Operating System

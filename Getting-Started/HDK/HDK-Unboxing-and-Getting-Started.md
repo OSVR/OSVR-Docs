@@ -63,7 +63,7 @@ On both the 1.2 and 1.3, the OSVR HDK Control utility on Windows is the best way
 ### Get OSVR Server
 OSVR Server is part of the OSVR software framework, and provides the system for accessing device data, configuring peripherals, etc. The HDK drivers come bundled in the main OSVR Core package (which includes the server), and your HDK can be auto-detected, so you won't need to edit any config files unless you want to connect additional input devices.
 
-There are two ways of getting the OSVR Server: the installer and build snapshots. Since the installer is not currently automatically updated, the best way is to download an OSVR Core snapshot, linked from the [Using OSVR][using] page. If you're using a 64-bit version of Windows, either 32 or 64 bit will work (and be compatible with both 32 and 64-bit applications), so just pick one.  (Linux users: please see the [OSVR-Core][] repository for [build instructions](https://github.com/OSVR/OSVR-Core/wiki/Linux-Build-Instructions).)
+There are two ways of getting the OSVR Server: the installer and build snapshots. Since the installer is not currently automatically updated, the best way is to download an OSVR Core snapshot, linked from the [Using OSVR][using] page. If you're using a 64-bit version of Windows, either 32 or 64 bit will work (and be compatible with both 32 and 64-bit applications), so just pick one.  (Linux users: please see the  [build instructions](../Installing/Linux-Build-Instructions.md) in this repository.)
 
 In any case, running the `osvr_server` application should open a command-line window displaying some messages. If everything is working right, you'll see a line that says something like:
 
@@ -76,7 +76,7 @@ You can minimize this window, but make sure to keep it running as long as you'll
 
 [OSVR-Core]: https://github.com/OSVR/OSVR-Core/
 [using]: http://osvr.github.io/using/
-[known issues]: https://github.com/OSVR/OSVR-Core/wiki/Linux-Build-Instructions#known-issues-temporary
+[known issues]: ../Installing/Linux-Build-Instructions.md#known-issues-temporary
 
 ### Adjust the Optics (HDK 1.0, 1.1, 1.2)
 [[assets/HDK-optics-adjustment.png]]
