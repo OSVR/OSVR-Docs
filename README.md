@@ -13,13 +13,14 @@
 
 # Using OSVR
 ## Getting Started
-- [Unboxing and getting started](Getting-Started/HDK/HDK-Unboxing-and-Getting-Started.md)
+- [HDK Unboxing and Getting Starting](Getting-Started/HDK/HDK-Unboxing-and-Getting-Started.md)
 
 ## Installing OSVR
 - [Windows](Getting-Started/Installing/windows.md)
   - [Download pre-compiled binaries and drivers](http://osvr.github.io/using/)
   - [Install and test RenderManager](installing/RenderManager.md)
-- [Linux](Getting-Started/Installing/linux.md); [Build instructions](https://github.com/OSVR/OSVR-Core/wiki/Linux-Build-Instructions)
+- [Linux](Getting-Started/Installing/Linux-Build-Instructions.md)
+  - [Very generic instructions](Getting-Started/Installing/linux.md)
 - [Android](https://github.com/OSVR/OSVR-Android-Build#readme)
 - [OS X](Getting-Started/Installing/osx.md)
 
@@ -27,23 +28,26 @@
 Running the OSVR server just requires passing it a configuration file. For example:
 **osvr_server osvr_server_config.json**
 
-if no parameter is specified, a default file is used
+if no parameter is specified, a default file is used.
 
 ## Configuring OSVR
-- [Calibrating the video-based tracker](https://github.com/OSVR/OSVR-Core/wiki/Video-Based-Tracking-Calibration)
-- [Local and distributed client/server configuations](Configuring/LocalAndRemote.md)
+- [Calibrating the video-based tracker](Getting-Started/HDK/Video-Based-Tracking-Calibration.md)
+- [Local and distributed client/server configurations](Configuring/LocalAndRemote.md)
 - Device-specific configuration
   - [OSVR HDK](Configuring/osvrhdk.md)
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
 
 ## Utilities
-- [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer/blob/master/README.md) ; [another documentation page](http://osvr.github.io/doc/tracker-viewer/)
+- Bundled with OSVR-Core binary snapshots/included in the OSVR-Core source tree:
+  - osvr_print_tree
+  - osvr_reset_yaw
+  - osvr_list_usbserial
+  - [PathTreeExport](http://resource.osvr.com/docs/OSVR-Core/md_doc_PathTreeExport.html)
+- [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer/blob/master/README.md)
+  - [Additional Tracker Viewer documentation](http://osvr.github.io/doc/tracker-viewer/)
 - [OSVR Control](Utilities/OSVRControl.md)
-- OSVR_print_tree
-- [Distortioizer](https://github.com/OSVR/distortionizer/blob/master/README.md) helps measure distortion parameters for HMDs
-- [Latency tester](https://github.com/sensics/Latency-Test). Open-source arduino-based latency tester
-- [PathTreeExport](http://resource.osvr.com/docs/OSVR-Core/md_doc_PathTreeExport.html)
-- OSVR_reset_yaw
+- [Distortionizer](https://github.com/OSVR/distortionizer/blob/master/README.md) helps measure distortion parameters for HMDs
+- [Latency tester](https://github.com/sensics/Latency-Test). Open-source Arduino-based latency tester
 
 ## Troubleshooting
 - [OSVR server](Troubleshooting/OSVRServer.md)
@@ -53,7 +57,7 @@ if no parameter is specified, a default file is used
 
 # Developing with OSVR
 - Setting up the development environment
-  - [Windows](https://github.com/OSVR/OSVR-Core/wiki/Windows-Build-Environment)
+  - [Windows](Developing/Windows-Build-Environment.md)
 - [Directory of projects](http://osvr.github.io/contributing/)
 - [Doxygen-generated developer documentation of OSVR-Core](http://resource.osvr.com/docs/OSVR-Core/)
 - [Doxygen-generated internal documentation of OSVR-Core](http://resource.osvr.com/internal-docs/OSVR-Core-Implementation/)
@@ -84,8 +88,8 @@ watch?v=TtLn6XpEisw)
 
 # Extending OSVR
 - [Adding a New HMD](Extending-OSVR/AddingHMD.md)
-- [Adding a new Device](https://github.com/OSVR/OSVR-Core/wiki/Adding-a-New-Device)
-  - [Best practices for device descriptor](https://github.com/OSVR/OSVR-Core/wiki/Device-Descriptor-Practices)
+- [Adding a new Device](Extending-OSVR/Adding-a-New-Device.md)
+  - [Best practices for device descriptor](Extending-OSVR/Device-Descriptor-Practices.md)
 - [Writing an OSVR Plugin](http://resource.osvr.com/docs/OSVR-Core/TopicWritingDevicePlugin.html)
 - [Writing an OSVR Client](http://resource.osvr.com/docs/OSVR-Core/TopicWritingClientApplication.html)
 - Porting to a New Operating System
@@ -98,7 +102,7 @@ watch?v=TtLn6XpEisw)
 # Getting Support
 ## Free support
 - Post an issue on the [OSVR Github projects](https://github.com/osvr) to be addressed by the OSVR community
-- email "support at osvr.org" to be addressed by core developers
+- Open a support ticket on the [support portal](http://support.osvr.org) (or email "support at osvr.org") to be addressed by core developers
 - [Visit the OSVR development chat rooms](https://gitter.im/orgs/OSVR/rooms)
 
 ## Paid support
@@ -133,6 +137,5 @@ Some existing rooms:
   - [What you should know about head trackers](http://vrguy.blogspot.com/2013/05/what-you-should-know-about-head-trackers.html)
   - [An overview of positional tracking technologies for VR](http://vrguy.blogspot.com/2014/05/an-overview-of-positional-tracking.html)
 
-
-# Sample projects that integrate OSVR into them
+# Sample third-party projects that integrate OSVR into them
 - [OSVR plugin for FreePie](https://github.com/thomasgauthier/FreePIE-OSVR)
