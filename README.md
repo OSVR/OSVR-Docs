@@ -39,14 +39,14 @@ if no parameter is specified, a default file is used.
 
 ## Utilities
 - Bundled with OSVR-Core binary snapshots/included in the OSVR-Core source tree:
-  - osvr_print_tree
+  - [osvr_print_tree](http://resource.osvr.com/docs/OSVR-Core/OSVRPrintTree.html)
   - osvr_reset_yaw
   - osvr_list_usbserial
-  - [PathTreeExport](http://resource.osvr.com/docs/OSVR-Core/md_doc_PathTreeExport.html)
-- [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer/blob/master/README.md)
+  - [PathTreeExport](http://resource.osvr.com/docs/OSVR-Core/PathTreeExport.html)
+- [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer#readme)
   - [Additional Tracker Viewer documentation](http://osvr.github.io/doc/tracker-viewer/)
 - [OSVR Control](Utilities/OSVRControl.md)
-- [Distortionizer](https://github.com/OSVR/distortionizer/blob/master/README.md) helps measure distortion parameters for HMDs
+- [Distortionizer](https://github.com/OSVR/distortionizer#readme) helps measure distortion parameters for HMDs
 - [Latency tester](https://github.com/sensics/Latency-Test). Open-source Arduino-based latency tester
 
 ## Troubleshooting
@@ -70,8 +70,7 @@ if no parameter is specified, a default file is used.
 # Integrating with Game Engines
 
 - [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md)
-  - [Tutorial video](https://www.youtube.com/
-watch?v=TtLn6XpEisw)
+  - [Tutorial video](https://www.youtube.com/watch?v=TtLn6XpEisw)
   - [Unity VR demos](https://github.com/OSVR/Unity-VR-Samples) are OSVR versions of the standard VR demos that ship with Unity 5.3
   - [Palace demo](https://github.com/OSVR/OSVR-Unity-Palace-Demo) is a Unity demo illustrating how to use the Unity OSVR plugin
   - [Unity version of Palace demo](http://github.com/OSVR/OSVR-Unity-Palace-Demo/blob/androidPalace/README.md) including APK and compilation notes
