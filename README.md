@@ -39,10 +39,10 @@ if no parameter is specified, a default file is used.
 
 ## Utilities
 - Bundled with OSVR-Core binary snapshots/included in the OSVR-Core source tree:
+  - [osvr_reset_yaw](http://resource.osvr.com/docs/OSVR-Core/OSVRResetYaw.html)
   - [osvr_print_tree](http://resource.osvr.com/docs/OSVR-Core/OSVRPrintTree.html)
-  - osvr_reset_yaw
-  - osvr_list_usbserial
   - [PathTreeExport](http://resource.osvr.com/docs/OSVR-Core/PathTreeExport.html)
+  - [osvr_list_usbserial](http://resource.osvr.com/docs/OSVR-Core/OSVRListUSBSerial.html)
 - [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer#readme)
   - [Additional Tracker Viewer documentation](http://osvr.github.io/doc/tracker-viewer/)
 - [OSVR Control](Utilities/OSVRControl.md)
