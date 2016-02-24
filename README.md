@@ -74,6 +74,7 @@ if no parameter is specified, a default file is used.
   - [Unity VR demos](https://github.com/OSVR/Unity-VR-Samples) are OSVR versions of the standard VR demos that ship with Unity 5.3
   - [Palace demo](https://github.com/OSVR/OSVR-Unity-Palace-Demo) is a Unity demo illustrating how to use the Unity OSVR plugin
   - [Unity version of Palace demo](http://github.com/OSVR/OSVR-Unity-Palace-Demo/blob/androidPalace/README.md) including APK and compilation notes
+  - [Palace demo and other Unity binaries](https://github.com/OSVR/OSVR-Unity-Palace-Demo/releases)
   - [Migrating Oculus Unity apps to OSVR](http://access.osvr.com/binary/download/misc_assets/Migrating%20Unity%20applications%20from%20Oculus%20to%20OSVR%20Mar-11-15.pdf)
 - [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md)
   - [Tutorial video](https://www.youtube.com/watch?v=u4Y9pUisL1M)
