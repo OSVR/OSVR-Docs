@@ -48,11 +48,14 @@ if no parameter is specified, a default file is used.
 - [OSVR Control](Utilities/OSVRControl.md)
 - [Distortionizer](https://github.com/OSVR/distortionizer#readme) helps measure distortion parameters for HMDs
 - [Latency tester](https://github.com/sensics/Latency-Test). Open-source Arduino-based latency tester
+- [OSVR HDK Video Status Tool](https://github.com/sensics/OSVR-HDK-Video-Status#readme) - Find out what video signal the HDK is receiving.
+  - [HDK Video Status Tool Windows Binaries](https://github.com/sensics/OSVR-HDK-Video-Status/releases) - On the Releases page - often a good place to check.
 
 ## Troubleshooting
 - [OSVR server](Troubleshooting/OSVRServer.md)
 - [Render Manager](Troubleshooting/RenderManager.md)
 - [Device-specific information](Troubleshooting/DeviceSpecific.md)
+  - See also the HDK video status tool above in Utilities.
 - [Performance optimization using Event Tracing for Windows](http://osvr.github.io/presentations/20150901-Intro-ETW-OSVR/)
 
 # Developing with OSVR
