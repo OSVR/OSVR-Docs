@@ -21,24 +21,26 @@ You can configure the OLED persistence settings through a terminal port or the O
 
 ### Off (full persistence, 16.6ms)
 This is the most optimized for luminosity but does not include any motion blur reduction
-COM Commands after bootup needed are:
-#sw1bf08fe
-#sw1bf9889
-#sw1bf068a
-#sw1bf708b
-#sw1bf00fe
+COM Commands after bootup needed are in the following sequence:
+1. #sw1bf08fe
+2. #sw1bf9889
+3. #sw1bf068a
+4. #sw1bf708b
+5. #sw1bf00fe
+
+Note that each command starts with a "#" sign
 
 ### Medium (8.3ms)
 Best compromise between textures luminosity and motion blur reduction
-#sw1bf08fe
-#sw1bfe689
-#sw1bff38a
-#sw1bf108b
-#sw1bf00fe
+1. #sw1bf08fe
+2. #sw1bfe689
+3. #sw1bff38a
+4. #sw1bf108b
+5. #sw1bf00fe
 
 ### Full (below 3 ms)
-#sw1bf08fe
-#sw1bfe689
-#sw1bf8e8a
-#sw1bf118b
-#sw1bf00fe
+1. #sw1bf08fe
+2. #sw1bfe689
+3. #sw1bf8e8a
+4. #sw1bf118b
+5. #sw1bf00fe
