@@ -22,11 +22,11 @@ You can configure the OLED persistence settings through a terminal port or the O
 ### Off (full persistence, 16.6ms)
 This is the most optimized for luminosity but does not include any motion blur reduction
 COM Commands after bootup needed are in the following sequence:
-1. #sw1bf08fe
-2. #sw1bf9889
-3. #sw1bf068a
-4. #sw1bf708b
-5. #sw1bf00fe
+ #sw1bf08fe
+ #sw1bf9889
+ #sw1bf068a
+ #sw1bf708b
+ #sw1bf00fe
 
 Note that each command starts with a "#" sign
 
