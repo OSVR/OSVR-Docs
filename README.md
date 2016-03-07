@@ -69,7 +69,7 @@ if no parameter is specified, a default file is used.
 - [OSVR interfaces](Developing/interfaces.md)
 - [Useful resources and tools](Developing/resources.md)
 - Device-specific information
-  - [OSVR HDK interface](developing/OSVRhdk.md)
+  - [OSVR HDK HID report interface](Developing/OSVRhdk.md)
 
 # Integrating with Game Engines
 
