@@ -35,6 +35,7 @@ if no parameter is specified, a default file is used.
 - [Local and distributed client/server configurations](Configuring/LocalAndRemote.md)
 - Device-specific configuration
   - [OSVR HDK](Configuring/osvrhdk.md)
+  - [Oculus Rift](Configuring/oculus-rift.md)
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
 
 ## Utilities
