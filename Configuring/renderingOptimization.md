@@ -16,7 +16,11 @@ As of 3/8/2016, RenderManager handles [distortion correction](./distortion.md) a
 
 ![Time Warp](./images/render_distort_tw.png)
 
+The **renderManagerConfig** portion of the OSVR server configuration has several entries that control whether and how this synchronization occurs in rendering pipelines that support DirectMode and where **directModeEnabled** is set to *true*.
 
+* **numBuffers**: This selects between front-buffered rendering (1) or double-buffered rendering (2) for the second (distortion/warp) render pass within RenderManager.  Note that double-buffered rendering in this case does not necessarily cause more latency -- if time warp using maxMsBeforeVsync is active, then the back buffer will be swapped to the front immediately after being rendered to.
+* **verticalSyncEnabled**: When using double-buffered rendering and this is set to *true*, this has the underlying hardware wait until vsync to present the current buffer, which will avoid tearing because it will not change the buffer being displayed while it is being scanned out.  @todo What happens when we're after vsync already?
+* **verticalSyncBlockRenderingEnabled**: When this is set to *true*, RenderManager will block in its rendering/presentation call and not return until the vertical synchronization event has happened (on some render paths and hardware, it waits until the presentation happens).  @todo Waiting until present is wasting time.
 
 ## Time Warp
 
