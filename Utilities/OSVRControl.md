@@ -2,6 +2,8 @@
 
 OSVR Control is a simple interactive utility for Windows that allows controlling various aspects of the OSVR HDK, including upgrading the main firmware.
 
+**Note:** To upgrade the firmware on Linux or other operating systems, [see these instructions](UpdateHDKLinux.md)
+
 ## Installation
 OSVR Control is available at [this link](http://sensics.com/software/OSVRControl-SW/publish.htm) on the Sensics Website. It is a one-click Windows installer.
 
