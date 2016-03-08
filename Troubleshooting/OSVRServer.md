@@ -16,7 +16,7 @@ It is possible to configure the server to insert a yield even when a client is c
 }
 ```
 
-...would cause a sleep of 1 mSec in the main loop. The reason why this is not the default configuration is that we discovered that the Windows schedule "cannot be trusted" to really provide 1 mSec. Often, it is 1 Msec but sometimes it has as high as 20 mSec, inserting unnecessary latency in the application.
+...would cause a sleep of 1 mSec in the main loop. The reason why this is not the default configuration is that the Windows scheduler "cannot be trusted" to really provide 1 mSec (which is in the definition of the sleep functions used), but more troubling, it can insert unnecessary latency of 10 mSec to as high as 20 mSec.
 
 However, if the OSVR server takes up too much of your CPU, you can work with this parameter.
 
