@@ -2,8 +2,6 @@
 
 This document describes aspects of the OSVR RenderManager's display pipeline relating to optimizing rendering performance and reducing latency.
 
-## 
-
 The timing diagram below shows repeated video frames being sent to the screen by the display hardware.
 
 ![Vertical Sync](./images/vsync_vs_trackers.png)
@@ -24,8 +22,45 @@ The **renderManagerConfig** portion of the OSVR server configuration has several
 
 ## Time Warp
 
-@todo
+The timing diagram from above is repeated here for reference.
 
-### Asynchronous
+![Vertical Sync](./images/vsync_vs_trackers.png)
 
-@todo
+Because the user's head is moving during the time rendering is happening, the image rendered to the screen will be out of date by the time it is presented to the user.  To reduce this artifact, RenderManager implements a **time warp** during its distortion-mapping render pass.  This is done through a texture-coordinate reprojection transform that makes the assumption of a 2-meter flat viewing surface to change the on-screen position of each texture coordinate.  (For rotation about the center of projection, this adjustment is exact; for translation of the head, it is only approximate.)
+
+So that it has the most-recent information, RenderManager requests new tracker reports.  Its behavior is controlled by several settings in the **timeWarp** portion of the OSVR server's renderManagerConfig section.
+
+* **enabled**: Turns on time warp when set to *true*.  If it is false, the images are not adjusted based on new tracker data.
+* **asynchronous**: If *enabled* is true this flag are both *true*, this causes a separate rendering thread to be constructed.  When the application presents render buffers to RenderManager (or uses the alternate *Render()* path), they are either shared or copied with this thread.  This thread then repeatedly gets new values from the tracker and renders at maximum frame rate (controlled by the DirectMode and other parameters), warping the image based on the latest tracker reports for each frame.  If the application does not send an update before it is time to render a new frame, the last-presented frame is used, re-warped with new tracker data.
+* **maxMsBeforeVsync**:  **Deprecated** This flag is no longer being used.  Instead, time warp will use the **verticalSyncBlockRenderingEnabled** flag to determine if it should wait until a vertical sync has occured after it has done its most-recent tracker reading.
+
+## Optimization
+
+Optimal rendering has a number of criteria, some of which are at odds with one another:
+
+* **Minimum Latency**: To reduce the time between reading from a tracker and rendering the scene based on that report (whether predicted or not), the tracker's position should be read as close as possible to the time the image will be presented to the display.  **Approaches**:  (1) Use DirectMode (this will often be even faster in portrait mode than in landscape mode for HMDs because their internal circuitry sometimes buffers a frame in landscape mode and then scans it out later).  (2) Use asynchronous time warp with shared buffers.  (3) Set *verticalSyncBlockRenderingEnabled*.
+* **Consistent Frame Rate**: Especially on Windows, the operating system sometimes puts even high-priority threads on hold pending I/O and other operations, which can cause variability in processing time.  Also, with some graphics drivers, the high-priority asynchronous rendering thread is not able to interrupt an ongoing GPU operation.  Either of these can cause RenderManager to miss a frame (or miss a partial frame, causing tearing) if a delay covers the vertical blanking interval.  **Approach**: Use asynchronous time warp.
+* **Consistent latency**: A frame-to-frame variation in the amount of time between reading the tracker and rendering the scene can produce apparent jitter (also called judder) in objects while the user's head is in motion.  **Approaches**:  (1) Use asynchronous time warp.  (2) Use time warp with *verticalSyncBlockRenderingEnabled* to cause the time RenderManager looks for a tracker report to be more consistent.  (3) @todo Implement client-side prediction based on the time until presentation.
+* **Scene Richness**: To maximize the time available for realistic rendering effects, the system should spend as little time as possible waiting during the RenderManager presentation (due to *verticalSyncBlockRenderingEnabled*) so that more time is available in the main thread for rendering instructions to be queued.  **Approaches**: (1) Use asynchronous time warp (which will be faster if you use it shared buffers because it avoids a texture copy).  (2) Disable *verticalSyncBlockRenderingEnabled*.
+* **Avoiding tearing**:  When the visible frame buffer has its content modified during scan-out, different portions of the image use different transforms and the image appears to be torn.  **Approaches**: (1) Set *numBuffers* to 2 and *verticalSyncEnabled* to true in DirectMode.  (2) Set *verticalSyncBlockRenderingEnabled* to true in DirectMode. (3) Use non-DirectMode.
+* **Smooth animation**: For objects in the environment that are moving (separate from eye-point motion), it is important that there are the same number of animation frames between each displayed frame, to avoid jitter/judder in their motion.  **Approaches**: (1) Disable asynchronous time warp and reduce rendering time (scene richness) to ensure that a new frame arrives.  (2) Use *verticalSyncBlockRenderingEnabled* to ensure that the scene rendering always starts in synchrony with frame scan-out.
+* **CPU efficiency**: Because even sub-millisecond sleeps on Windows can cause arbitary delays, many of the approaches used by RenderManager must busy-wait, which increases processor usage.  **Approaches**: (1) Disable asynchronous time warp.  (2) Set *verticalSyncBlockRenderingEnabled* to false.
+* **Memory efficiency**: **Approaches**: (1) Set *numBuffers* to 1.  (2) Disable asynchronous time warp, which either requires the application to double-buffer its textures or requires a copy into an internal RenderManager-handled buffer.
+
+### Default
+
+In an attempt to maximize the client application's time to render while avoiding rendering artifacts, the default OSVR configuration as of 3/9/2016 will be set as follows:
+
+* Asynchronous time warp enabled.  @todo Describe how to set up for double-buffered client-side rendering to avoid copies.
+* Set *numBuffers* to 2.  Set *verticalSyncEnabled* to true.
+* Set *verticalSyncBlockRenderingEnabled* to true.
+
+A reduction in GPU memory use (at risk of tearing) can be produced by changing to this configuration:
+
+* Set *numBuffers* to 1.  Set *verticalSyncEnabled* to false.
+
+A reduction in GPU memory use and CPU processing power (at risk of skipped frames) can be produced by changing to this configuration:
+
+* Asynchronous time warp disabled.
+
+
