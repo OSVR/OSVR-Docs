@@ -22,3 +22,7 @@ However, if the OSVR server takes up too much of your CPU, you can work with thi
 
 ## Common error messages
 *Warning: Have received several video tracker reports without receiving one from the IMU, which shouldn't happen.  Please try disconnecting/reconnecting and restarting the server, and if this re-occurs, double-check your configuration files.*
+
+If you see this message on startup, and you haven't modified your config files (you're using a basic config file for video-based tracking on the HDK), it means that the HDK's internal tracker (IMU), which runs at four times the rate of the video tracker, hasn't sent any reports, but the video-based tracker has seen the HDK for an extended period of time, so the Video-IMU fusion plugin determined the HDK's internal tracker has stopped reporting. **In short, the HDK just needs to be rebooted.** Unplug and replug the power connector, or the wide connector from the belt box, to do the power cycle. It may "just work" without having to restart the server, but if not, just close the server and start it again.
+
+Make sure that you've got the latest firmware on your HDK (see [OSVR Control instructions](../Utilities/OSVRControl.md) for info) to help avoid this issue.
