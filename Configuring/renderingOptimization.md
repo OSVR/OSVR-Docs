@@ -30,9 +30,10 @@ Because the user's head is moving during the time rendering is happening, the im
 
 So that it has the most-recent information, RenderManager requests new tracker reports.  Its behavior is controlled by several settings in the **timeWarp** portion of the OSVR server's renderManagerConfig section.
 
-* **enabled**: Turns on time warp when set to *true*.  If it is false, the images are not adjusted based on new tracker data.
-* **asynchronous**: If *enabled* is true this flag are both *true*, this causes a separate rendering thread to be constructed.  When the application presents render buffers to RenderManager (or uses the alternate *Render()* path), they are either shared or copied with this thread.  This thread then repeatedly gets new values from the tracker and renders at maximum frame rate (controlled by the DirectMode and other parameters), warping the image based on the latest tracker reports for each frame.  If the application does not send an update before it is time to render a new frame, the last-presented frame is used, re-warped with new tracker data.
-* **maxMsBeforeVsync**:  **Deprecated** This flag is no longer being used.  Instead, time warp will use the **verticalSyncBlockRenderingEnabled** flag to determine if it should wait until a vertical sync has occured after it has done its most-recent tracker reading.
+* **enabled**: Turns on time warp when set to true.  If it is false, the images are not adjusted based on new tracker data.
+* **asynchronous**: If *enabled* and this flag are both true, this causes a separate rendering thread to be constructed.  When the application presents render buffers to RenderManager (or uses the alternate *Render()* path), they are either shared or copied with this thread.  This thread then repeatedly gets new values from the tracker and renders at maximum frame rate (controlled by the DirectMode and other parameters), warping the image based on the latest tracker reports for each frame.  If the application does not send an update before it is time to render a new frame, the last-presented frame is used, re-warped with new tracker data.
+* **verticalSyncBlockRenderingEnabled**: This flag is in the direct-mode parameter set listed above.  Time warp uses it to determine if it should wait until a vertical sync has occured after it has done its most-recent tracker reading
+* **maxMsBeforeVsync**:  **Deprecated** This parameter is no longer being used as of RenderManager 0.6.41.
 
 ## Optimization
 
