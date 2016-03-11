@@ -13,7 +13,7 @@
 
 # Using OSVR
 ## Getting Started
-- [HDK Unboxing and Getting Starting](Getting-Started/HDK/HDK-Unboxing-and-Getting-Started.md)
+- [HDK Unboxing and Getting Started](Getting-Started/HDK/HDK-Unboxing-and-Getting-Started.md)
 
 ## Installing OSVR
 - [Windows](Getting-Started/Installing/windows.md)
