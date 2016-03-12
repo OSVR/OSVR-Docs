@@ -1,6 +1,6 @@
-# Congrats on your Hacker Development Kit!
+# Felicitaciones por tu Hacker Development Kit!
 
-Esta es una traducción de "Getting Started", y como tal va a estar desactualizada, así que es probable que algunos datos sean inválidos.
+Esta es una traducción de "Getting Started", y como tal puede quedar desactualizada, así que es probable que algunos datos sean inválidos.
 
 ## Identificando tu dispositivo
 Las principales variedades de HDK en el mercado son HDK 1.2 y HDK 1.3 . Ambas vienen dentro de una caja de cartón con manija de transporte con logotipos de OSVR y generalmente incluye un kit de cámara IR.
@@ -43,14 +43,12 @@ Hay varias partes del sistema que tienen firmware que puede ser actualizado.
 El **Firmware de la Cámara IR** actualizado es escencial, ya que las actualizaciones provéen mejoras substanciales de rendimiento como compatibilidad con Linux, OS X, y otros paquetes de software además del plugin de seguimiento por video de OSVR. En Windows, con drivers 1.2.6 o superior, desde INICIO, escribe "Dispositivos e Impresoras" y presiona Enter, y deberías ver un número de dispositivos vinculados a OSVR con íconos correspondientes a lo que tengas conectado.
 
 Si el ícono de tu Cámara IR se ve así:
-
 ![IR camara necesita actualizar](camera-needs-upgrade.png)
 Click derecho, y elige "Get firmware upgrade". Alternativamente puedes ir a <http://osvr.github.io/using/>.
-
 ![IR menu contextual camara](camera-context-menu.png)
-
 Una vez allí, debes buscar la descarga para el actualizador de firmware de la Cámara IR: va a estar marcado con este símbolo:
 ![IR camara simbolo actualizar](ircamera-updater.png)
+
 
 > ¿No usas Windows?: Si bien no puedes actualizar el firmware en tu sistema, puedes revisar y ver la versión del firmware, ya que es parte del ID del hardware USB. El ID del fabricante es 0x0bda, ID de producto es 0x57e8, y la versión del firmware es cualquiera que sea listada en el campo `bcdDevice` ( que figura como `REV_` en Windows).
 > En Linux, `lsusb -v -d 0bda:57e8` presenta mucha información sobre el dispositivo, y `lsusb -v -d 0bda:57e8 | grep bcdDevice` presenta sólo la revisión 0.07 para versión 7, la última al tiempo de autoría de este documento. Si es menor, el firmware necesita actualizaciones.
@@ -63,3 +61,57 @@ En ambos 1.2 y 1.3 el OSVR HDK Control utility en Windows es el mejor lugar para
 El firmware del HDK se puede actualizar en Linux o Mac OS X, pero el proceso no fue completamente documentado aún. Si necesitas instrucciones, contacta al soporte y te ayudaremos , actualizando la documentación en el proceso.
 
 ### Obtener el OSVR Server
+
+OSVR Server es parte del framework OSVR y provee un sistema para acceder a los datos del dispositivo, configurar periféricos, etc. Los drivers del HDK están incluidos en el paquete OSVR Core ( que incluye al server ), y tu HDK puede ser auto detectado, así que no vas a necesitar editar ninguna configuración, salvo que desees conectar dispositivos de entrada adicionales.
+
+Hay dos formas de obtener el OSVR Server: el instalador y las "build snapshots". Ya que actualmente el instalador no se actualiza automáticamente , la mejor manera es bajar un "snapshot" de OSVR Core, vinculado desde [Using OSVR][using]. Si usas una versión de 64 bits de Windows, tanto la de 32 o la de 64 bits funcionarán ( y serán compatibles con aplicaciones de 32 y 64 bits), así que sólo elige una. ( Usuarios de Linux: favor de ver [instrucciones de compilación](../Installing/Linux-Build-Instructions.md) en este repositorio.)
+
+En cualquier caso, ejecutar `osvr_server` debe abrir una ventana de comandos con algunos mensajes. Si todo funciona bien, verás una linea que dice :
+
+```
+Added device: com_osvr_Multiserver/OSVRHackerDevKit0
+```
+
+Si te encuentras en Linux o Mac OS X y no observas esta linea, debes referirte a [known issues].
+
+Puedes minimizar esta ventana, pero asegurate de mantenerla corriendo mientras uses aplicaciones para OSVR.
+
+[OSVR-Core]: https://github.com/OSVR/OSVR-Core/
+[using]: http://osvr.github.io/using/
+[known issues]: ../Installing/Linux-Build-Instructions.md#known-issues-temporary
+
+### Ajuste de Óptica (HDK 1.0, 1.1, 1.2)
+[[assets/HDK-optics-adjustment.png]]
+
+Este diagrama del ajuste de óptica ([[printable full-page PDF here|assets/HDK-optics-adjustment.pdf]]) muestra cuales son los ajustes. Querrás hacer los ajustes mientras tengas puesto el visor con una imagen en pantalla, pero con un ojo a la vez ( cierra uno a la vez ). Puedes usar tus anteojos/gafas si los necesitas para estimar donde quieres comenzar el control de foco, y luego ajustar el IPD hasta que las lentes se sientan centradas con tu ojo y toda la pantalla se ve igualmente nítida.
+
+### Ajuste de Óptica (HDK 1.3)
+
+Los deslizadores bajo las lentes del HDK 1.3 ajustan el foco en diópteras. Si normalmente usas anteojos/gafas, es posible que con el ajuste de foco no las necesites y puedas lograr una imágen nítida. De lo contrario, ajusta hasta que veas una imágen nítida con ambos ojos, seguramente cuando ambos ojos se encuentren cerca de la marca etiquetada 0.
+
+
+## Software
+
+### Visor de Seguimiento ( Tracker Viewer )
+La primera aplicación que sugerimos probar no es glamorosa, pero es útil para chequear y asegurarse de que las cosas funcionen. En [Using OSVR][using] encontrarás un enlace de edscarga para el OSVR Tracker Viewer. Descarga y ejecutalo ( ¡Con el OSVR Server corriendo! ) y verás una pequeña ventana con unas flechas 3D. Si eres conocedor de gráficos 3D o de VR, probablemente deduzcas lo que ves y lo que significa, pero la parte importante en general es verificar que las pequeñas flechas en el centro se mueven cuando rotas el HDK. ( Puedes hacer click derecho y arrastrar para hacer zoom)
+
+Por supuesto puedes ignorar este paso, pero si tienes problemas, alguien te preguntará probablemente lo que ves en el Tracker Viewer.
+
+
+### La Demo "Palace" ( Palacio )
+
+La Demo Palace [OSVR Unity Palace Demo](https://github.com/OSVR/OSVR-Unity-Palace-Demo/releases) [(source repo)](https://github.com/OSVR/OSVR-Unity-Palace-Demo) es un entorno visualmente rico para observar y explorar usando dispositivos soportados por OSVR, incluyendo el HDK. EL primer vínculo contiene descargas para el binario para Windows: sólo descarga y ejecuta ( ¡Con el OSVR Server corriendo! ), y si lo deseas puedes usar un comando de juego o el teclado más el mouse. En la pantalla de inicio puedes decidir que pantalla está configurada como tu HDK.
+
+Recuerda que esta aplicación, como todas las aplicaciones Unity, si la ventana pierde el foco, la aplicación se congela, la mayoría de las veces se resuelve clickeando dentro de la ventana nuevamente.
+
+## ¡Ayuda! ( Asume que el lenguaje del soporte es el Inglés )
+
+Si experimentas problemas de hardware o software en general, abre un ticket de ayuda en [OSVR Support](http://support.osvr.com).
+
+Si estás interesado en desarrollar software para OSVR o contribuir de alguna forma, favor de ver el [Developer Portal at osvr.github.io](http://osvr.github.io) para unirte al desarrollo/lista de correo, y ver la lista de proyectos y su información para desarrolladores.
+
+Los tickets de soporte son monitoreados por múltiples personas así que serán atendidos con cuidado por la mejor persona disponible y preparada para responder tu pregunta. GitHub y la lista de correo son las principales formas para contactarse con los desarrolladores que contribuyen con OSVR.
+
+- No es recomendado hacer preguntas sobre problemas o publicar preguntas en otros lugares ( foros/reddit, twitter, etc.) si deseas una respuesta "oficial" o de los desarrolladores, dado que no son los lugares que nosotros (desarrolladores/personas técnicas) necesariamente frecuenten diariamente o controlan las cuentas "oficiales" en esos lugares.
+
+- Como una regla general de comunidades de open-source, y por ende en OSVR también, es usualmente considerado descortés enviar un e-mail a un desarrollador personalmente con una pregunta. Entre otras razones, sólo le permite a una persona atender tu pregunta ( cuando puede haber otras que podrían hacerlo, e incluso mejor) y no produciría un intercambio útil disponible en los archivos públicos. ( No te sorprendas si tu e-mail es republicado como un ticket de soporte ).
