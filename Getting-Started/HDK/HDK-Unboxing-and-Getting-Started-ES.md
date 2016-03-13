@@ -115,3 +115,27 @@ Los tickets de soporte son monitoreados por múltiples personas así que serán 
 - No es recomendado hacer preguntas sobre problemas o publicar preguntas en otros lugares ( foros/reddit, twitter, etc.) si deseas una respuesta "oficial" o de los desarrolladores, dado que no son los lugares que nosotros (desarrolladores/personas técnicas) necesariamente frecuentamos diariamente, o controlamos las cuentas "oficiales" en esos lugares.
 
 - Como una regla general de comunidades de open-source, y por ende en OSVR también, es usualmente considerado descortés enviar un email a un desarrollador personalmente con una pregunta. Entre otras razones, sólo le permite a una persona atender tu pregunta ( cuando puede haber otras que podrían hacerlo, e incluso mejor) y no produciría un intercambio útil disponible en los archivos públicos. ( No te sorprendas si tu email es republicado como un ticket de soporte ).
+ 
+
+# Obteniendo Soporte
+## Soporte Gratis (Sólo Inglés)
+- Publica un issue en [OSVR Github projects](https://github.com/osvr) para que la comunidad lo trate.
+- Abre un ticket de soporte en [support portal](http://support.osvr.org) o un email a "support at osvr.org" para que los core developers lo traten.
+- [Visita las salas de chat del desarrollo de OSVR](https://gitter.im/orgs/OSVR/rooms)
+
+## Soporte Pago (Sólo Inglés)
+Algunas compañías como [Sensics](http://sensics.com/contact-us/) proveen soporte premium para OSVR, incluyendo soporte para teléfonos, ingeniería de sistemas, creación de drivers o ayuda para la integración. Si necesitas soporte más allá de lo que puede proveer la comunidad gratuitamente, considera contactar al soporte premium.
+
+# Participar (Sólo Inglés)
+Una lista de salas para desarrolladores se encuentra [aquí](https://gitter.im/orgs/OSVR/rooms)
+
+Algunas salas existentes:
+- [General subjects](https://gitter.im/OSVR/OSVR-General)
+- [Unity](https://gitter.im/OSVR/OSVR-Unity)
+- [Unreal](https://gitter.im/OSVR/OSVR-Unreal)
+- [SteamVR](https://gitter.im/OSVR/SteamVR-OSVR)
+- [OSVR Core](https://gitter.im/OSVR/OSVR-Core)
+
+[Tracker de issues combinado OSVR](https://waffle.io/osvr/osvr-core)
+
+[Mapa de proyectos OSVR](http://osvr.github.io/contributing/)
