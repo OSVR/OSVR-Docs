@@ -19,4 +19,4 @@ The user can control which of these modes is being used using the [OSVR HDK Conf
 
 You can configure the OLED persistence settings through a terminal port or the [OSVR Control utility](../Utilities/OSVRControl.md)
 
-![](file:///D:/GitHub/OSVR-Docs/Configuring/images/OSVRControl.png)
+![](http:/GitHub/OSVR-Docs/Configuring/images/OSVRControl.png)
