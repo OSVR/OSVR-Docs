@@ -103,6 +103,8 @@ Note that in this application, as with all Unity applications, if you "click awa
 
 ## Help!
 
+[Custom Google Search for the OSVR project](https://cse.google.com/cse/publicurl?cx=016285390483464504735:ifzwvrb3lp4)
+
 If you're having hardware or software problems in general, just open a help ticket with [OSVR Support](http://support.osvr.com).
 
 If you'd like to develop OSVR software or contribute in some way, please see the [Developer Portal at osvr.github.io](http://osvr.github.io) to join the development discussion/mailing list, and see the list of projects and their contribution information.
