@@ -1,5 +1,7 @@
 # OSVR Developer Documentation
 
+
+
 # Introduction to OSVR
 - [Introduction to OSVR](http://osvr.github.io/whitepapers/introduction_to_osvr/)
 - [OSVR feature list](featurelist.md)
@@ -106,6 +108,10 @@ if no parameter is specified, a default file is used.
 - Additional development priorities suggested by the core OSVR team can be [found here](Roadmap/additional.md).
 
 # Getting Support
+
+## Search
+[Custom Google Search for the OSVR project](https://cse.google.com/cse/publicurl?cx=016285390483464504735:ifzwvrb3lp4)
+
 ## Free support
 - Post an issue on the [OSVR Github projects](https://github.com/osvr) to be addressed by the OSVR community
 - Open a support ticket on the [support portal](http://support.osvr.org) (or email "support at osvr.org") to be addressed by core developers
