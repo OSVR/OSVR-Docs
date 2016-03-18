@@ -65,7 +65,7 @@ The HDK firmware can be upgraded on Linux or Mac OS X, but the process hasn't be
 ### Get OSVR Server
 OSVR Server is part of the OSVR software framework, and provides the system for accessing device data, configuring peripherals, etc. The HDK drivers come bundled in the main OSVR Core package (which includes the server), and your HDK can be auto-detected, so you won't need to edit any config files unless you want to connect additional input devices.
 
-There are two ways of getting the OSVR Server: the installer and build snapshots. Since the installer is not currently automatically updated, the best way is to download an OSVR Core snapshot, linked from the [Using OSVR][using] page. If you're using a 64-bit version of Windows, either 32 or 64 bit will work (and be compatible with both 32 and 64-bit applications), so just pick one.  (Linux users: please see the  [build instructions](../Installing/Linux-Build-Instructions.md) in this repository.)
+There are two ways of getting the OSVR Server: the installer and build snapshots. Both can be obtained from the [Using OSVR][using] page. The installer is more convenient, while the build snapshots are updated somewhat more frequently. Most users will prefer the OSVR Runtime for Windows installer. Developers should select the OSVR SDK for Windows. If you're using a 64-bit version of Windows, either 32 or 64 bit will work (and be compatible with both 32 and 64-bit applications), so just pick one.  (Linux users: please see the  [build instructions](../Installing/Linux-Build-Instructions.md) in this repository.)
 
 In any case, running the `osvr_server` application should open a command-line window displaying some messages. If everything is working right, you'll see a line that says something like:
 
