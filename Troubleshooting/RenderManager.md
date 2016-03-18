@@ -1,3 +1,7 @@
+## GPU Drivers
+- NVIDIA : 362.00 or earlier. 364.xx not working as of 18 March 2016.
+- AMD : No details yet.
+
 ## Extended desktop is visible, unable to enter direct mode
 - (I know this sounds boilerplate, but it works reliably on older versions of the OSVR HDK.) Unplug the USB, HDMI, and wall-power connectors from the HDK.  Plug in the wall power.  Plug in the USB connector.  Wait 10 seconds for the devices to be recognized.  Plug in the HDMI connector.
 - Verify that your HMD is supported by RenderManager. At present (Jan 2016), the OSVR HDK, Vuzix iWear 720, and Raw VRPN Oculus Rift DK2 are supported.
