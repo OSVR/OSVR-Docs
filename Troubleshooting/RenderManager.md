@@ -1,4 +1,4 @@
-## GPU Drivers
+## Compatible GPU Drivers
 - NVIDIA : 362.00 or earlier. 364.xx not working as of 18 March 2016.
 - AMD : 16.2 or earlier as of 18 March 2016.
 
