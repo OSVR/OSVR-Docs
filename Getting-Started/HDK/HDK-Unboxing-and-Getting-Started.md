@@ -36,6 +36,9 @@ If you're on Windows, there's a driver pack installer that can improve your expe
 
 You can get the latest release here: <https://github.com/OSVR/OSVR-HDK-Windows-Drivers/releases>. Download and install it before moving on.
 
+### GPU Drivers
+Check [RenderManager Troubleshooting](../../Troubleshooting/RenderManager.md) for latest tested drivers.
+
 ### Check/update firmware
 There are several parts of the system that have firmware that can be updated.
 
