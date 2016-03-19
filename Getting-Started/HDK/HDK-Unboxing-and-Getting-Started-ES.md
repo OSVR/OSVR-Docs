@@ -37,6 +37,9 @@ Si te encuentras en Windows, hay un instalador del pack de drivers que puede mej
 
 Puedes encontrar la última versión en <https://github.com/OSVR/OSVR-HDK-Windows-Drivers/releases>. Descarga e instala antes de continuar.
 
+### Drivers de Video
+Chequea [RenderManager Troubleshooting](../../Troubleshooting/RenderManager.md) para ver los últimos drivers testeados.
+
 ### Verifica/Actualiza el firmware
 
 Hay varias partes del sistema que tienen firmware que puede ser actualizado.
