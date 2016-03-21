@@ -68,7 +68,7 @@ The HDK firmware can be upgraded on Linux or Mac OS X, but the process hasn't be
 ### Get OSVR Server
 OSVR Server is part of the OSVR software framework, and provides the system for accessing device data, configuring peripherals, etc. The HDK drivers come bundled in the main OSVR Core package (which includes the server), and your HDK can be auto-detected, so you won't need to edit any config files unless you want to connect additional input devices.
 
-There are two ways of getting the OSVR Server: the installer and build snapshots. Both can be obtained from the [Using OSVR][using] page. The installer is more convenient, while the build snapshots are updated somewhat more frequently. Most users will prefer the OSVR Runtime for Windows installer. Developers should select the OSVR SDK for Windows. If you're using a 64-bit version of Windows, either 32 or 64 bit will work (and be compatible with both 32 and 64-bit applications), so just pick one.  (Linux users: please see the  [build instructions](../Installing/Linux-Build-Instructions.md) in this repository.)
+There are two ways of getting the OSVR Server: the installer and build snapshots. Both can be obtained from the [Using OSVR][using] page. The installer is a more convenient option that bundles latest OSVR-Core snapshot, OSVR tools and documentation, while build snapshots allow to get various components individually. Most users will prefer the [OSVR Runtime][osvr-runtime] for Windows installer. Developers should select the [OSVR SDK][osvr-sdk] for Windows installer which contains additional content and tools necessary for OSVR development. If you're using a 64-bit version of Windows, either 32 or 64 bit will work (and be compatible with both 32 and 64-bit applications), so just pick one.  (Linux users: please see the  [build instructions](../Installing/Linux-Build-Instructions.md) in this repository.)
 
 In any case, running the `osvr_server` application should open a command-line window displaying some messages. If everything is working right, you'll see a line that says something like:
 
@@ -82,6 +82,8 @@ You can minimize this window, but make sure to keep it running as long as you'll
 [OSVR-Core]: https://github.com/OSVR/OSVR-Core/
 [using]: http://osvr.github.io/using/
 [known issues]: ../Installing/Linux-Build-Instructions.md#known-issues-temporary
+[osvr-runtime]: http://access.osvr.com/binary/osvr-runtime-installer
+[osvr-sdk]: http://access.osvr.com/binary/osvr-sdk-installer
 
 ### Adjust the Optics (HDK 1.0, 1.1, 1.2)
 [[assets/HDK-optics-adjustment.png]]
