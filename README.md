@@ -19,13 +19,19 @@
 - [HDK Unboxing and Getting Started (SPANISH)](Getting-Started/HDK/HDK-Unboxing-and-Getting-Started-ES.md)
 
 ## Installing OSVR
+
 - [Windows](Getting-Started/Installing/windows.md)
+  - Minimum recommended version : Windows Vista SP1 or later
   - [Download pre-compiled binaries and drivers](http://osvr.github.io/using/)
   - [Install and test RenderManager](installing/RenderManager.md)
 - [Linux](Getting-Started/Installing/Linux-Build-Instructions.md)
+  - Minimum recommended version : Debian Jessie or equivalent ( Ubuntu 15.04+ for example )
   - [Very generic instructions](Getting-Started/Installing/linux.md)
 - [Android](https://github.com/OSVR/OSVR-Android-Build#readme)
 - [OS X](Getting-Started/Installing/osx.md)
+  - Minimum recommended version : El Capitan
+
+Note : It can be used in earlier versions but might require compilation and tweaking.
 
 ## Setting the OSVR_SERVER_ROOT environment variable
 - OSVR server auto-start functionality in ClientKit (Windows only for now) currently relies on the OSVR_SERVER_ROOT environment variable to find the server you would like to have launch. Install the [OSVR Runtime](http://osvr.github.io/using/), then set the OSVR_SERVER_ROOT environment variable to C:/Program Files/OSVR/Runtime/Server (for 64-bit) or C:/Program Files (x86)/OSVR/Runtime/Server (for 32-bit).
