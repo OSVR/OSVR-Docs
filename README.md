@@ -19,13 +19,17 @@
 - [HDK Unboxing and Getting Started (SPANISH)](Getting-Started/HDK/HDK-Unboxing-and-Getting-Started-ES.md)
 
 ## Installing OSVR
+
 - [Windows](Getting-Started/Installing/windows.md)
+  - Minimum recommended version : Windows Vista SP1.
   - [Download pre-compiled binaries and drivers](http://osvr.github.io/using/)
   - [Install and test RenderManager](installing/RenderManager.md)
 - [Linux](Getting-Started/Installing/Linux-Build-Instructions.md)
+  - Minimum recommended version : Debian Jessie or equivalent ( Ubuntu 15.04+ for example )
   - [Very generic instructions](Getting-Started/Installing/linux.md)
 - [Android](https://github.com/OSVR/OSVR-Android-Build#readme)
 - [OS X](Getting-Started/Installing/osx.md)
+  - Minimum recommended version : El Capitan
 
 ## Running the OSVR Server
 Running the OSVR server just requires passing it a configuration file. For example:
