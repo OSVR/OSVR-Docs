@@ -4,6 +4,8 @@ OSVR supports using your HTC Vive and its controllers to use any OSVR software, 
 
 The [OSVR-Vive](https://github.com/OSVR/OSVR-Vive) plugin and tools provide for access to the Vive hardware through OSVR.
 
+[Download pre-compiled OSVR-Vive plugin binaries here!](http://access.osvr.com/binary/vive)
+
 ## Compatibility
 While the drivers should be compatible with all Vive family devices, it has only been tested so far on the HTC Vive PRE (not the earlier Developer Edition). If you have one of these early devices, please consider helping out by testing and reporting back how it works!
 
