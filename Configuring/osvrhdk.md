@@ -1,3 +1,29 @@
+# OSVR HDK 1.x
+## OSVR Server Configs
+
+The default server configuration on Windows is suitable for an HDK 1.3 or 1.4, optionally using video-based (positional) tracking fused with IMU (orientation-only) sensor data, running in direct mode: it's a copy of the `osvr_server_config.HDK13DirectMode.sample.json` file from the `sample-configs` directory.
+
+### Improved distortion correction
+If you're using applications that have been built with RenderManager versions 0.6.40 or newer, you may choose to use `osvr_server_config.HDK13DirectModeMesh.sample.json` instead - it is the same except it uses a built-in mesh distortion rather than a polynomial function for distortion correction, which results in a more accurate display.
+
+### Non-direct mode
+The similarly named sample configs
+
+- `osvr_server_config.HDK13ExtendedPortrait.sample.json`
+- `osvr_server_config.HDK13ExtendedPortraitMesh.sample.json`
+- `osvr_server_config.HDK13ExtendedLandscape.sample.json`
+
+will work if you cannot use Direct Mode - the same caveat as with direct mode above applies if you wish to use the "mesh" config. Note that you may need to modify the `sample-configs/renderManager.extended.portrait.json` or `sample-configs/renderManager.extended.landscape.json` configuration files, respectively, to set `xPosition` and `yPosition` of where the HDK screen starts on your desktop.
+
+### HDK 1.2 and earlier
+HDK versions 1.2 and earlier can use the config files named identically to those for the 1.3 except with `12` replacing `13`:
+
+- `osvr_server_config.HDK12DirectMode.sample.json`
+- `osvr_server_config.HDK12ExtendedPortrait.sample.json`
+- `osvr_server_config.HDK12ExtendedLandscape.sample.json`
+
+There is no mesh variant for the 1.2 and earlier as the optics module on these versions does not require it.
+
 # Video modes
 ## Input resolutions
 The OSVR HDK supports two input resolutions:
