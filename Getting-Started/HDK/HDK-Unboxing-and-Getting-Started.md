@@ -15,7 +15,7 @@ The main exterior difference between the 1.3 and preceding versions is the adjus
 Additionally, there are some differences generally noted between the chipsets shipped in the belt boxes with 1.2 units and 1.3 units, so once you have the driver pack installed (if you're using Windows), that can also help remind you, but the mechanical differences are the most reliable.
 
 ## Caveats/Limitations
-- The current default configuration file on Windows assumes an HDK 1.3, direct mode rendering, and fused IMU and video-based (aka positional) tracking. If you are using a 1.2 (thumbscrew-adjusters on the lenses, not sliders), or can't/don't want to use direct mode, you'll want to switch config files. There are config files with self-documenting names included.
+- The current default configuration file on Windows assumes an HDK 1.3, direct mode rendering, and fused IMU and video-based (aka positional) tracking. If you are using a 1.2 (thumbscrew-adjusters on the lenses, not sliders), or can't/don't want to use direct mode, you'll want to switch config files. There are config files with self-documenting names included - for something more substantial than "filenames", see [Configuring the OSVR HDK](../Configuring/osvrhdk.md).
 - The OSVR Server currently shows a console window that can be minimized, but should not be closed while you're using OSVR applications. A more appealing or invisible interface is coming.
 
 ## Setup
@@ -84,6 +84,9 @@ You can minimize this window, but make sure to keep it running as long as you'll
 [known issues]: ../Installing/Linux-Build-Instructions.md#known-issues-temporary
 [osvr-runtime]: http://access.osvr.com/binary/osvr-runtime-installer
 [osvr-sdk]: http://access.osvr.com/binary/osvr-sdk-installer
+
+### Configuring the OSVR Server for your HDK
+The default configuration should work for HDK 1.3/1.4 users with systems capable of direct mode, but there are other configuration options. Additionally, there's a configuration tool for the HMD itself that can allow you to customize things further.  See [Configuring the OSVR HDK](../Configuring/osvrhdk.md) for details.
 
 ### Adjust the Optics (HDK 1.0, 1.1, 1.2)
 ![](HDK-optics-adjustment.png)
