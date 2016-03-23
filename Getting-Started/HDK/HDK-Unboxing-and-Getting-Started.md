@@ -15,7 +15,7 @@ The main exterior difference between the 1.3 and preceding versions is the adjus
 Additionally, there are some differences generally noted between the chipsets shipped in the belt boxes with 1.2 units and 1.3 units, so once you have the driver pack installed (if you're using Windows), that can also help remind you, but the mechanical differences are the most reliable.
 
 ## Caveats/Limitations
-- The current default configuration file on Windows assumes an HDK 1.3, direct mode rendering, and fused IMU and video-based (aka positional) tracking. If you are using a 1.2 (thumbscrew-adjusters on the lenses, not sliders), or can't/don't want to use direct mode, you'll want to switch config files. There are config files with self-documenting names included.
+- The current default configuration file on Windows assumes an HDK 1.3, direct mode rendering, and fused IMU and video-based (aka positional) tracking. If you are using a 1.2 (thumbscrew-adjusters on the lenses, not sliders), or can't/don't want to use direct mode, you'll want to switch config files. There are config files with self-documenting names included - for something more substantial than "filenames", see [Configuring the OSVR HDK](../Configuring/osvrhdk.md).
 - The OSVR Server currently shows a console window that can be minimized, but should not be closed while you're using OSVR applications. A more appealing or invisible interface is coming.
 
 ## Setup
@@ -75,7 +75,7 @@ In any case, running the `osvr_server` application should open a command-line wi
 ```
 Added device: com_osvr_Multiserver/OSVRHackerDevKit0
 ```
-If you are on Linux on Mac and do not get this output line, refer to the [known issues].
+If you are on Linux or Mac and do not get this output line, refer to the [known issues].
 
 You can minimize this window, but make sure to keep it running as long as you'll be using OSVR applications.
 
@@ -85,14 +85,18 @@ You can minimize this window, but make sure to keep it running as long as you'll
 [osvr-runtime]: http://access.osvr.com/binary/osvr-runtime-installer
 [osvr-sdk]: http://access.osvr.com/binary/osvr-sdk-installer
 
-### Adjust the Optics (HDK 1.0, 1.1, 1.2)
-[[assets/HDK-optics-adjustment.png]]
+### Configuring the OSVR Server for your HDK
+The default configuration should work for HDK 1.3/1.4 users with systems capable of direct mode, but there are other configuration options. Additionally, there's a configuration tool for the HMD itself that can allow you to customize things further.  See [Configuring the OSVR HDK](../Configuring/osvrhdk.md) for details.
 
-This diagram of HDK optics adjustments ([[printable full-page PDF here|assets/HDK-optics-adjustment.pdf]]) shows what the adjustments are. You'll want to adjust them while wearing the display and with an image displayed on the screen (plugged in, etc.), but one eye at a time (close the other eye). You can use your glasses (or lack thereof) to estimate approximately where you'll want to start the focus control at, then adjusting the IPD until the lens feels and looks "centered" with your eye and all parts of the screen are equally sharp.
+### Adjust the Optics (HDK 1.0, 1.1, 1.2)
+![](HDK-optics-adjustment.png)
+
+This diagram of HDK optics adjustments ([printable full-page PDF here](HDK-optics-adjustment.pdf]) shows what the adjustments are. You'll want to adjust them while wearing the display and with an image displayed on the screen (plugged in, etc.), but one eye at a time (close the other eye). You can use your glasses (or lack thereof) to estimate approximately where you'll want to start the focus control at, then adjusting the IPD until the lens feels and looks "centered" with your eye and all parts of the screen are equally sharp.
 
 ### Adjust the Optics (HDK 1.3)
 
 The sliders on the bottom of the 1.3 adjust focus in diopters. If you normally wear glasses, you may be able to take them off and adjust the focus sliders instead to see a sharp image. Otherwise, just adjust them until you see a sharp image in both eyes, likely when both eyes are around the tick-mark labeled 0.
+
 
 ## Software
 
