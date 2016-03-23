@@ -98,7 +98,7 @@ if no parameter is specified, a default file is used.
 - [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md)
   - [Tutorial video](https://www.youtube.com/watch?v=u4Y9pUisL1M)
   - [Additional Documentation](https://github.com/OSVR/OSVR-Unreal/blob/master/Documentation.md)
-- [OpenVR/SteamVR](https://gitter.im/OSVR/SteamVR-OSVR)
+- [OpenVR/SteamVR](https://github.com/OSVR/SteamVR-OSVR)
 - [Blender](https://github.com/BlendOSVR/OSVR-Blender)
 - WebVR
 - CryEngine
