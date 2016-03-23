@@ -32,7 +32,7 @@ The OSVR HDK supports two input resolutions:
   - When you want to mirror the desktop
   - When you want to use a wireless video link that does not support 1080x1920 resolution
 
-The HDK reports back using an HID message whether it is detecting video at all, and whether it is receiving 1920x1080 or 1080x1920. See report format in the [HID protocol definition for the OSVR HDK](../Developing/OSVRhdk.md)
+The HDK reports back using an HID message whether it is detecting video at all, and whether it is receiving 1920x1080 or 1080x1920. See report format in the [HID protocol definition for the OSVR HDK](../Developing/OSVRhdk.md).  There is also a ["HDK Video Status Tool"](https://github.com/sensics/OSVR-HDK-Video-Status#readme) utility ([Windows binaries here](https://github.com/sensics/OSVR-HDK-Video-Status/releases)) that can display this data when OSVR Server is running.
 
 ### Side by side
 The OSVR HDK is usually driven by applications that generate different left and right eye imagery in side-by-side mode. However, it is sometimes useful to replicate the entire image over both eyes. For instance:
