@@ -75,7 +75,7 @@ In any case, running the `osvr_server` application should open a command-line wi
 ```
 Added device: com_osvr_Multiserver/OSVRHackerDevKit0
 ```
-If you are on Linux on Mac and do not get this output line, refer to the [known issues].
+If you are on Linux or Mac and do not get this output line, refer to the [known issues].
 
 You can minimize this window, but make sure to keep it running as long as you'll be using OSVR applications.
 
@@ -93,6 +93,7 @@ This diagram of HDK optics adjustments ([printable full-page PDF here](HDK-optic
 ### Adjust the Optics (HDK 1.3)
 
 The sliders on the bottom of the 1.3 adjust focus in diopters. If you normally wear glasses, you may be able to take them off and adjust the focus sliders instead to see a sharp image. Otherwise, just adjust them until you see a sharp image in both eyes, likely when both eyes are around the tick-mark labeled 0.
+
 
 ## Software
 
