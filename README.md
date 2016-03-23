@@ -33,10 +33,11 @@
 
 Note : It can be used in earlier versions but might require compilation and tweaking.
 
-## Setting the OSVR_SERVER_ROOT environment variable
-- OSVR server auto-start functionality in ClientKit (Windows only for now) currently relies on the OSVR_SERVER_ROOT environment variable to find the server you would like to have launch. Install the [OSVR Runtime](http://osvr.github.io/using/), then set the OSVR_SERVER_ROOT environment variable to C:/Program Files/OSVR/Runtime/Server (for 64-bit) or C:/Program Files (x86)/OSVR/Runtime/Server (for 32-bit).
-
 ## Running the OSVR Server
+### Setting the OSVR_SERVER_ROOT environment variable
+OSVR server auto-start functionality in ClientKit (Windows only for now) currently relies on the OSVR_SERVER_ROOT environment variable to find the server you would like to have launch. Install the [OSVR Runtime](http://osvr.github.io/using/), then set the OSVR_SERVER_ROOT environment variable to C:/Program Files/OSVR/Runtime/Server (for 64-bit) or C:/Program Files (x86)/OSVR/Runtime/Server (for 32-bit).
+
+### Server parameters
 Running the OSVR server just requires passing it a configuration file. For example:
 **osvr_server osvr_server_config.json**
 
