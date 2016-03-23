@@ -86,9 +86,9 @@ You can minimize this window, but make sure to keep it running as long as you'll
 [osvr-sdk]: http://access.osvr.com/binary/osvr-sdk-installer
 
 ### Adjust the Optics (HDK 1.0, 1.1, 1.2)
-[[assets/HDK-optics-adjustment.png]]
+![](HDK-optics-adjustment.png)
 
-This diagram of HDK optics adjustments ([[printable full-page PDF here|assets/HDK-optics-adjustment.pdf]]) shows what the adjustments are. You'll want to adjust them while wearing the display and with an image displayed on the screen (plugged in, etc.), but one eye at a time (close the other eye). You can use your glasses (or lack thereof) to estimate approximately where you'll want to start the focus control at, then adjusting the IPD until the lens feels and looks "centered" with your eye and all parts of the screen are equally sharp.
+This diagram of HDK optics adjustments ([printable full-page PDF here](HDK-optics-adjustment.pdf]) shows what the adjustments are. You'll want to adjust them while wearing the display and with an image displayed on the screen (plugged in, etc.), but one eye at a time (close the other eye). You can use your glasses (or lack thereof) to estimate approximately where you'll want to start the focus control at, then adjusting the IPD until the lens feels and looks "centered" with your eye and all parts of the screen are equally sharp.
 
 ### Adjust the Optics (HDK 1.3)
 
