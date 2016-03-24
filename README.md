@@ -34,6 +34,10 @@
 Note : It can be used in earlier versions but might require compilation and tweaking.
 
 ## Running the OSVR Server
+### Setting the OSVR_SERVER_ROOT environment variable
+OSVR server auto-start functionality in ClientKit (Windows only for now) currently relies on the OSVR_SERVER_ROOT environment variable to find the server you would like to have launch. Install the [OSVR Runtime](http://osvr.github.io/using/), then set the OSVR_SERVER_ROOT environment variable to C:/Program Files/OSVR/Runtime/Server (for 64-bit) or C:/Program Files (x86)/OSVR/Runtime/Server (for 32-bit).
+
+### Server parameters
 Running the OSVR server just requires passing it a configuration file. For example:
 **osvr_server osvr_server_config.json**
 
@@ -44,6 +48,7 @@ if no parameter is specified, a default file is used.
 - [Local and distributed client/server configurations](Configuring/LocalAndRemote.md)
 - Device-specific configuration
   - [OSVR HDK](Configuring/osvrhdk.md)
+  - [HTC Vive](Configuring/HTC-Vive.md)
   - [Oculus Rift](Configuring/oculus-rift.md)
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
 
@@ -93,7 +98,7 @@ if no parameter is specified, a default file is used.
 - [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md)
   - [Tutorial video](https://www.youtube.com/watch?v=u4Y9pUisL1M)
   - [Additional Documentation](https://github.com/OSVR/OSVR-Unreal/blob/master/Documentation.md)
-- [OpenVR/SteamVR](https://gitter.im/OSVR/SteamVR-OSVR)
+- [OpenVR/SteamVR](https://github.com/OSVR/SteamVR-OSVR)
 - [Blender](https://github.com/BlendOSVR/OSVR-Blender)
 - WebVR
 - CryEngine
