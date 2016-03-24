@@ -1,5 +1,10 @@
 # Installing OSVR for Windows
 
+Minimum recommended version : Windows Vista SP1 or later
+
+[Compatible GPU Drivers](/Troubleshooting/RenderManager.md#compatible-gpu-drivers)
+
+
 #### There are 32 and 64 bit installers available for OSVR Runtime and OSVR SDK.
 
 ## OSVR Runtime
