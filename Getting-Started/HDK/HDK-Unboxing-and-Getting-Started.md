@@ -20,6 +20,10 @@ Additionally, there are some differences generally noted between the chipsets sh
 
 ## Setup
 
+### Calibration
+Each time you switch places when using the HDK , you can do a little calibration for the internal sensors to prevent some drift.
+Simply plug the HDK to the computer, see if it's ON, and with the HDK in your hands move it in an 8 figure up and down facing forward. Repeat the 8 figure four times at least. There is no need to run any software for this calibration.
+
 ### Connect the HDK and IR Camera
 There are a few connections to make: the headset to the beltbox, power from the wall to the beltbox, and HDMI and USB between the beltbox and your computer. Order does not particularly matter. You'll want to make sure that you have the beltbox held or clipped in such a way that cables don't tug during use.
 
