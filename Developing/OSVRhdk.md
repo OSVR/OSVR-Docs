@@ -7,7 +7,7 @@ Protocol for it is as follows (in byte offsets):
 - 0:
   - Bits 0:3 : Report version number, currently 3
   - Version 3 only: bit 4: "1" if video is detected and "0" if not.
-  - Version 3 only: bit 5: "1" if portrait mode (1080x1920 video) is detected and "0" if landscape (1080x1920).
+  - Version 3 only: bit 5: "1" if portrait mode (1080x1920 video) is detected and "0" if landscape (1920x1080).
 - 1: message sequence number (8 bit)
 - 2: Unit quaternion i component LSB
 - 3: Unit quaternion i component MSB
