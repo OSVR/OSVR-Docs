@@ -6,7 +6,7 @@ This will describe the process to update the HDK firmware from CLI in Linux. Thi
 
 ## Requirements
 
-- [dfu-programmer](https://dfu-programmer.github.io/)
+- [dfu-programmer](https://dfu-programmer.github.io/) - version 1.72 or newer
   - [AUR package](https://aur.archlinux.org/packages/dfu-programmer/) - For Arch Linux users
 - [screen](https://www.gnu.org/software/screen/) - Included in many base installs
 - sha1sum - Included in many base installs
