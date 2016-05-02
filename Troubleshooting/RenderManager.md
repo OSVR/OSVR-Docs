@@ -1,11 +1,20 @@
 ## Compatible GPU Drivers
-- NVIDIA : 362.00 or earlier. 364.xx not working as of 18 March 2016.
+- NVIDIA : 362.xx preferred (362.00 for standard GeForce drivers - pre-364 for other hardware with different driver releases.) Some users have reported success with 364.72 (no earlier 364.xx driver is compatible) as of 1 May 2016, particularly with high-end GPUs, but others have reported failures solved by downgrading to 362.
 - AMD : 16.2 or earlier as of 18 March 2016.
+
+## General troubles with NVIDIA devices: clean install.
+A first line troubleshooting option is a clean-install of the NVIDIA drivers. Install the recommended NVIDIA drivers again, but choose "Custom" install, then check the box for a "Clean" install. This will remove any customized settings or profiles you may have created in the NVIDIA control panel (so if you did make any, you may want to record them or back them up), but it can also remove corrupted internal settings in the NVIDIA driver itself. When you re-install the drivers, try doing so without the HDK connected.
+
+Once you've done a clean reinstall, it will likely automatically put the HDK into direct mode when you plug it in, which means that Windows will likely not see it as a monitor and you'll only see black on the screen - use a tool to disable direct mode to check extended mode functionality.
+
+It is harmless, and in general, when possible recommended to do clean installs of NVIDIA drivers when you upgrade them as well.
 
 ## Extended desktop is visible, unable to enter direct mode
 - (I know this sounds boilerplate, but it works reliably on older versions of the OSVR HDK.) Unplug the USB, HDMI, and wall-power connectors from the HDK.  Plug in the wall power.  Plug in the USB connector.  Wait 10 seconds for the devices to be recognized.  Plug in the HDMI connector.
-- Verify that your HMD is supported by RenderManager. At present (Jan 2016), the OSVR HDK, Vuzix iWear 720, and Raw VRPN Oculus Rift DK2 are supported.
-- Verify that you have a supported graphics card. At present (Jan 2016), NVIDIA graphics cards with Gameworks VR are supported. HMD should be connected into a video port that directly goes into the NVIDIA device. If your video port goes into an Intel chip (e.g Intel Optimus configuration), direct mode will not work on that port.
+- Verify that your HMD is supported by RenderManager. At present (May 2016), the OSVR HDK, Vuzix iWear 720, HTC Vive/Vive Pre, and Oculus Rift DK2 are supported.
+- Verify that you have a supported graphics card. At present (May 2016):
+  - NVIDIA graphics cards with Gameworks VR/VRWorks are supported. (Generally - those that can run the latest driver series.) HMD should be connected into a video port that directly goes into the NVIDIA device. If your video port goes into an Intel chip (e.g some Intel Optimus configurations), direct mode will not work on that port. You can run the OSVR "DirectModeDebugging" tool to find out if your hardware configuration supports VRWorks - it will list near the beginning of its operation whether there are any connectors on your NVIDIA GPU.
+  - AMD LiquidVR DirectToDisplay capable GPUs are supported - generally, AMD "GCN" GPU cores.
 - Run 'EnableOSVRDirectMode' from the shortcuts created by the Render Manager.
 - If you are using an older OSVR HDK, try whitelisting your HMD using the whitelist shortcuts in the Render Manager installation. This  requires computer restart to take effect.
 
