@@ -44,6 +44,7 @@ Running the OSVR server just requires passing it a configuration file. For examp
 if no parameter is specified, a default file is used.
 
 ## Configuring OSVR
+- [Using the OSVR-Config utility](Configuring/OSVR-Config.md)
 - [Calibrating the video-based tracker](Getting-Started/HDK/Video-Based-Tracking-Calibration.md)
 - [Local and distributed client/server configurations](Configuring/LocalAndRemote.md)
 - Device-specific configuration
@@ -51,7 +52,6 @@ if no parameter is specified, a default file is used.
   - [HTC Vive](Configuring/HTC-Vive.md)
   - [Oculus Rift](Configuring/oculus-rift.md)
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
-- [Using the OSVR-Config utility](Configuring/OSVR-Config.md)
 
 ## Utilities
 - Bundled with OSVR-Core binary snapshots/included in the OSVR-Core source tree:
