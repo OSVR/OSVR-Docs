@@ -126,7 +126,7 @@ if no parameter is specified, a default file is used.
 
 ## Free support
 - Post an issue on the [OSVR Github projects](https://github.com/osvr) to be addressed by the OSVR community
-- Open a support ticket on the [support portal](http://support.osvr.org) (or email "support at osvr.org") to be addressed by core developers
+- Open a support ticket on the [support portal](http://support.osvr.com/) (or email "support at osvr.org") to be addressed by core developers
 - [Visit the OSVR development chat rooms](https://gitter.im/orgs/OSVR/rooms)
 
 ## Paid support
