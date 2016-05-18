@@ -23,7 +23,7 @@
 - [Windows](Getting-Started/Installing/windows.md)
   - Minimum recommended version : Windows Vista SP1 or later
   - [Download pre-compiled binaries and drivers](http://osvr.github.io/using/)
-  - [Install and test RenderManager](installing/RenderManager.md)
+  - [Install and test RenderManager](Installing/RenderManager.md)
 - [Linux](Getting-Started/Installing/Linux-Build-Instructions.md)
   - Minimum recommended version : Debian Jessie or equivalent ( Ubuntu 15.04+ for example )
   - [Very generic instructions](Getting-Started/Installing/linux.md)
