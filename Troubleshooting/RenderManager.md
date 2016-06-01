@@ -1,5 +1,16 @@
 ## Compatible GPU Drivers
-- NVIDIA : 362.xx preferred (362.00 for standard GeForce drivers - pre-364 for other hardware with different driver releases.) Some users have reported success with 364.72 (no earlier 364.xx driver is compatible) as of 1 May 2016, particularly with high-end GPUs, but others have reported failures solved by downgrading to 362.
+- NVIDIA:
+  - **Warning**: 367-series and newer drivers have an **added limitation from NVIDIA**: they disable "multi-GPU" (when one or more is not an NVIDIA GPU) capability for direct mode on a number of HMDs, including the HDK.
+    - This affects you if, for instance,
+      - You use a laptop with hybrid graphics, even with an NVIDIA GPU with a direct external graphics connector as well as integrated Intel graphics that previously supported NVIDIA direct mode
+      - You use a desktop Intel chip with the GPU enabled/in use in addition to a discrete NVIDIA card
+    - To work around this, you'll either need to:
+      - Disable the other GPU (if possible - e.g., on desktop)
+      - Stay with a pre-367 driver.
+    - For additional information on this, see, for example, the [Release notes for desktop drivers version 368.22](http://us.download.nvidia.com/Windows/368.22/368.22-win10-win8-win7-winvista-desktop-release-notes-updated.pdf)
+  - **365.xx** should work on all systems that 362 worked on - requires that applications be built with a post-March 2016 Render Manager, but provides some additional functionality over 362. 365.10 and 365.19 (GeForce) tested.
+  - Recommended to **skip 364.xx** releases - the earliest such release ever known to work (and capable of working - earlier versions were known to have bugs making them incompatible with direct mode) was 364.72, and it only worked on some systems.
+  - **362.xx** works well as a fallback even with applications using very old (pre-March 2016) Render Manager versions. (362.00 for standard GeForce drivers - pre-364 for other hardware with different driver releases.)
 - AMD : 16.2 or earlier as of 18 March 2016.
 
 ## General troubles with NVIDIA devices: clean install.
