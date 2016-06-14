@@ -76,7 +76,7 @@ Using direct rendering on a new HMD requires three things:
 
 - The display must be recognized as a DirectMode display by the vendor's driver.  This is handled differently by each vendor, and you should contact them directly to be added to their whitelists.
 
-Note that all non-DirectMode display features (including time warping, predictive tracking, and distortion correction) is available in RenderManager using the open-source portion of the library.  Asynchronous time warping is (as of 6/14/2016) only implemented on top of DirectMode.
+Note that all non-DirectMode display features (including time warping, predictive tracking, and distortion correction) are available in RenderManager using the open-source portion of the library.  Asynchronous time warping is (as of 6/14/2016) only implemented on top of DirectMode.
 
 ## Tracking and Status Reporting
 Your HMD presumably has tracking either integrated or attached. If it's an off-the-shelf tracker, then there's probably already support in OSVR for it via VRPN: see more on the [Compatibility page](http://osvr.github.io/compatibility/). A tracker for an HMD should provide the /me/head alias at the center point between the two eyes centers.
