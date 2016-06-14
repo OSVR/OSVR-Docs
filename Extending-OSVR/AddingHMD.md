@@ -68,7 +68,7 @@ A snippet from a configuration file that specifies general-polynomial-based dist
 ## Supporting Direct Rendering
 The final step is direct-to-HMD rendering: bypassing operating system and window management overhead, removing the display from being a part of the extended desktop, and drawing directly to it using the graphics driver. OSVR's RenderManager handles both non-direct advanced rendering (timewarp, advanced predistortion, etc.) available with just a regular display descriptor as above, as well as optional direct mode support, which is generally only available on some combinations of hardware vendors and software platforms.
 
-Using direct rendering ona new HMD requires three things: 
+Using direct rendering on a new HMD requires three things: 
 
 - Specify the vendor ID in three-letter format and construction of a RenderManager configuration file with that vendor ID and with screen resolution and rotatation that matches one of the modes supported by the HMD (ideally, the most-rapid rendering mode).  As of 6/14/2016, the OSVR team is finalizing the format for specifying arbitrary vendor IDs; the system currently does an internal mapping from vendor names to IDs.  To add such a mapping, you should edit the createRenderManager() function in RenderManagerBase.cpp to add another vendor-name mapping.  The vendor name should map to all display vendor IDs that you produce (see the OSVR HDK for an example of how to add more than one vendor ID).
 
