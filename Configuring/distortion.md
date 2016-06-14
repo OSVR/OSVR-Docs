@@ -149,4 +149,13 @@ An example output, which is a partial description of and HMD, follows.  It provi
 
 The RenderManager uses this set of unordered point samples to compute a mesh by using a bilinear fit to the nearest 3 non-coplanar points to determine each of the coordinates for each point in space that must be sampled to produce a mesh with the specified number of points.
 
-@todo Mesh
+## Built-in Distortion Meshes
+Distortion meshes for HDK 1.3 and HDK 2.0 have been built-in to RenderManager. They can be loaded by name in the "distortion" section of a display config. For example, to load the HDK 2.0 distortion mesh:
+```json
+"distortion": {
+				"type": "mono_point_samples",
+				"mono_point_samples_built_in": "OSVR_HDK_20_V1"
+			},
+```
+Note that OSVR_HDK_20_V1 is only available in RenderManager v00_06_43-93-g3a45de8 or later.
+For the HDK 1.3, the name of the mesh is "OSVR_HDK_13_V2" or "OSVR_HDK_13_V1". An example display descriptor with built-in mesh for HDK 1.3 can be found at https://github.com/OSVR/OSVR-Core/blob/master/apps/displays/OSVR_HDK_1_3_with_mesh.json.
