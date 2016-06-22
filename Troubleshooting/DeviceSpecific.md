@@ -16,7 +16,8 @@ Orient the headset so that it is sitting on each face of the cube sequentially. 
 
 ![HDK Cubes](./images/hdk_cubes_2.png)
 
-Hold the headset in each orientation for about 3-4 seconds.  Then when finished, try running OSVRTrackerView.exe.
+Hold the headset in each orientation for about 3-4 seconds. It doesn’t have to be perfectly aligned with the cube – just 4-6 unique orientations (the more variation in orientations between those 4-6 the better, so faces of a cube is a good way to think about it).  And it doesn’t matter what order you move them into. 
+When finished, try running OSVRTrackerView.exe.
 
 ![Fixed Tracker](./images/fixed_tracker.png)
  
