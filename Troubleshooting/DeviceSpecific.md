@@ -2,7 +2,7 @@
 
 ## HDK
 ### Skewed Tracker Orientation
-If the HDK tracker is skewed in a normal resting position, even after running osvr_reset_yaw.exe, it’s possible that the accelerometer is not calibrated well.
+If the HDK tracker is skewed in a normal resting position, even after running osvr_reset_yaw.exe, it’s possible that the accelerometer is not well calibrated.
 
 ![Skewed Tracker](./images/skewed_tracker.png)
 
