@@ -1,5 +1,30 @@
 # Device-specific information
 
+## HDK
+# Skewed Tracker Orientation
+If the HDK tracker is skewed in a normal resting position, even after running osvr_reset_yaw.exe, it’s possible that the accelerometer is not calibrated well.
+
+@todo -- add picture
+
+One parameter of accelerometers is called the Zero G Offset (ZGO).  This can vary from unit to unit and can change over time.  If you have a poorly calibrated accel ZGO, then it could look to the algorithm like it is slightly tilted.  The BNO070 has dynamic accelerometer calibration, but you have to induce certain motions for it to fully take effect. 
+
+The accelerometer will be calibrated after the device is moved into 4-6 unique orientations and held in each orientation for ~3-4 seconds.  One way to think about this is the “cube” method.  Imagine that the headset is a standard cube with 6 faces (Front, Back, Left, Right, Top, Bottom).
+
+@todo -- add picture
+
+Orient the headset so that it is sitting on each face of the cube sequentially.  For example, start with the device positioned normally (bottom face of the cube down).  Then orient it so that the right side of the cube is facing down.  Then continue through the rest of the faces of the cube.  Here’s a quick example:
+
+@todo -- add picture
+
+Hold the headset in each orientation for about 3-4 seconds.  Then when finished, try running OSVRTrackerView.exe.
+ 
+If the issue has gone away you can run the following COM port command via OSVR Control to force the calibration to save to flash (this will happen automatically after 5 minutes but it’s not a bad idea to force it to do so).
+ 
+#BDS
+ 
+It should say “DCD Saved” if successful.
+
+@todo -- add picture
 
 ## Razer Hydra
 
