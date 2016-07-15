@@ -146,7 +146,7 @@ It's not recommended to ask about problems or post questions elsewhere (forums/r
 
 As a general rule of open-source communities, and thus in OSVR as well, it's usually considered rude to email a developer personally with a question. Among other reasons, it only allows a single person to handle your question (when there may be others who could do so and perhaps better) and doesn't archive a potentially useful exchange in searchable archives. (Don't be surprised if your email gets forwarded to the support ticket system if you do this.)
 
-## More Useful Info
+## Additional Useful Info
 
 ### Identifying the device
 -- The HDK 1.2 and earlier have thumbscrew-adjusters underneath each eye, with pupil-distance and focus adjustment. This image is from a 1.1, but the mechanism on the 1.2 is effectively the same. ![HDK pre-1.3 optics adjustment knob](HDK11.jpg)
