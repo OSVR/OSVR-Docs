@@ -6,6 +6,7 @@
 
 ## Identifying Your OSVR Hardware Device
 * You can view schematic drawings and access 3D printer files for all OSVR HDK versions at https://github.com/OSVR/OSVR-HDK
+* The optics adjustment section at the end of this page also includes useful photos to help identify the device
 
 ## Setup
 ### Connect The OSVR HDK HMD And IR Camera
@@ -146,6 +147,11 @@ If you'd like to develop OSVR software or contribute in some way, please see the
 - As a general rule of open-source communities, and thus in OSVR as well, it's usually considered rude to email a developer personally with a question. Among other reasons, it only allows a single person to handle your question (when there may be others who could do so and perhaps better) and doesn't archive a potentially useful exchange in searchable archives. (Don't be surprised if your email gets forwarded to the support ticket system if you do this.)
 - 
 ## More Useful Info
+
+### Identifying the device
+-- The HDK 1.2 and earlier have thumbscrew-adjusters underneath each eye, with pupil-distance and focus adjustment. This image is from a 1.1, but the mechanism on the 1.2 is effectively the same. ![HDK pre-1.3 optics adjustment knob](HDK11.jpg)
+ -- The HDK 1.3 have simple sliders underneath each eye for focus adjustment (modified optics for a larger eyebox removed the need for adjustable pupil distance.). ![HDK 1.3 optics adjustment slider](HDK13-ID.jpg)
+ 
 ### Adjust the Optics (HDK 1.0, 1.1, 1.2)
 ![](HDK-optics-adjustment.png)
 
