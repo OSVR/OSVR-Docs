@@ -15,15 +15,15 @@ Enabling both client and server-side prediction at the same time will likely res
 ```json
 "prediction": {
 					"enabled": true,
-					"staticDelayMS": 29,
+					"staticDelayMS": 22,
 					"leftEyeDelayMS": 7.5,
 					"rightEyeDelayMS": 0,
 					"localTimeOverride": true
 			},
 ```
-"staticDelayMS" sets how many milliseconds ahead to predict.
+"staticDelayMS" sets how many milliseconds ahead to predict. Adjust this value to balance perceived latency and noise/accuracy.
 
-For HMDs with one physical display, it is often the case that the image for one eye appears with a delay of half a frame relative to the other eye. This is the case for HDK 1.4 or earlier. If each eye has its own display, set each eye delay to 0.
+For HMDs with one physical display, it is often the case that the image for one eye appears with a delay of half a frame relative to the other eye. This is the case for HDK 1.4 or earlier. If each eye has its own display, as is the case with HDK 2.0, set each eye delay to 0.
 
 ## Rendering optimzations
 For more information on rendering optimizations, see: https://github.com/sensics/OSVR-RenderManager/blob/master/doc/renderingOptimization.md
