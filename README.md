@@ -54,6 +54,7 @@ if no parameter is specified, a default file is used.
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
 
 ## Utilities
+- [OSVR-Central](Utilities/OSVRCentral.md)
 - Bundled with OSVR-Core binary snapshots/included in the OSVR-Core source tree:
   - [osvr_reset_yaw (e.g. "recenter")](http://resource.osvr.com/docs/OSVR-Core/OSVRResetYaw.html)
   - [osvr_print_tree](http://resource.osvr.com/docs/OSVR-Core/OSVRPrintTree.html)
