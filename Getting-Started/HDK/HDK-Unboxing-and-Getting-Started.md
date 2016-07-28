@@ -103,7 +103,7 @@ You can minimize this window, but make sure to keep it running as long as you'll
 [osvr-sdk]: http://access.osvr.com/binary/osvr-sdk-installer
 
 ### Configuring the OSVR Server for your HDK
-The default configuration should work for HDK 1.3/1.4 users with systems capable of direct mode, but there are other configuration options. Additionally, there's a configuration tool for the HMD itself that can allow you to customize things further.  See [Configuring the OSVR HDK](../Configuring/osvrhdk.md) for details.
+The default configuration should work for HDK 1.3/1.4 users with systems capable of direct mode, but there are other configuration options. Additionally, there's a configuration tool for the HMD itself that can allow you to customize things further.  See [Configuring the OSVR HDK](https://github.com/OSVR/OSVR-Docs/blob/master/Configuring/osvrhdk.md) for details.
 
 
 
