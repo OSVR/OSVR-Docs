@@ -10,7 +10,9 @@ You can use [Chocolatey][] (aka "choco") to install the dependencies/packages re
 
 ```cmd
 choco source add --name="osvr-deps" -s="https://www.myget.org/F/osvr-deps/"
-choco install -y cmake OpenCV
+choco install -y cmake
+choco install -y OpenCV -version 2.4.10.20150209
+choco pin add -name OpenCV
 ```
 
 and, depending on if you want to build 32-bit or 64-bit, add one or both of the following package names to that last install line or a new one: `boost-x86-msvc2013` (32-bit), `boost-x64-msvc2013` (64-bit)
