@@ -15,7 +15,7 @@ runtime and SDK installers, which can be downloaded from [OSVR website](http://o
 
 ##Screenshots
 
-![ConnectedDevicesScreen](ConnectedDevicesScreen.png "Connected devices")
-![DevToolsScreen](DevToolsScreen.png "Developer Tools")
-![ToolsScreen](ToolsScreen.png "Tools")
-![AboutScreen](AboutScreen.png "About OSVR-Central")
+![ConnectedDevicesScreen](ConnectedDevicesScreen.PNG "Connected devices")
+![DevToolsScreen](DevToolsScreen.PNG "Developer Tools")
+![ToolsScreen](ToolsScreen.PNG "Tools")
+![AboutScreen](AboutScreen.PNG "About OSVR-Central")
