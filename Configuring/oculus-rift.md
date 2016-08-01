@@ -1,7 +1,7 @@
 
 # Oculus Rift plugin
 
-The Oculus Rift plugin provides access to Oculus Rift trackers from OSVR applications. It makes use of the [Oculus VR SDK][https://developer.oculus.com/]. This plugin currently supports Oculus VR SDK versions 0.4.4-beta through 1.3.2-public.
+The Oculus Rift plugin provides access to Oculus Rift trackers from OSVR applications. It makes use of the [Oculus VR SDK][https://developer.oculus.com/]. This plugin currently supports Oculus VR SDK versions 0.4.4-beta through 1.6.0-public.
 
 ## Installing the Oculus Rift plugin
 

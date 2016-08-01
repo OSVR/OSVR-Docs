@@ -54,6 +54,7 @@ if no parameter is specified, a default file is used.
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
 
 ## Utilities
+- [OSVR-Central](Utilities/OSVRCentral.md)
 - Bundled with OSVR-Core binary snapshots/included in the OSVR-Core source tree:
   - [osvr_reset_yaw (e.g. "recenter")](http://resource.osvr.com/docs/OSVR-Core/OSVRResetYaw.html)
   - [osvr_print_tree](http://resource.osvr.com/docs/OSVR-Core/OSVRPrintTree.html)
@@ -97,7 +98,8 @@ if no parameter is specified, a default file is used.
   - [Palace demo and other Unity binaries](https://github.com/OSVR/OSVR-Unity-Palace-Demo/releases)
   - [Migrating Oculus Unity apps to OSVR](http://access.osvr.com/binary/download/misc_assets/Migrating%20Unity%20applications%20from%20Oculus%20to%20OSVR%20Mar-11-15.pdf)
 - [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md)
-  - [Tutorial video](https://www.youtube.com/watch?v=u4Y9pUisL1M)
+  - [Tutorial Video (Unreal Engine 4.12+)](https://www.youtube.com/watch?v=Co2IiLVS3r8&feature=youtu.be)
+  - [Tutorial video (Unreal Engine 4.11 or building from source)](https://www.youtube.com/watch?v=u4Y9pUisL1M)
   - [Additional Documentation](https://github.com/OSVR/OSVR-Unreal/blob/master/Documentation.md)
 - [OpenVR/SteamVR](https://github.com/OSVR/SteamVR-OSVR)
 - [Blender](https://github.com/BlendOSVR/OSVR-Blender)
