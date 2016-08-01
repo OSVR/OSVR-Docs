@@ -13,6 +13,9 @@
   - **362.xx** works well as a fallback even with applications using very old (pre-March 2016) Render Manager versions. (362.00 for standard GeForce drivers - pre-364 for other hardware with different driver releases.)
 - AMD : 16.2 or earlier as of 18 March 2016.
 
+## RenderManagerAMDD3D11::OpenDisplay(): Could not create Liquid VR device
+If you have previously installed an AMD card and then removed it, deleting the drivers, it sometimes leaves DLLs on the system.  RenderManager uses the presence of the DLL named amdlvr64.dll, which on some systems is located in C:\Windows\System32, to determine whether AMD's Liquid VR is available on the system.  If that DLL is present, it attempts to use it to open DirectMode, resulting in the error message above.  Some users have reported successful resolution of this issue by removing that DLL from their system when they do not have an AMD card installed.
+ 
 ## General troubles with NVIDIA devices: clean install.
 A first line troubleshooting option is a clean-install of the NVIDIA drivers. Install the recommended NVIDIA drivers again, but choose "Custom" install, then check the box for a "Clean" install. This will remove any customized settings or profiles you may have created in the NVIDIA control panel (so if you did make any, you may want to record them or back them up), but it can also remove corrupted internal settings in the NVIDIA driver itself. When you re-install the drivers, try doing so without the HDK connected.
 
