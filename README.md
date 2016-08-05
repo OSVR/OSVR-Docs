@@ -63,6 +63,7 @@ if no parameter is specified, a default file is used.
 - [TrackerViewer](https://github.com/OSVR/OSVR-Tracker-Viewer#readme)
   - [Additional Tracker Viewer documentation](http://osvr.github.io/doc/tracker-viewer/)
 - [OSVR Control](Utilities/OSVRControl.md)
+- [Updating OSVR HDK Positional Tracking IR board firmware](Utilities/HDKUpgradeIRBoardFirmware.md)
 - [Updating HDK Firmware from Linux](Utilities/UpdateHDKLinux.md)
 - [Distortionizer](https://github.com/OSVR/distortionizer#readme) helps measure distortion parameters for HMDs
 - [Latency tester](https://github.com/sensics/Latency-Test). Open-source Arduino-based latency tester
