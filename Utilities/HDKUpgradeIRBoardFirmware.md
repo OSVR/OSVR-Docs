@@ -2,11 +2,11 @@
 
 The OSVR HDK 1.2, 1.3, 1.4 and HDK 2 all have a similar electronics setup for their positional tracking infrared LEDs. There is a small circuit board inside the HMD (on the left as you look at the HMD from the front - below the external USB port) dedicated to driving these LEDs, with a separate STM8 microcontroller (also known as an MCU) that controls synchronizing the LEDs with the camera, pulse duration, pattern, and more.
 
-Unfortunately, there is no easy way to upgrade the firmware (and thus any of the parameters) on this microcontroller from the host computer over USB: the STM8 does not even connect to the main MCU of the HDK that provides the USB interface. However, the IR board has through-holes for a standard debug/programming header, and the programming tool used to flash a new firmware on the STM8 is readily available and inexpensive, so if you aren't afraid to solder (which you'll need to do unless you buy an official, large, round-ish ST/Link v2 programming tool direct from ST Micro and have an HDK 1.4 or 2, in which case you have a cable you can use), it's an achievable task.
+Unfortunately, there is no easy way to upgrade the firmware (and thus any of the parameters) on this microcontroller from the host computer over the HDK's normal USB connection : the STM8 does not even connect to the main MCU of the HDK that provides the USB interface. However, the IR board has through-holes for a standard debug/programming header, and the programming tool used to flash a new firmware on the STM8 is readily available and inexpensive, so if you aren't afraid to solder (which you'll need to do unless you buy an official, large, round-ish ST/Link v2 programming tool direct from ST Micro and have an HDK 1.4 or 2, in which case you have a cable you can use), it's an achievable task.
 
 ## Hardware Bits
 
-See the [Technique: How to add a IR board programming connector to OSVR HDK 1.2 1.3 1.4 2](https://www.ifixit.com/Guide/How+to+add+a+IR+board+programming+connector+to+OSVR+HDK+1.2+1.3+1.4+2/65821) iFixit guide for step-by-step instructions on opening your HDK and adding the programming connector.
+See the [Technique: How to add a IR board programming connector to OSVR HDK 1.2 1.3 1.4 2](https://www.ifixit.com/Guide/How+to+add+a+IR+board+programming+connector+to+OSVR+HDK+1.2+1.3+1.4+2/65821) iFixit guide for step-by-step instructions on opening your HDK and adding the programming connector. Note that this guide is community-editable, just like the documentation you're reading now, so feel free to pitch in if something can be clarified or improved!
 
 You will need an STM8 USB programmer compatible with the ST-Link v2: you can get one like that used in the instructions at the [Sensics OSVR Store](https://osvrstore.com/products/programming-tool-for-hdk-positional-tracking-ir-board).
 
@@ -35,15 +35,16 @@ Verify that you have the driver installed and that there are no errors in Device
 You may also want to consider [updating the ST-Link v2 firmware](http://www.st.com/content/st_com/en/products/embedded-software/development-tool-software/stsw-link005.html).
 If you saw an error, once you've double checked those items, you can just re-run `Program-IRFirmware.cmd` and see if it goes better.
 
-Once you're done programming the board, return to the iFixit guide for re-assembly tips.
+Once you're done programming the board, return to the guide hosted on iFixit for re-assembly tips.
 
 Note that the IR board does not need to be connected to anything but the programmer for the process to work, but it can be left attached to the rest of the HDK, so you can re-assemble the HDK and just open the faceplate and tilt out the connector for future programming if desired.
 
 ## Firmware Downloads
 
-- 4 August 2016: Substantially improves sync with camera firmware version 0007, especially during fast motion, improves range and reliability by masking troublesome beacons.
-	- Self-extracting 7z of firmware and tools for Windows: [IR-Board-Programmer-Bundle-20160804.exe](https://resource.osvr.com.s3.amazonaws.com/public_download/IRBoardFirmware/IR-Board-Programmer-Bundle-20160804.exe)
-	- Zip of firmware and tools for Windows: [IR-Board-Programmer-Bundle-20160804.zip](https://resource.osvr.com.s3.amazonaws.com/public_download/IRBoardFirmware/IR-Board-Programmer-Bundle-20160804.zip)
+See the [IR_LED_DRV Releases page](https://github.com/sensics/IR_LED_DRV/releases) for the latest firmware releases and changelogs.
+The `.zip` and the `.exe` that contain `bundle` in their names are most likely what you want (they contain both the firmware and the software required to flash it on to the microcontroller), just choose one: both contain the same files, just one is a self-extracting 7z file (smaller, executable), while the other is a common `.zip` format file (larger).
+
+The firmware is open-source (Apache 2.0 licensed): if you want to contribute, the project is here: <https://github.com/sensics/IR_LED_DRV>
 
 ## Firmware Tool Details
 
