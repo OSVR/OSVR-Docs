@@ -76,6 +76,7 @@ if no parameter is specified, a default file is used.
 - [Device-specific information](Troubleshooting/DeviceSpecific.md)
   - See also the HDK video status tool above in Utilities.
 - [Performance optimization using Event Tracing for Windows](http://osvr.github.io/presentations/20150901-Intro-ETW-OSVR/)
+- [Re-flash bootloader on OSVR HDK](Configuring\HDKBootloader.md)
 
 # Developing with OSVR
 - Setting up the development environment
