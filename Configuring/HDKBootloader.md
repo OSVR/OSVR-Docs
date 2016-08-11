@@ -1,5 +1,7 @@
 #Preparing HDK2 board to enter bootloader mode
 
+This guide is useful in case the HDK is completely unresponsive, does  not appears as a USB device and there is a desire to re-flash its bootloader so that new application software can be loaded
+
 ## Step 1: Connect programmer to HDK2 board
 
 Connect progammer such as [Atmel JTAGIce3](http://www.atmel.com/tools/JTAGICE3.aspx) to the programming port on the HDK board.
