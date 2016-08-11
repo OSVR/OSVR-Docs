@@ -1,6 +1,9 @@
 # Using the OSVR-Config Utility
 OSVR-Config is a utility installed along with the OSVR SDK or the OSVR Runtime installers, and requires one of those to be installed to work. Once installed, simply launch OSVR-Config.exe from the SDK directory to start the utility in your browser. OSVR-Config is Windows-only at the moment, but Mac and Linux versions are planned.
 
+### Tutorial Video
+A YouTube video demonstrating OSVR-Config exists [here](https://www.youtube.com/watch?v=yuTSr8JMPUI).
+
 ### OSVR_SERVER_ROOT Environment Variable
 In order for OSVR-Config to work, you need to define the `OSVR_SERVER_ROOT` environment variable to point to the `bin` folder of your current OSVR Runtime or OSVR SDK install directory. If you see this page, it means the environment variable is not set, and you'll need to set it before continuing:
 
