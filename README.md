@@ -93,7 +93,7 @@ if no parameter is specified, a default file is used.
 # Integrating with Game Engines
 
 - [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md)
-  - [Tutorial video](https://www.youtube.com/watch?v=TtLn6XpEisw)
+  - [Tutorial video](https://youtu.be/xSOq3bOBPxs)
   - [Unity VR demos](https://github.com/OSVR/Unity-VR-Samples) are OSVR versions of the standard VR demos that ship with Unity 5.3
   - [Palace demo](https://github.com/OSVR/OSVR-Unity-Palace-Demo) is a Unity demo illustrating how to use the Unity OSVR plugin
   - [Unity version of Palace demo](http://github.com/OSVR/OSVR-Unity-Palace-Demo/blob/androidPalace/README.md) including APK and compilation notes
