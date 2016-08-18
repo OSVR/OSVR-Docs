@@ -6,7 +6,7 @@ For non-Windows users, who therefore can't use the [OSVR-Control](OSVRControl.md
 Do not install HDK 1.x firmware on the HDK 2!
 Version numbers may look similar starting around 1.95, due to a common codebase, but substantial differences in the video signal path make them completely incompatible.
 
-- [1-96-HDK2SVR.hex]((http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-96-HDK2SVR.hex)
+- [1-96-HDK2SVR.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-96-HDK2SVR.hex)
 	- SHA-1 hash: `8d09f77edf5ce438d4361cddbf11c72bf4061dbf`
 	- 1.96 for dual-screen, 90Hz HDK2.
 	- Changes:
