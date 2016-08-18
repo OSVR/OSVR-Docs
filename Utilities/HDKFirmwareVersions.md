@@ -6,7 +6,14 @@ For non-Windows users, who therefore can't use the [OSVR-Control](OSVRControl.md
 Do not install HDK 1.x firmware on the HDK 2!
 Version numbers may look similar starting around 1.95, due to a common codebase, but substantial differences in the video signal path make them completely incompatible.
 
-- [1-95-HDK2.hex](https://resource.osvr.com.s3.amazonaws.com/public_download/FirmwareUpgrade/hdk-hex/1-95-HDK2.hex)
+- [1-96-HDK2SVR.hex]((http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-96-HDK2SVR.hex)
+	- SHA-1 hash: `8d09f77edf5ce438d4361cddbf11c72bf4061dbf`
+	- 1.96 for dual-screen, 90Hz HDK2.
+	- Changes:
+		- Uses `SVR` registered PNPID for monitor hardware ID for direct mode compatibility
+		- Improved EDID data.
+
+- [1-95-HDK2.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-95-HDK2.hex)
 	- SHA-1 hash: `000f3a17b5503d433e34f2642ab3b95c688398a3`
 	- 1.95 for dual-screen, 90Hz HDK2 (Do not install on HDK 1.x!)
 	- Earlier HDK 2 firmware version 1.01 is roughly equivalent to a 1.92 version, with some limitations.
@@ -20,6 +27,12 @@ Version numbers may look similar starting around 1.95, due to a common codebase,
 Do not install HDK 2 firmware on the HDK 1.x!
 Version numbers may look similar starting around 1.95, due to a common codebase, but substantial differences in the video signal path make them completely incompatible.
 
+- [1-96-OLED.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-96-OLED.hex)
+	- SHA-1 hash: `861e3e660c80195dc8962d9143ba7faca0746098`
+	- 1.96 for low-persistence OLED (HDK 1.3/1.4)
+	- Notable changes since 1.92:
+		- All known issues related to side-by-side mode have been fixed. You may need to toggle side-by-side mode once (`#fs` at the virtual USB serial port exposed by the HDK toggles between side-by-side and normal mode) to repair your saved setting. (This includes disabling HID-directed SBS mode, which was suspected to cause the problems related to SteamVR)
+		- USB reliability improvements.
 - [1-92-OLED.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-92-OLED.hex)
 	- SHA-1 hash: `3d0284110bba7b699a5ba47792d1faf23293ab7c`
 	- 1.92 for low-persistence OLED (HDK 1.3/1.4)
