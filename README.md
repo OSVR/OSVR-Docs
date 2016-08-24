@@ -121,9 +121,14 @@ if no parameter is specified, a default file is used.
 - Porting to a New Operating System
 
 # Roadmap
-- In September 2015, RoadToVR published an article by [Yuval Boger](https://twitter.com/osvrguy) of Sensics about the OSVR roadmap. It is an excellent starting point to understand the OSVR big picture and roadmap. [The article can be found here](http://www.roadtovr.com/osvr-roadmap-creating-an-ecosystem-of-interoperable-vr-hardware-and-software/).
+- [Aug 2016 article in RoadToVR on future plans for OSVR](http://www.roadtovr.com/osvr-co-founder-on-the-future-of-open-source-virtual-reality/)
+- In September 2015, RoadToVR published an article by [Yuval Boger](https://twitter.com/osvrguy) of Sensics about the [OSVR roadmap](http://www.roadtovr.com/osvr-roadmap-creating-an-ecosystem-of-interoperable-vr-hardware-and-software/). It is an excellent starting point to understand the OSVR big picture and roadmap. 
 - The [OSVR Waffle Board](Roadmap/waffle.md) contains an overview of issues currently in GitHub issue trackers for all OSVR framework projects.
 - Additional development priorities suggested by the core OSVR team can be [found here](Roadmap/additional.md).
+
+# Hacking the Hardware
+- [iFixit guides on various HDK 1.3/1.4 upgrades and repairs](https://www.ifixit.com/Device/Razer_OSVR_HDK_1.4)
+- [Replacement parts and other OSVR-related products](https://osvrstore.com/collections/frontpage)
 
 # Getting Support
 
