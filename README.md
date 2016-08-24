@@ -73,8 +73,10 @@ if no parameter is specified, a default file is used.
 ## Troubleshooting
 - [OSVR server](Troubleshooting/OSVRServer.md)
 - [Render Manager](Troubleshooting/RenderManager.md)
-- [Device-specific information](Troubleshooting/DeviceSpecific.md)
+- HDK troubleshooting
+  - [Skewed tracker orientation](Troubleshooting/SkewedTracker.md)
   - See also the HDK video status tool above in Utilities.
+- [Device-specific information](Troubleshooting/DeviceSpecific.md)
 - [Performance optimization using Event Tracing for Windows](http://osvr.github.io/presentations/20150901-Intro-ETW-OSVR/)
 - [Re-flash bootloader on OSVR HDK](Configuring/HDKBootloader.md)
 
