@@ -158,12 +158,18 @@ Some existing rooms:
 - VR Knowledge Nuggets
   - [Tracking](VR-Knowledge-Nuggets/tracking.md)
   - [Displays](VR-Knowledge-Nuggets/displays.md)
-- [The VRGuy's blog](http://www.vrguy.net) often covers OSVR-related topics and includes tutorials such as:
-  - [What is geometric distortion (and why should you care)?](http://vrguy.blogspot.com/2013/07/what-is-geometric-distortion-and-why.html)
+- [The Sensics insights page](http://sensics.com/insight) often covers OSVR-related topics and includes tutorials such as:
+  - [Key parameters in optical design](http://sensics.com/key-parameters-optical-designs/)
+  - [Common eye tracker configurations](http://sensics.com/the-three-and-a-half-configurations-of-eye-trackers/)
+  - [Understanding pixel density and eye-limiting resolutions](http://sensics.com/understanding-pixel-density-and-eye-limiting-resolution/)
+  - [Predictive tracking](http://sensics.com/understanding-predictive-tracking/)
+  - [Foveated rendering](http://sensics.com/converting-diagonal-field-of-view-and-aspect-ratio-to-horizontal-and-vertical-field-of-view/)
+  - [Asynchrnous timewarp](http://sensics.com/time-warp-explained/)
+  - [Geometric distortion](http://vrguy.blogspot.com/2013/07/what-is-geometric-distortion-and-why.html)
   - [Converting diagonal FOV and aspect ratio to horizontal and vertical FOV](http://vrguy.blogspot.com/2013/04/converting-diagonal-field-of-view-and.html)
   - [TV screen size vs. goggle field of view](http://vrguy.blogspot.com/2013/04/tv-screen-size-vs-goggle-field-of-view.html)
   - [How things work: the dual-elements optics of the OSVR HDK](http://vrguy.blogspot.com/2015/01/how-things-work-dual-element-optics-of.html)
-  - [What is binocular overlap and why should you care?](http://vrguy.blogspot.com/2013/05/what-is-binocular-overlap-and-why.html)
+  - [Binocular overlap](http://vrguy.blogspot.com/2013/05/what-is-binocular-overlap-and-why.html)
   - [What you should know about head trackers](http://vrguy.blogspot.com/2013/05/what-you-should-know-about-head-trackers.html)
   - [An overview of positional tracking technologies for VR](http://vrguy.blogspot.com/2014/05/an-overview-of-positional-tracking.html)
 
