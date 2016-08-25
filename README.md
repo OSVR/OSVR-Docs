@@ -71,6 +71,7 @@ if no parameter is specified, a default file is used.
   - [HDK Video Status Tool Windows Binaries](https://github.com/sensics/OSVR-HDK-Video-Status/releases) - On the Releases page - often a good place to check.
 
 ## Troubleshooting
+- [FAQ](Troubleshooting/FAQ.md)
 - [OSVR server](Troubleshooting/OSVRServer.md)
 - [Render Manager](Troubleshooting/RenderManager.md)
 - HDK troubleshooting
