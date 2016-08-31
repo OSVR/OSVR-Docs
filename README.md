@@ -93,7 +93,7 @@ if no parameter is specified, a default file is used.
 - Device-specific information
   - [OSVR HDK HID report interface](Developing/OSVRhdk.md)
 
-# Integrating with Game Engines
+# Game Engines and OSVR
 
 - [Unity](https://github.com/OSVR/OSVR-Unity/blob/master/GettingStarted.md)
   - [Tutorial video](https://youtu.be/xSOq3bOBPxs)
@@ -105,6 +105,7 @@ if no parameter is specified, a default file is used.
 - [Unreal](https://github.com/OSVR/OSVR-Unreal/blob/master/README.md)
   - [Tutorial Video (Unreal Engine 4.12+)](https://www.youtube.com/watch?v=Co2IiLVS3r8&feature=youtu.be)
   - [Tutorial video (Unreal Engine 4.11 or building from source)](https://www.youtube.com/watch?v=u4Y9pUisL1M)
+  - [Using multi-resolution shading with OSVR](Integrating-Game-Engines/Unreal/multires.md)
   - [Additional Documentation](https://github.com/OSVR/OSVR-Unreal/blob/master/Documentation.md)
 - [OpenVR/SteamVR](https://github.com/OSVR/SteamVR-OSVR)
 - [Blender](https://github.com/BlendOSVR/OSVR-Blender)
