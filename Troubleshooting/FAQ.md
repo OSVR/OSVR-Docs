@@ -9,6 +9,10 @@ A. There are a few things that may be causing the screen to remain black :
 1. Verify that both USB and HDMI cables are connected to the computer and make sure that HDK cable is connected securely to the beltbox.
 2. Your device may be in direct mode (DM). When DM is enabled, the screen will turn off, but once you launch a game, it will turn back on. You will not be able to see the desktop background.
 
+Q. In non-DirectMode on Windows, when my HDK is showing as a standard screen, a portion of one of the eyes bleeds over into the other one.
+
+A. Windows 10 systems sometimes decide to change the screen resolution to magnify text when a new monitor is installed. This changes the effective pixel size and can make one of the eyes bleed over into the other. You can right click on the desktop and select Display Settings, then select the HDK screen, then slide the "Change the size of text, apps, and other items" so that it is at 100% (probably the far left of the slider.
+
 Q. How to enable or disable Direct Mode 
 
 A. Direct Mode allows us to directly send input (games, video) to the headset. Extended mode is equivalent to mirroring your monitor on HDK display (act as a second monitor). Download the latest [OSVR Runtime](www.osvr.github.io/using) and launch OSVR-Central where you can enable and disable Direct Mode.
