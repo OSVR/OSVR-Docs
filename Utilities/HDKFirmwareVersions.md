@@ -35,6 +35,10 @@ Version numbers may look similar starting around 1.95, due to a common codebase,
 		- Re-unified codebase with OSVR HDK 1.x and other Sensics devices, resulting in restored functionality compared with 1.01.
 		- USB reliability improvements.
 		- Tracker performance improvements.
+- [1-01-HDK2.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-01-HDK2.hex)
+	- SHA-1 hash: `1a601e9a68a0e9060085b6a4c48d1a32b019f3d6`
+	- Initial shipped firmware for the HDK 2, forked from roughly a common-codebase 1.92 version, with some limitations.
+	- Provided for convenience in case this older version is more compatible with your particular video card.
 
 ## HDK 1.2/1.3/1.4
 
