@@ -1,20 +1,18 @@
----
-
-title: Installing OSVR for OS X
-heading: Installing OSVR for OS X
-
----
-
 # Installing OSVR for OS X
 
-## Install using Homebrew
+There are two wasys of installing OSVR-Core in OS X: using Homebrew or compiling it manually. Unless you're planning to contribute code to OSVR-Core itself, installing with Homebrew is the easier method.
 
+## Installing using Homebrew
+
+If you don't already have Homebrew installed, install it first following the instructions at http://brew.sh/.
 You may install OSVR for OS X using our Homebrew repository:
 
 ```bash
 $ brew tap OSVR/osvr
 $ brew install osvr-core --HEAD
 ```
+
+Once you've installed OSVR-Core using Homebrew, you don't need to build it from source.
 
 ## Building OSVR from source
 
