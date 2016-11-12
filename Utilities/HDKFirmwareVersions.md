@@ -1,10 +1,19 @@
 # OSVR HDK Firmware Stand-alone Downloads
 
 For non-Windows users, who therefore can't use the [OSVR-Control](OSVRControl.md) integrated tool to get the latest firmware.
+
 ## HDK 2
 
 Do not install HDK 1.x firmware on the HDK 2!
 Version numbers may look similar starting around 1.95, due to a common codebase, but substantial differences in the video signal path make them completely incompatible.
+
+- [1-98-HDK2SVR.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-98-HDK2SVR.hex)
+	- SHA-1 hash: `806dfbba80e08ffbcef2b286d96d4d63a039d3ad`
+	- 1.98 for dual-screen, 90Hz HDK2.
+	- Changes:
+		- Fixes issue with USB serial buffering that could result in a non-responsive HMD after several display transitions or direct-mode app start/exits. (This fixes the known issue listed in the 1.97 release notes)
+		- General USB and USB serial reliability and performance enhancements.
+		- Adds `#?h` hardware info console command, currently reporting the status of the brownout-detection fuses.
 
 - [1-97-HDK2SVR.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-97-HDK2SVR.hex)
 	- SHA-1 hash: `64829dbd6d227b0424a88750e983cd553ea56f69`
@@ -45,6 +54,13 @@ Version numbers may look similar starting around 1.95, due to a common codebase,
 Do not install HDK 2 firmware on the HDK 1.x!
 Version numbers may look similar starting around 1.95, due to a common codebase, but substantial differences in the video signal path make them completely incompatible.
 
+- [1-98-OLED.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-98-OLED.hex)
+	- SHA-1 hash: `d0412876178b50e72c5436308c52270a3b4a9265`
+	- 1.97 for low-persistence OLED (HDK 1.3/1.4)
+	- Changes:
+		- Fixes issue with USB serial buffering that could result in a non-responsive HMD after several display transitions or direct-mode app start/exits. (This fixes the known issue listed in the 1.97 release notes)
+		- General USB and USB serial reliability and performance enhancements.
+		- Adds `#?h` hardware info console command, currently reporting the status of the brownout-detection fuses.
 - [1-97-OLED.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-97-OLED.hex)
 	- SHA-1 hash: `38f2889289199d34346e93e04d2f38c6d26d8015`
 	- 1.97 for low-persistence OLED (HDK 1.3/1.4)
