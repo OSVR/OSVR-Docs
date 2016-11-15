@@ -21,7 +21,7 @@ Yes. For instance, see [this video](https://www.facebook.com/Reviatech/videos/89
 
 ### RenderManager support on Android
 
-As of 2/22/2106, the RenderManager code compiles and links for Android in a
+As of 2016-02-22, the RenderManager code compiles and links for Android in a
 branch of the [OSVR-Android-Build project](https://github.com/OSVR/OSVR-Android-Build).
 There is not yet a working GLES example program to compile, and the code has
 not yet been tested.
