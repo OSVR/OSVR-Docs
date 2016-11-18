@@ -45,6 +45,7 @@ if no parameter is specified, a default file is used.
 
 ## Configuring OSVR
 - [Using the OSVR-Config utility](Configuring/OSVR-Config.md)
+- [RenderManager](Configuring/OSVR-RenderManager.md)
 - [Calibrating the video-based tracker](Getting-Started/HDK/Video-Based-Tracking-Calibration.md)
 - [Local and distributed client/server configurations](Configuring/LocalAndRemote.md)
 - Device-specific configuration
