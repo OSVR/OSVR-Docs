@@ -7,6 +7,41 @@ For non-Windows users, who therefore can't use the [OSVR-Control](OSVRControl.md
 Do not install HDK 1.x firmware on the HDK 2!
 Version numbers may look similar starting around 1.95, due to a common codebase, but substantial differences in the video signal path make them completely incompatible.
 
+- [1-99-HDK2SVR.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-99-HDK2SVR.hex)
+	- SHA-256 hash: `5d8dad93b5c7f2d24e0079870755b7b735a9a59959768a664ef5932c77f00cba`
+	- 1.99 for dual-screen, 90Hz HDK2.
+	- **Overview:** This release primarily affects the HDK2 and derived devices, improving their reliability and compatibility with nearly all systems and environments, as verified with broad pre-release testing. A fix for loading the stored IMU mode setting (whether or not the mag is used to mitigate gyro drift) that applies to all HDK (1.x and 2) based devices is also included.
+	- Changes:
+		- Re-factoring/rewrite of display-related code for HDK2-based HMDs.
+		- Fixed handling of HDMI signal acquisition/loss handling for HDK2 (plug/unplug or direct mode app launch/exit).
+		- Interrupt-based control of the Toshiba chip in the HDK2, improving performance by removing polling overhead.
+		- Improved display timings and EDID data (in HDK2SVR variant)
+		- In HDK2/HDK2SVR, inclusion of a truncated version of the text serial number in the EDID ("CT" prefix removed to fit the serial into the 13 characters/bytes available in EDID).
+		- Troubleshooting and debugging command support added for HDK2.
+	- Fixes these HDK2 issues, among others:
+		- HDK2 not being recognized as HDCP capable by NVIDIA drivers in direct mode (and thus incompatible with direct mode on mobile - laptop or backpack/small form factor PC - due to NVIDIA driver policy)
+		- Direct mode present calls failing immediately or after one or more frames are displayed.
+		- A number of undifferentiated "black screen" issues not due to hardware defects.
+		- Bright bar appearing on display after HDMI unplug.
+	- Fixes for all HDK-family devices (all devices with BNO070 IMU):
+		- Fixed loading of setting from EEPROM that determined IMU configuration: game rotation vector (aka "GRV" - set with `#sg1` - default - mag not used) vs. rotation vector (aka "RV" - set with `#sg0` - mag used to counter drift and establish fixed north direction).
+	- Additional improvements, all devices:
+		- git-based version stamp augmentation (for `#?v` and `#?f` output) to distinguish releases from dev builds and dev builds from each other. (This build should say "(RELEASE)" after the version number.)
+		- HDK2 serial number reading (from EEPROM) is now cached to reduce calls to the NVM controller and improve reliability.
+	- Known issues:
+		- A small number of HDK 2-based setups, so far only noticed with NVIDIA GPUs, do not produce or propagate the video sync change interrupt properly, particularly on signal loss. This can result in a bright bar after direct mode app close or HDMI unplug until the HMD is power-cycled, or in rare cases, trouble running direct mode applications (applications will run but screen will remain dark).
+			- This issue is under investigation. If you experience it, please contact OSVR Support, mentioning "OSVR-HDK-MCU-Firmware issue #17" and including the following information:
+				- Your hardware and software setup - GPU, GPU driver version, OSVR server version and config file in use, and test applications - testing with the RenderManager Direct3D "Present" demo ("cube room") recommended
+				- Your HDK2 headset serial number - takes the form `CTxxxxV001yyyyy`, found on the cable going from the HMD to the belt box, or on most units, using the `#fsr` command (let us know if that reports `NG` instead of your serial number)
+				- Console log from OSVR-Control (or other serial terminal client) connected to the HDK before and during the undesired behavior.
+				- Information reported from the `#hr` command (run in each unique condition you can put your device in)
+				- Whether any of the following commands resolved the problem:
+					- `#sn` (display on)
+					- `#sf` (display off)
+					- `#hp` (trigger HDMI sync status polling)
+			- In all known cases, reverting to 1.98 can work around this issue.
+		- Having the USB device powered and plugged in to a Windows 10 PC results in a blue-screen (`WDF_VIOLATION`) in a built-in Microsoft driver at system shutdown/restart, and may interfere with system suspend. Tracked at <https://github.com/OSVR/OSVR-Core/issues/389> (This is not a new issue, just has not been listed in the Known Issues section of release notes before.) The workaround is to unplug any one of the following cables before shutting down or restarting: belt box power, USB (from belt box to PC), HMD cable to beltbox. (Belt box power or USB to PC are probably the preferred options due to the durability of those connectors.)
+
 - [1-98-HDK2SVR.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-98-HDK2SVR.hex)
 	- SHA-1 hash: `806dfbba80e08ffbcef2b286d96d4d63a039d3ad`
 	- 1.98 for dual-screen, 90Hz HDK2.
@@ -54,9 +89,20 @@ Version numbers may look similar starting around 1.95, due to a common codebase,
 Do not install HDK 2 firmware on the HDK 1.x!
 Version numbers may look similar starting around 1.95, due to a common codebase, but substantial differences in the video signal path make them completely incompatible.
 
+- [1-99-OLED.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-99-OLED.hex)
+	- SHA-256 hash: `ef05bd83a324eea3d3b86344d8f80cb70ea75394ac12061861547e04c19f0bd0`
+	- 1.99 for low-persistence OLED (HDK 1.3/1.4)
+	- **Overview:** This release primarily affects the HDK2 and derived devices, improving their reliability and compatibility with nearly all systems and environments, as verified with broad pre-release testing. A fix for loading the stored IMU mode setting (whether or not the mag is used to mitigate gyro drift) that applies to all HDK (1.x and 2) based devices is also included.
+	- Fixes for all HDK-family devices (all devices with BNO070 IMU):
+		- Fixed loading of setting from EEPROM that determined IMU configuration: game rotation vector (aka "GRV" - set with `#sg1` - default - mag not used) vs. rotation vector (aka "RV" - set with `#sg0` - mag used to counter drift and establish fixed north direction).
+	- Additional improvements, all devices:
+		- git-based version stamp augmentation (for `#?v` and `#?f` output) to distinguish releases from dev builds and dev builds from each other. (This build should say "(RELEASE)" after the version number.)
+	- Known issues:
+		- Having the USB device powered and plugged in to a Windows 10 PC results in a blue-screen (`WDF_VIOLATION`) in a built-in Microsoft driver at system shutdown/restart, and may interfere with system suspend. Tracked at <https://github.com/OSVR/OSVR-Core/issues/389> (This is not a new issue, just has not been listed in the Known Issues section of release notes before.) The workaround is to unplug any one of the following cables before shutting down or restarting: belt box power, USB (from belt box to PC), HMD cable to beltbox. (Belt box power or USB to PC are probably the preferred options due to the durability of those connectors.)
+
 - [1-98-OLED.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-98-OLED.hex)
 	- SHA-1 hash: `d0412876178b50e72c5436308c52270a3b4a9265`
-	- 1.97 for low-persistence OLED (HDK 1.3/1.4)
+	- 1.98 for low-persistence OLED (HDK 1.3/1.4)
 	- Changes:
 		- Fixes issue with USB serial buffering that could result in a non-responsive HMD after several display transitions or direct-mode app start/exits. (This fixes the known issue listed in the 1.97 release notes)
 		- General USB and USB serial reliability and performance enhancements.
