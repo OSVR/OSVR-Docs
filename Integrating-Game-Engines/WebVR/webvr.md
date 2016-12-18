@@ -17,7 +17,7 @@
 
 	A screenshot below provides reference on how it is configured on a sample system.
 
-![](WebVRConfig.PNG)
+	![](WebVRConfig.PNG)
 	
 5. Start OSVR server with a device of your choice plugged in.
 6. Restart Firefox.
