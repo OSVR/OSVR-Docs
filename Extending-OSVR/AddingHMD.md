@@ -6,14 +6,16 @@ OSVR creates an abstration layer for many types of devices, including HMDs. This
 - Create a display descriptor. This specifies the key attributes of the HMD such as the field of view
 - Provide information about distortion. OSVR can apply distortion correction for the HMD. This step is optional.
 - Support direct rendering. When used with a supported graphics card, OSVR provides direct rendering support to HMDs and this section discusses how to add this capability to your HMD through OSVR
-- Often, HMDs also include peripherals such as an orientation tracker. The section on the tracker points you at the right documents towards adding the HMD tracker.
+- Integrate tracking information. Often, HMDs also include peripherals such as an orientation tracker. OSVR passes this information along to applications so they can update the view of the virtual world.
+- Verify your HMD is working with OSVR. Ensure that the display is free of distortion and that the tracking is working well.
+- Publish your HMD plugin. Release your OSVR plugin to the world so developers and gamers can use your HMD with their OSVR software and games.
 
-## Creating a Basic display descriptor
-To start with OSVR, all you need to get a display going initially is just a "display descriptor" JSON file. You can start with a very simple one - the one for the OSVR HDK 1.0-1.2 is about as simple as they get - and modify it to suit your display.
+## Display integration
+To start with OSVR, all you need to get a display going initially is just a "display descriptor" JSON file. You can start with a very simple one—the one for the [OSVR HDK 1.1](https://github.com/OSVR/OSVR-Core/blob/master/apps/displays/OSVR_HDK_1_1.json) is about as simple as they get—and modify it to suit your display.
 
-- Format Documentation: <https://github.com/OSVR/OSVR-JSON-Schemas/blob/master/doc/display_descriptor_schema_v1/Structure%20of%20JSON%20descriptor%20file%20for%20HMDs.md>
-- JSON Schema: <https://github.com/OSVR/OSVR-JSON-Schemas/blob/master/display_descriptor_schema_v1.json>
-- Existing descriptors for additional reference: <https://github.com/OSVR/OSVR-Core/tree/master/apps/displays> - see particularly [the descriptor for the HDK 1.0-1.2](https://github.com/OSVR/OSVR-Core/blob/master/apps/displays/OSVR_HDK_1_1.json)
+- [Display descriptor documentation](https://github.com/OSVR/OSVR-JSON-Schemas/blob/master/doc/display_descriptor_schema_v1/Structure%20of%20JSON%20descriptor%20file%20for%20HMDs.md)
+- [Display descriptor JSON schema](https://github.com/OSVR/OSVR-JSON-Schemas/blob/master/display_descriptor_schema_v1.json)
+- [Existing display descriptors for additional reference](https://github.com/OSVR/OSVR-Core/tree/master/apps/displays)
 
 The only fields you must modify are:
 
@@ -31,7 +33,7 @@ The only fields you must modify are:
 
 To use a display descriptor with an OSVR server config file, you add or edit the `"display": "???.json"` line. See, for example, [a server config that specifies the display descriptor for the Sensics dSight HMD](https://github.com/OSVR/OSVR-Core/blob/master/apps/sample-configs/osvr_server_config.dSight.json). (If no display line is specified, then a default is used.) A useful minimal sample to test your display descriptor (does not test distortion) would be the OpenGLSample in the OSVR-Core distribution (requires SDL), which places you in a cube.
 
-## Adding Distortion Correction
+## Correcting lens and display distortion
 In many cases, displays have some degree of distortion that should be compensated for ahead of time through predistortion. OSVR has a number of parameterizations of distortion, suited to different types of distortion, and different tools for measuring them.  All of these modes can be specified in the server configuration files and read using the OSVR-Core libraries and several of them are implemented in the OSVR-RenderManager interface.
 
 A theoretical description of distortion correction and its relationship to projection and viewing can be found in the [distortion document](../Configuring/distortion.md) and a program to construct the distortion parameters based on a mapping from angles to screen coordinates can be found in the [AnglesToConfig documentation](https://github.com/OSVR/distortionizer/blob/master/angles_to_config/doc/anglesToConfig.md).
@@ -66,24 +68,36 @@ A snippet from a configuration file that specifies general-polynomial-based dist
     }
 
 ## Supporting Direct Rendering
-The final step is direct-to-HMD rendering: bypassing operating system and window management overhead, removing the display from being a part of the extended desktop, and drawing directly to it using the graphics driver. OSVR's RenderManager handles both non-direct advanced rendering (timewarp, advanced predistortion, etc.) available with just a regular display descriptor as above, as well as optional direct mode support, which is generally only available on some combinations of hardware vendors and software platforms.
+The next step is direct-to-HMD rendering: bypassing operating system and window management overhead, removing the display from being a part of the extended desktop, and drawing directly to it using the graphics driver. OSVR's [RenderManager](https://github.com/sensics/OSVR-RenderManager) handles both non-direct advanced rendering (timewarp, advanced predistortion, etc.) available with just a regular display descriptor as above, as well as direct mode support.
 
 Using direct rendering on a new HMD requires three things: 
 
-- Specify the vendor ID in three-letter format and construction of a RenderManager configuration file with that vendor ID and with screen resolution and rotatation that matches one of the modes supported by the HMD (ideally, the most-rapid rendering mode).  As of 6/14/2016, the OSVR team is finalizing the format for specifying arbitrary vendor IDs; the system currently does an internal mapping from vendor names to IDs.  To add such a mapping, you should edit the createRenderManager() function in RenderManagerBase.cpp to add another vendor-name mapping.  The vendor name should map to all display vendor IDs that you produce (see the OSVR HDK for an example of how to add more than one vendor ID).
+1. Construct a RenderManager configuration file with a screen resolution and rotatation that matches one of the modes supported by the HMD.
 
-- Because of non-disclosure agreements with graphics vendors, the source code for the vendor-specific portions of the DirectRender code cannot be released.  They have agreed to let OSVR provide a common interface to their direct-render capabilities through the RenderManager interface, using NDA submodules.  This means that we currently need to recompile RenderManager with the new vendor IDs and release a new version.  Please issue a pull request once your vendor IDs have been added so that they will appear in future releases.
+2. Add your EDID vendor ID to [RenderManager](https://github.com/sensics/OSVR-RenderManager/blob/master/osvr/RenderKit/DirectModeVendors.h#L227) and create a pull request to have it included in RenderManager.
 
-- The display must be recognized as a DirectMode display by the vendor's driver.  This is handled differently by each vendor, and you should contact them directly to be added to their whitelists. You'll need to contact nVidia to get them to add your device to their driver white-list. Be aware that they have stopped DirectMode support for non-HDCP-compliant HMDs on laptops and on systems with multi GPUs (and they are warning that we should support it on any display going forward). AMD has a different approach to getting devices registered, so you should contact them as well.  Intel cards require the HMDs to add a specific registry entry to indicate that they should be used in DirectMode.
-
-As of 7/12/2016, there is an API upgrade working its way through Microsoft that should provide a vendor-independent solution. We're tracking it and plan to release a new driver when it comes out. At that point, the entire rendering chain should be open source, because it will be using public APIs and not vendors-specific ones. We don't have an ETA for this, other than it was supposed to have been out last August.
-
-Note that all non-DirectMode display features (including time warping, predictive tracking, and distortion correction) are available in RenderManager using the open-source portion of the library.  Asynchronous time warping is (as of 6/14/2016) only implemented on top of DirectMode.
-Additionally, some features (such as client-side prediction), while not explicitly dependent on direct mode, only function fully in the presence of the precise frame timing information that currently is only obtained from direct mode.
+3. Contact the graphics card manufacturers to have your EDID vendor ID added to their direct mode whitelists. The display must be recognized as a direct-mode display by the vendor's driver.  This is handled differently by each vendor, and you should contact them directly to be added to their whitelists. You'll need to contact nVidia to get them to add your device to their driver whitelist. Be aware that they have stopped direct-mode support for non-HDCP-compliant HMDs on laptops and on systems with multiple GPUs (and they are warning that we should support it on any display going forward). AMD has a different approach to getting devices registered, so you should contact them as well.  Intel cards require the HMDs to add a specific registry entry to indicate that they should be used in DirectMode.
 
 ## Tracking and Status Reporting
 Your HMD presumably has tracking either integrated or attached. If it's an off-the-shelf tracker, then there's probably already support in OSVR for it via VRPN: see more on the [Compatibility page](http://osvr.github.io/compatibility/). A tracker for an HMD should provide the /me/head alias at the center point between the two eyes centers.
 
 If you have a custom tracking system, and/or if your device has an interface for control and status messages, you might be interested in writing a device plugin to provide more interaction with the OSVR system than just as a display device. Get in touch, and/or see the [Building a Plugin](http://osvr.github.io/build-with/#building-a-plugin) documentation.
 
-Tracking can be tested with the OSVR Tracker Viewer (can be downloaded from http://osvr.github.io/using/ - by default it will attempt to show the /me/head alias.
+
+
+## Verifying your HMD is working with OSVR
+
+You can verify that the tracker is working by using [OSVR Tracker Viewer](https://github.com/osvr/OSVR-Tracker-Viewer). It will display a set of axes showing the position and orientation of your HMD as you move it about.
+
+You can check that the display descriptor and distortion correction is working well by running one of the demo applications that ship with [OSVR-RenderManager](https://github.com/sensics/OSVR-RenderManager#example-programs).
+
+Finally, we also suggest using the [SteamVR-OSVR driver](https://github.com/osvr/SteamVR-OSVR) to test your HMD with SteamVR games.
+
+## Publishing your HMD plugin
+
+To make your HMD plugin available to the widest audience of OSVR users, we recommend the following:
+
+ * Create simple installer to deploy the plugin. 
+ * Add the installer to the OSVR plugin repository.
+ * If applicable, open-source your plugin code so that the community can assist in porting it to other platforms and improve it.
+
