@@ -19,7 +19,7 @@ choco pin add -name OpenCV
 
 and, depending on if you want to build 32-bit or 64-bit, add one or both of the following packages: `boost-x86-msvc2013` (32-bit), `boost-x64-msvc2013` (64-bit).  i.e. :
 ```cmd
-choco install -s osvr-deps -y boostx64-msvc2013
+choco install -s osvr-deps -y boost-x64-msvc2013
 ```
 On your own, you'll want to make sure you have Git, a proper notepad replacement like notepad++ or notepad2mod, etc.
 
