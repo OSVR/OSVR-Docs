@@ -7,6 +7,16 @@ For non-Windows users, who therefore can't use the [OSVR-Control](OSVRControl.md
 Do not install HDK 1.x firmware on the HDK 2!
 Version numbers may look similar starting around 1.95, due to a common codebase, but substantial differences in the video signal path make them completely incompatible.
 
+- [hdk2svr-2.00.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/hdk2svr-2.00.hex)
+	- SHA-256 hash: `36c7eb20dec518c400b8cd8eda0189c9c1622be05c4fb87ced2359f9667593a0`
+	- 2.00 for dual-screen, 90Hz HDK2.
+	- **Overview:** This build incorporates a design change that should allow proper functioning on all HDK2 devices/systems: both the devices that worked well with 1.99, as well as the ones that didn't work well on 1.99 and instead needed to use 1.98 or earlier. If your display still doesn't work with this firmware, please contact support with the same information requested for version 1.99 debugging. Minor build warning fixes for all devices are also included that should not affect functioning relative to 1.99.
+	- Changes for all devices: Fixes for some build warnings.
+	- Changes for HDK 2:
+		- One design change included in 1.99 was moving from polling to interrupts on HDK2-based hardware. While this worked well on the dev systems tested before release, some devices in the field (and eventually, one in our labs) didn't handle it well, seemingly not propagating the interrupt. Manually triggering a poll would often temporarily resolve the issue for setups that didn't work well with 1.99.
+		- So, while this new release keeps all the new display code from 1.99, it switches to infrequently polling the video status, instead of using interrupts from the display bridge, for reliability across the full range of devices/systems in the field. It's still doing the polling in a more light-weight way than 1.98 and earlier versions, so performance shouldn't be impacted negatively compared to 1.99.
+		- (It's still not clear why exactly some propagate the interrupt and some don't, but since the overall firmware family was already set up to be able to support either method, there should be no harm in switching all HDK2 devices over to polling.)
+
 - [1-99-HDK2SVR.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-99-HDK2SVR.hex)
 	- SHA-256 hash: `5d8dad93b5c7f2d24e0079870755b7b735a9a59959768a664ef5932c77f00cba`
 	- 1.99 for dual-screen, 90Hz HDK2.
@@ -89,6 +99,11 @@ Version numbers may look similar starting around 1.95, due to a common codebase,
 Do not install HDK 2 firmware on the HDK 1.x!
 Version numbers may look similar starting around 1.95, due to a common codebase, but substantial differences in the video signal path make them completely incompatible.
 
+- [hdk_oled-HDK-1.3-1.4-2.00.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/hdk_oled-HDK-1.3-1.4-2.00.hex)
+	- SHA-256 hash: `e0f9e71ceafa2e5905a4f0cd44739253bca70c67fc4cd393393cd1aad192b7aa`
+	- 2.00 for low-persistence OLED (HDK 1.3/1.4)
+	- **Overview:** This release primarily affects the HDK2 and derived devices. Minor build warning fixes for all devices are also included that should not affect functioning relative to 1.99.
+	- Changes for all devices: Fixes for some build warnings.
 - [1-99-OLED.hex](http://resource.osvr.com/public_download/FirmwareUpgrade/hdk-hex/1-99-OLED.hex)
 	- SHA-256 hash: `ef05bd83a324eea3d3b86344d8f80cb70ea75394ac12061861547e04c19f0bd0`
 	- 1.99 for low-persistence OLED (HDK 1.3/1.4)
