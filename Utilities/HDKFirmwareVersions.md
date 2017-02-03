@@ -2,6 +2,11 @@
 
 For non-Windows users, who therefore can't use the [OSVR-Control](OSVRControl.md) integrated tool to get the latest firmware.
 
+Choose your device:
+
+- [HDK 2](#hdk-2) - including devices manufactured as HDK as well as devices upgraded from 1.3/1.4 to HDK 2 spec with the Upgrade Kit.
+- [HDK 1.2/1.3/1.4](#hdk-121314)
+
 ## HDK 2
 
 Do not install HDK 1.x firmware on the HDK 2!
