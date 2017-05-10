@@ -1,18 +1,18 @@
 # Configuring OSVR HDK2 with Vive Puck Tracking
 
-This document outlines how to add room-scale positional tracking to HDK2 by mounting an HTC Vive tracking puck and using the Lighthouse base stations and tracking system.
+This document outlines how to add room-scale positional tracking to HDK2 (and any other OSVR-compatible HMD) by mounting an HTC Vive tracking puck and using the Lighthouse base stations and tracking system. 
 
 Hardware Requirements:
-OSVR HDK2 with mount
-Vive Tracking Puck
-Lighthouse base stations
-USB - microUSB cable
+- OSVR HDK2 with mount
+- Vive Tracking Puck
+- Lighthouse base stations
+- USB - microUSB cable
 
 
 Software Requirements:
-OSVR-Core build
-OSVR-Vive plugin build
-Optionally SteamVR
+- OSVR-Core build
+- OSVR-Vive plugin build
+- Optionally SteamVR and SteamVR-OSVR
 
 ### Why?
 There are a few reasons this document could be useful:
