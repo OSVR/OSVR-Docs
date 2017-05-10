@@ -122,7 +122,7 @@ Instead of setting up an alias to the Multiserver plugin, we want to access the 
 ````
 That’s it! We are now able to move the puck around to change the image in our display. We probably have a little extra work to do depending on the puck's expected orientation and how it is mounted to the HDK.
 
-###Rotating and Translating
+### Rotating and Translating
 Depending on how your puck is mounted, there may be more configuration needed for tracking to appear in the correct orientation. We decided to mount the puck on top of HDK2 with the crown pointing up and microUSB port facing the forehead, like so:
 ![Puck Mounted HDK2](https://github.com/OSVR/OSVR-Docs/blob/master/Configuring/images/hdk_puck.jpg)
 Doing so requires a -90 degree rotation, which is applied in the server config:
@@ -249,7 +249,7 @@ OSVRTrackerView.exe --pose /me/head /me/hands/left /me/hands/right /me/puck
 ````
 However, if we are aliasing /me/head --> /me/puck like in the server config above, we will be able to see the puck tracking by default without this command.
 
-###Using OSVR-Vive with SteamVR-OSVR
+### Using OSVR-Vive with SteamVR-OSVR
 It is possible to use OSVR-Vive to use the puck as a positional tracker for HDK2, and then play SteamVR games via the SteamVR-OSVR driver. We call it going through the rabbit hole twice. This is an importnat use case for HMD manufacturers to quickly test new HMDs with Vive room-scale tracking by simply mounting a puck. We're still working on some issues on this path after the most recent OpenVR/SteamVR changes, but we think you'll need to make sure you have the following settings in C:\Program Files (x86)\Steam\config\steamvr.vrsettings:
 ````json
 "steamvr": {
