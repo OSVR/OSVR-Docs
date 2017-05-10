@@ -10,9 +10,9 @@ Hardware Requirements:
 
 
 Software Requirements:
-- OSVR-Core build
-- OSVR-Vive plugin build
-- Optionally SteamVR and SteamVR-OSVR
+- [OSVR-Core build or SDK/Runtime installation](http://access.osvr.com/)
+- [OSVR-Vive plugin build](https://github.com/OSVR/OSVR-Vive)
+- Optionally SteamVR and [SteamVR-OSVR](https://github.com/OSVR/SteamVR-OSVR)
 
 ### Why?
 There are a few reasons this document could be useful:
