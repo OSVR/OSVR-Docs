@@ -1,4 +1,4 @@
-# Configuring OSVR HDK2 with VIVE Puck Tracking
+# Configuring OSVR HDK2 and other OSVR-supported HMD with VIVE Puck Tracking
 
 This document outlines how to add room-scale positional tracking to HDK2 (and any other OSVR-compatible HMD) by mounting an HTC VIVE tracking puck and using the Lighthouse base stations and tracking system. 
 
