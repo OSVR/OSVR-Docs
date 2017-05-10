@@ -53,6 +53,7 @@ if no parameter is specified, a default file is used.
   - [HTC Vive](Configuring/HTC-Vive.md)
   - [Oculus Rift](Configuring/oculus-rift.md)
 - [Integrating with VRPN devices](https://osvr.github.io/whitepapers/vrpn_in_osvr/)
+- [Configuring OSVR HDK2 and other OSVR-supported HMD with VIVE Puck Tracking](https://github.com/OSVR/OSVR-Docs/blob/master/Extending-OSVR/ConfiguringHDKViveTracking.md)
 
 ## Utilities
 - [OSVR-Central](Utilities/OSVRCentral.md)
