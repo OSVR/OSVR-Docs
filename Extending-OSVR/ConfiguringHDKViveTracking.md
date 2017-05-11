@@ -1,36 +1,36 @@
-# Configuring OSVR HDK2 with Vive Puck Tracking
+# Configuring OSVR HDK2 and other OSVR-supported HMD with VIVE Puck Tracking
 
-This document outlines how to add room-scale positional tracking to HDK2 (and any other OSVR-compatible HMD) by mounting an HTC Vive tracking puck and using the Lighthouse base stations and tracking system. 
+This document outlines how to add room-scale positional tracking to HDK2 (and any other OSVR-compatible HMD) by mounting an HTC VIVE tracking puck and using the Lighthouse base stations and tracking system. 
 
 Hardware Requirements:
 - OSVR HDK2 with mount
-- Vive Tracking Puck
+- VIVE Tracking Puck
 - Lighthouse base stations
 - USB - microUSB cable
 
 
 Software Requirements:
-- OSVR-Core build
-- OSVR-Vive plugin build
-- Optionally SteamVR and SteamVR-OSVR
+- [OSVR-Core build or SDK/Runtime installation](http://access.osvr.com/)
+- [OSVR-VIVE plugin build](https://github.com/OSVR/OSVR-VIVE)
+- Optionally SteamVR and [SteamVR-OSVR](https://github.com/OSVR/SteamVR-OSVR)
 
 ### Why?
 There are a few reasons this document could be useful:
 - To serve as a working example of how to configure a new head/positional tracker using OSVR semantic paths.
 - To demonstrate how easily displays and tracking systems can be swapped quickly
-- To prove that the Vive tracking puck (with a wireless receiver) can be used for HDK headtracking in SteamVR
+- To prove that the VIVE tracking puck (with a wireless receiver) can be used for HDK headtracking in SteamVR
 
-### OSVR-Vive 
-[OSVR-Vive](https://github.com/OSVR/OSVR-Vive/) is the OSVR plugin for the family of Vive devices -- HMD, Controllers, and tracking puck. Wireless tracking of puck/controllers requires the Vive HMD or a wireless receiver. Follow the instructions in the Readme to install the plugin. Basically, download the latest binaries and copy **com_osvr_Vive.dll** to "/osvr-core-build/bin/osvr-plugins-0/".
+### OSVR-VIVE 
+[OSVR-VIVE](https://github.com/OSVR/OSVR-VIVE/) is the OSVR plugin for the family of VIVE devices -- HMD, Controllers, and tracking puck. Wireless tracking of puck/controllers requires the VIVE HMD or a wireless receiver. Follow the instructions in the Readme to install the plugin. Basically, download the latest binaries and copy **com_osvr_VIVE.dll** to "/osvr-core-build/bin/osvr-plugins-0/".
 
 ### Semantic Paths
 OSVR Developers should understand the concept of **semantic paths** within the OSVR software stack. For a good introduction, review this presentation on the [OSVR-Core Path Tree](https://osvr.github.io/presentations/20150419-osvr-software-framework-path-tree/).
-The OSVR-Vive plugin device descriptor ([com_osvr_Vive.json](https://github.com/OSVR/OSVR-Vive/blob/master/com_osvr_Vive.json)) defines to access specific Vive devices. We’ll need the puck’s semantic path in order to use it as our head tracker.
-### OSVR-Vive device descriptor (com_osvr_Vive.json):
+The OSVR-VIVE plugin device descriptor ([com_osvr_VIVE.json](https://github.com/OSVR/OSVR-VIVE/blob/master/com_osvr_VIVE.json)) defines to access specific VIVE devices. We’ll need the puck’s semantic path in order to use it as our head tracker.
+### OSVR-VIVE device descriptor (com_osvr_VIVE.json):
 ````json
 {
     "deviceVendor": "HTC",
-    "deviceName": "Vive PRE and Vive Controllers",
+    "deviceName": "VIVE PRE and VIVE Controllers",
     "author": "Georgiy Frolov <gfrolov@sensics.com>",
     "version": 1,
     "lastModified": "",
@@ -104,7 +104,7 @@ The OSVR-Vive plugin device descriptor ([com_osvr_Vive.json](https://github.com/
 }
 ````
 
-Take the time to review the device descriptor to understand how the Vive devices are factored into OSVR interfaces. The parts related to the puck are the assignment to tracker 3, and the automatic alias:
+Take the time to review the device descriptor to understand how the VIVE devices are factored into OSVR interfaces. The parts related to the puck are the assignment to tracker 3, and the automatic alias:
 ````json
 "/me/puck": "semantic/puck",
 ````
@@ -116,7 +116,7 @@ Take a look at the last line in the config file above. The syntax is similar to 
 ````json
 "aliases": {"/me/head":"/com_osvr_Multiserver/OSVRHackerDevKit0/semantic/hmd"}
 ````
-Instead of setting up an alias to the Multiserver plugin, we want to access the Vive plugin. We saw earlier that there is an automatic alias in the Vive device descriptor named “/me/puck”. Our new config file with puck tracking for the head is:
+Instead of setting up an alias to the Multiserver plugin, we want to access the VIVE plugin. We saw earlier that there is an automatic alias in the VIVE device descriptor named “/me/puck”. Our new config file with puck tracking for the head is:
 ````json
 "aliases": {"/me/head":"/me/puck”}
 ````
@@ -170,7 +170,7 @@ Note: The posttranslate values here may need some fine-tuning depending on exact
 
 Tip: In addition to rotate and posttranslate, there's also postrotate and translate. Experiment to see how this changes tracking.
 
-All together, our config file with Vive Puck tracking and HDK2 display looks like:
+All together, our config file with VIVE Puck tracking and HDK2 display looks like:
 ````json
 {
 	"display": "displays/OSVR_HDK_2_0.json",
@@ -243,14 +243,14 @@ could be changed to work with the Sensics dSight display:
 ````json
 "display": "displays/Sensics_dSight_landscape_1input_sbs.json",
 ````
-Reminder that if you're using OSVRTrackerView to visualize tracked devices, only /me/head, /me/hands/left, and /me/hands/right are visualized by default. To see other devices, specify their path in the command line. For example, to launch OSVRTrackerView and see four connected OSVR-Vive devices (Vive HMD, Controllers, Puck), launch OSVRTrackerView with the following command:
+Reminder that if you're using OSVRTrackerView to visualize tracked devices, only /me/head, /me/hands/left, and /me/hands/right are visualized by default. To see other devices, specify their path in the command line. For example, to launch OSVRTrackerView and see four connected OSVR-VIVE devices (VIVE HMD, Controllers, Puck), launch OSVRTrackerView with the following command:
 ````c
 OSVRTrackerView.exe --pose /me/head /me/hands/left /me/hands/right /me/puck
 ````
 However, if we are aliasing /me/head --> /me/puck like in the server config above, we will be able to see the puck tracking by default without this command.
 
-### Using OSVR-Vive with SteamVR-OSVR
-It is possible to use OSVR-Vive to use the puck as a positional tracker for HDK2, and then play SteamVR games via the SteamVR-OSVR driver. We call it going through the rabbit hole twice. This is an importnat use case for HMD manufacturers to quickly test new HMDs with Vive room-scale tracking by simply mounting a puck. We're still working on some issues on this path after the most recent OpenVR/SteamVR changes, but we think you'll need to make sure you have the following settings in C:\Program Files (x86)\Steam\config\steamvr.vrsettings:
+### Using OSVR-VIVE with SteamVR-OSVR
+It is possible to use OSVR-VIVE to use the puck as a positional tracker for HDK2, and then play SteamVR games via the SteamVR-OSVR driver. We call it going through the rabbit hole twice. This is an importnat use case for HMD manufacturers to quickly test new HMDs with VIVE room-scale tracking by simply mounting a puck. We're still working on some issues on this path after the most recent OpenVR/SteamVR changes, but we think you'll need to make sure you have the following settings in C:\Program Files (x86)\Steam\config\steamvr.vrsettings:
 ````json
 "steamvr": {
 		"activateMultipleDrivers": true,
