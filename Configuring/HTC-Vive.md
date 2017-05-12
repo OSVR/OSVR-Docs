@@ -22,7 +22,7 @@ You'll have files as follows in your extracted download:
 - In `bin`, a `ViveDisplayExtractor` tool - copy to the `bin` directory of your OSVR server.
 - A sample `osvr_server_config` config file that you'll want to start with (as well as some pre-made display descriptor and mesh files, which we'll be replacing shortly.)
 
-**Note that each time you want to run an OSVR application on your Vive** (including the initial setup app), you need to tell SteamVR to release control of it: in the SteamVR menu, disable "Direct Mode" (if it was enabled) then exit SteamVR. (You may actually be able to get away with leaving it in direct mode - it may depend on your system. Test it and see!)
+You should be able to run an OSVR application on your Vive HMD in direct mode without having to change any settings in SteamVR. If Vive works in direct mode in SteamVR, but won't open in direct mode in OSVR, make sure SteamVR has exited before starting the OSVR application. On some systems, it may be necessary to disable direct mode in the SteamVR menu before exiting SteamVR.
 
 One time setup: Your Vive needs a custom display descriptor and mesh distortion data file, which can be extracted using the included `ViveDisplayExtractor` tool. Making sure that `ViveDisplayExtractor` is alongside `osvr_server`, that your Vive is plugged in, and that SteamVR has exited, run `ViveDisplayExtractor`.
 
