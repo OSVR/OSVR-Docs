@@ -161,16 +161,18 @@ Some existing rooms:
 
 [Map of OSVR projects](http://osvr.github.io/contributing/)
 
-# Useful Links
-Revive allows non Oculus headsets be used for games which only support Oculus headsets when run through steamvr runtime https://github.com/LibreVR/Revive
-FakeVive allows non HTC headsets be used for games which only support HTC headsets when run through steamvr runtime. https://github.com/Shockfire/FakeVive
-OpenVR-AdvancedSettings gives users access to many useful openvr and openvr apps settings. Users that do not have Vive controllers will need to access these settings from desktop or rely on using the hydra drivers and six sense SDK from steam tools to emulate Vive controllers to access the settings in an overlay running as a steamvr dashboard app https://github.com/matzman666/OpenVR-AdvancedSettings
-For Vive Controller Emulation:
-Sixense SDK for Razer Hydra https://steamdb.info/app/42300/
-SteamVR Driver for Razer Hydra http://store.steampowered.com/app/491380/SteamVR_Driver_for_Razer_Hydra/
-FreePIE https://github.com/AndersMalmgren/FreePIE
-Opentrack https://github.com/opentrack/opentrack
-FreePIE-VR-Controls https://github.com/fmaurer/FreePIE-VR-Controls
+# Useful Links 
+### Contributed from the OSVR community
+
+- Revive allows non Oculus headsets be used for games which only support Oculus headsets when run through steamvr runtime https://github.com/LibreVR/Revive and then potentially work on OSVR supported through the SteamVR interface
+- FakeVive allows non HTC headsets be used for games which only support HTC headsets when run through steamvr runtime. https://github.com/Shockfire/FakeVive
+- Non-Vive controllers can be used through with OSVR with Vive games. See https://github.com/OSVR/OSVR-Docs/blob/master/Extending-OSVR/ConfiguringHDKViveTracking.md . Alternatively, OpenVR-AdvancedSettings gives users access to many useful openvr and openvr apps settings. Users that do not have Vive controllers will need to access these settings from desktop or rely on using the hydra drivers and six sense SDK from steam tools to emulate Vive controllers to access the settings in an overlay running as a steamvr dashboard app https://github.com/matzman666/OpenVR-AdvancedSettings
+
+#### For Vive Controller Emulation:
+
+- FreePIE https://github.com/AndersMalmgren/FreePIE
+- Opentrack https://github.com/opentrack/opentrack
+- FreePIE-VR-Controls https://github.com/fmaurer/FreePIE-VR-Controls
 
 # Additional Information
 - [OSVR mailing lists and newsletters](http://osvr.github.io/mailing-lists/)
