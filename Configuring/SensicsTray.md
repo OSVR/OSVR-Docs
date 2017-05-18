@@ -1,6 +1,8 @@
 # Using the SensicsTray Utility
 SensicsTray is a utility installed separately from the OSVR SDK or the OSVR Runtime installers, and requires one of those to be installed to work. Once installed, simply launch SensicsTray.exe from the Start menu to start the utility. SensicsTray is Windows-only at the moment.
 
+ * [Download here](https://drive.google.com/open?id=0B-Y4Yl2OeYOQUTFsNzVEZ1d0eFE)
+ 
 ### OSVR_SERVER_ROOT Environment Variable
 In order for SensicsTray to work, you need to define the `OSVR_SERVER_ROOT` environment variable to point to the `bin` folder of your current OSVR Runtime or OSVR SDK install directory. If you see this page, it means the environment variable is not set, and you'll need to set it before continuing:
 
