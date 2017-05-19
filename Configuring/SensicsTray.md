@@ -6,7 +6,7 @@ SensicsTray is a utility installed separately from the OSVR SDK or the OSVR Runt
 ### OSVR_SERVER_ROOT Environment Variable
 In order for SensicsTray to work, you need to define the `OSVR_SERVER_ROOT` environment variable to point to the `bin` folder of your current OSVR Runtime or OSVR SDK install directory. If you see this page, it means the environment variable is not set, and you'll need to set it before continuing:
 
-![Missing Environment Variable](/images/SensicsTray/server-not-found.png)
+![Missing Environment Variable](configuring/images/SensicsTray/server-not-found.png)
 
 This environment variable is set by the the OSVR Runtime or SDK installers, but you can also set it yourself.
 
