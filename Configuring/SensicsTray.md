@@ -8,6 +8,7 @@ In order for SensicsTray to work, you need to define the `OSVR_SERVER_ROOT` envi
 
 ![Missing Environment Variable](./images/sensicstray/server-not-found.png)
 
+
 This environment variable is set by the the OSVR Runtime or SDK installers, but you can also set it yourself.
 
 ### Advanced vs Basic Mode
