@@ -488,7 +488,7 @@ In our Unity project, each skeleton joint has a gameobect with SkeletonInterface
 
 Your hands should now be tracked, and visibly represented in the scene by prefabs made up of primitive objects. The **VRDisplayTrackedHands** prefab includes left and right hands. In the Hierarchy view, expand a hand such as **LeftHandRigidCapsules** to see that the object is composed of skeleton joints, each one with a different path.
 
-**Rigging 3D Hands Models**
+**Rigging 3D Hand Models**
 Although not included with the initial release, it is possible to animate a 3d model with the incoming skeleton data. For more information about creating a rigged 3d hand, please see [Leap Motion documentation](https://developer.leapmotion.com/documentation/unity/unity/Unity_Hand_Rigging.html) on hand rigging. Given an existing 3d hand model, such as those distributed with the Leap Motion Unity assets, one can modify the gameobject to work with this example by:
 - Flattening the object hierarchy so that all fingers are siblings, not parent-child relationships. The incoming skeleton data is in world-space, not hand-space.
 - Adding a SkeletonInterface component to each gameojbect which represents a hand joint, providing a path for each data source.
