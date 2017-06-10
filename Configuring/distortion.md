@@ -52,13 +52,13 @@ The coefficients for R, G, and B; and the Distances for X and Y; and the center 
 
 The parameters for each color specify the new radial displacement from the center of projection as a function of the original displacement.  In D-scaled space, this is:
 
-    Offset = Orig - COP;              // Vector
+    Offset = Orig - COP*D;              // Vector, component-wise mult.
     OffsetMag = sqrt(Offset.length() * Offset.length());  // Scalar
     NormOffset = Offset / OffsetMag;  // Vector
-    Final = COP + (a0 + a1*OffsetMag + a2*OffsetMag*OffsetMag + ...)
+    Final = COP*D + (a0 + a1*OffsetMag + a2*OffsetMag*OffsetMag + ...)
         * NormOffset; // Position
 
-Examples: (1) For a display 10 pixels wide by 8 pixels high that has square pixels whose center of projection is in the middle of the image, we would get: D = (10, 8); COP = (4.5, 3.5); parameters specified in pixel-unit offsets.  (2) For a display that is 6 units wide by 12 units high, but whose optics stretch the view horizontally to produce a square viewing image with pixels that are stretched in X, we could have: D = (12, 12); COP = (5.5, 5.5); parameters specified in vertical pixel-sized units **or** D = (6,6); COP = (2.5, 2.5); parameters specified in horizontal pixel-sized units.
+Examples: (1) For a display 10 pixels wide by 8 pixels high that has square pixels whose center of projection is in the middle of the image, we would get: D = (10, 8); COP = (0.5, 0.5); parameters specified in pixel-unit offsets.  (2) For a display that is 6 units wide by 12 units high, but whose optics stretch the view horizontally to produce a square viewing image with pixels that are stretched in X, we could have: D = (12, 12); COP = (0.5, 0.5); parameters specified in vertical pixel-sized units **or** D = (6,6); COP = (0.5, 0.5); parameters specified in horizontal pixel-sized units.
 
 ### Overfill
 
