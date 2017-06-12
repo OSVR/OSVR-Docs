@@ -478,11 +478,15 @@ It is recommended to review the [OSVR-Unity Getting Started Guide](https://githu
 
 **SkeletonInterface.cs**
 The SkeletonInterface class is responsible for obtaining pose reports (position and rotation) at a given path. If the skeleton joints are being mapped to a rigged 3d model, such as the hand models distributed with the Leap Motion assets, additional post-rotation may be necessary in order to fit the model constraints. If the joints are not mapped to a rigged model, post-rotation is not necessary, and the SkeletonInterface is essentially just a PoseInterface.
+![SkeletonInterface](images/skeleton-interface-component.png)
 
 In our Unity project, each skeleton joint has a gameobect with SkeletonInterface component attached which specifies a path to that joint.
 
 - Create a new Unity project and import the [OSVR-Unity unitypackage](http://access.osvr.com/binary/osvr-unity).
 - Open the VRSkeletonHands.unity scene.
+
+![SkeletonInterface](images/skeleton-interface.png)
+
 - After you've completed the OSVR-Leap-Motion setup above, run **osvr_server.exe**.
 - Play the Unity scene.
 
