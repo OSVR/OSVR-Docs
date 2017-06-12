@@ -478,22 +478,24 @@ It is recommended to review the [OSVR-Unity Getting Started Guide](https://githu
 
 **SkeletonInterface.cs**
 The SkeletonInterface class is responsible for obtaining pose reports (position and rotation) at a given path. If the skeleton joints are being mapped to a rigged 3d model, such as the hand models distributed with the Leap Motion assets, additional post-rotation may be necessary in order to fit the model constraints. If the joints are not mapped to a rigged model, post-rotation is not necessary, and the SkeletonInterface is essentially just a PoseInterface.
-![SkeletonInterface](images/skeleton-interface-component.png)
+
+![SkeletonInterfaceComponent](images/skeleton-interface-component.png)
 
 In our Unity project, each skeleton joint has a gameobect with SkeletonInterface component attached which specifies a path to that joint.
 
 - Create a new Unity project and import the [OSVR-Unity unitypackage](http://access.osvr.com/binary/osvr-unity).
 - Open the VRSkeletonHands.unity scene.
-
-![SkeletonInterface](images/skeleton-interface.png)
-
 - After you've completed the OSVR-Leap-Motion setup above, run **osvr_server.exe**.
 - Play the Unity scene.
 
+![SkeletonInterface](images/skeleton-interface.png)
+
 Your hands should now be tracked, and visibly represented in the scene by prefabs made up of primitive objects. The **VRDisplayTrackedHands** prefab includes left and right hands. In the Hierarchy view, expand a hand such as **LeftHandRigidCapsules** to see that the object is composed of skeleton joints, each one with a different path.
 
-**Rigging 3D Hand Models**
+### Rigging 3D Hand Models
 Although not included with the initial release, it is possible to animate a 3d model with the incoming skeleton data. For more information about creating a rigged 3d hand, please see [Leap Motion documentation](https://developer.leapmotion.com/documentation/unity/unity/Unity_Hand_Rigging.html) on hand rigging. Given an existing 3d hand model, such as those distributed with the Leap Motion Unity assets, one can modify the gameobject to work with this example by:
 - Flattening the object hierarchy so that all fingers are siblings, not parent-child relationships. The incoming skeleton data is in world-space, not hand-space.
 - Adding a SkeletonInterface component to each gameojbect which represents a hand joint, providing a path for each data source.
 - In the Inspector view of the SkeletonInterface component, a post rotation may need to be applied according to the model's forward and normal direction. For Leap Motion Hand Models, a forward direction of (1,0,0) and (0,-1,0) translates to a correct-looking mapping in OSVR-Unity.
+
+![SkinnedHands](images/hands-skinned.png)
