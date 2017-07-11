@@ -13,7 +13,7 @@ The [osvr-core-ubuntu-build-script](https://bitbucket.org/monkygames/osvr-core-u
 ## Windows
 
 ### Experienced Users
-The [Windows Build Environment](Developing/Windows-Build-Environment.md) contains documentation for experencied programers/users to setup a development environment on the windows platform.
+The [Windows Build Environment](Windows-Build-Environment.md) contains documentation for experencied programers/users to setup a development environment on the windows platform.
 
 ### Novice Users
 The [STEAMVR-OSVR compilation for noobs](https://github.com/OSVR/SteamVR-OSVR/files/1117930/STEAMVR-OSVR.compilation.for.noobs.pdf) is a guide for novice users to setup and compile OSVR.
