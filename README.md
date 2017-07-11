@@ -85,8 +85,8 @@ if no parameter is specified, a default file is used.
 - [Re-flash bootloader on OSVR HDK](Configuring/HDKBootloader.md)
 
 # Developing with OSVR
-- Setting up the development environment
-  - [Windows](Developing/Windows-Build-Environment.md)
+- Setting up a development environment
+  - [Guides](Developing/Guides.md)
 - [Directory of projects](http://osvr.github.io/contributing/)
 - [Doxygen-generated developer documentation of OSVR-Core](http://resource.osvr.com/docs/OSVR-Core/)
 - [Doxygen-generated internal documentation of OSVR-Core](http://resource.osvr.com/internal-docs/OSVR-Core-Implementation/)
