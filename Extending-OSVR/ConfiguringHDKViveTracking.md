@@ -251,7 +251,7 @@ and enabling the null driver helps steamvr to start more predictably so we want 
 		"requireHmd" : true,
 ```
 
-To try it, run OSVR server with the configuration file from earlier, making sure tracker viewer can see and use vive tracker for head tracking as well as the vive controllers are all behaving as expected. 
+To try it, run OSVR server with the configuration file from earlier, making sure Tracker Viewer can see and use vive tracker for head tracking as well as the vive controllers are all behaving as expected. 
 
 We need osvr server to be able to use all the steamvr tracked devices to create a pose usinng the defined alias's before trying to start steamvr.  Current steamvr builds and recent firmware updates means whenever a system button on a steamvr tracked device is pressed it causes steamvr to start.  We can use `"autoLaunchSteamVROnButtonPress" : false,` and `"powerOffOnExit" : false` to stop steamvr from being started until we tell it to start using the vr icon from steam client on desktop.
 
