@@ -233,26 +233,9 @@ However, if we are aliasing /me/head --> /me/puck like in the server configurati
 ### Using OSVR-VIVE with SteamVR-OSVR
 It is possible to use OSVR-VIVE to use the puck as a positional tracker for HDK2, and then play SteamVR games via the SteamVR-OSVR driver. We call it going through the rabbit hole twice. This is an important use case for HMD manufacturers to quickly test new HMDs with VIVE room-scale tracking by simply mounting a puck. We're still working on some issues on this path after the most recent OpenVR/SteamVR changes, but we think you'll need to make sure you have the following settings in C:\Program Files (x86)\Steam\config\steamvr.vrsettings:
 ```json
-{
-   "power" : {
-      "autoLaunchSteamVROnButtonPress" : false,
-      "powerOffOnExit" : false
-   },
-   "steamvr" : {
-   "activateMultipleDrivers": true,
+"steamvr": {
+		"activateMultipleDrivers": true,
 		"requireHmd" : false
 	}
 ```
-and enabling the null driver helps steamvr to start more predictably so we want to edit C:\Program Files (x86)\Steam\steamapps\common\SteamVR\resources\settings\default.vrsettings so the first entry looks like
-
-```json
-{
-	"steamvr" : {
-		"requireHmd" : true,
-```
-
-To try it, run OSVR server with the configuration file from earlier, making sure Tracker Viewer can see and use vive tracker for head tracking as well as the vive controllers are all behaving as expected. 
-
-We need osvr server to be able to use all the steamvr tracked devices to create a pose usinng the defined alias's before trying to start steamvr.  Current steamvr builds and recent firmware updates means whenever a system button on a steamvr tracked device is pressed it causes steamvr to start.  We can use `"autoLaunchSteamVROnButtonPress" : false,` and `"powerOffOnExit" : false` to stop steamvr from being started until we tell it to start using the vr icon from steam client on desktop.
-
-Then we can run SteamVR (after installing the latest build of [SteamVR-OSVR](https://github.com/OSVR/SteamVR-OSVR)) and enjoy vr apps using vive tracker for head tracking. 
+To try it, run OSVR server with the configuration file from earlier, then run SteamVR (after installing the latest build of [SteamVR-OSVR](https://github.com/OSVR/SteamVR-OSVR)). If it doesn't work immediately, run SteamVR Room Setup. We will continue to update these instructions as the prcoess seems to have changed slightly in the latest releases of SteamVR.
