@@ -1,5 +1,17 @@
 This is an ad-hoc collection of practices for setting up device descriptors, in particular good semantic alias trees for devices.
 
+**Syntax Note**: The json semantic alias syntax of the form
+
+```json
+"hat": {
+    "$target": "analog/4",
+    "up": "button/12"
+}
+```
+
+indicates that the partial/relative path `hat` is an alias for `analog/4`, while `hat/up` is an alias for `button/12`.
+The `$target` key is intentional use of a reserved character (it cannot be in a valid path) to be able to set alias sources for both `hat` and `hat/up` (in this example).
+
 ## For controller buttons that are labeled, make the semantic alias the label, in lowercase.
 
 e.g.
