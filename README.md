@@ -95,6 +95,7 @@ if no parameter is specified, a default file is used.
 - [Useful resources and tools](Developing/resources.md)
 - Device-specific information
   - [OSVR HDK HID report interface](Developing/OSVRhdk.md)
+  - [Epson Moverio AR devices](Developing/EpsonMoverio.md)
 
 # Game Engines and OSVR
 

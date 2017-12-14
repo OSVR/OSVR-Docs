@@ -1,0 +1,11 @@
+# Developing with Epson Moverio AR Devices
+The Moverio series of AR glasses from Epson are supported by the latest OSVR-Android source. Deploying an OSVR application to this device requires a few steps:
+
+ 1. Build the latest [OSVR-Android-Build](https://github.com/osvr/osvr-android-build) (preferably) or download a binary [here](https://drive.google.com/file/d/0B-Y4Yl2OeYOQd2xpWnZYLWFFbzA/view?usp=sharing).
+ 1. Add the [osvr_server_config.moverio_highfov.json](https://github.com/OSVR/OSVR-Core/blob/moverio-configs/apps/sample-configs/osvr_server_config.moverio_highfov.json) file to your Android project's assets folder. Verify that the file is bundled into the assets folder of the final packaged application .apk.
+ 1. At runtime, check if `/sdcard/osvr/osvr_server_config.json` exists, and if not copy `osvr_server_config.moverio_highfov.json` from your application's bundle to `/sdcard/osvr/osvr_server_config.json` (note the file rename). This must be done before initializing any OSVR client contexts. See sample code [here](https://github.com/OSVR/OSVR-Android-Samples/blob/master/OSVROpenGL/osvrcommon/src/main/java/com/osvr/common/util/OSVRFileExtractor.java) for an easy-to-use utility to do this with one call to `extractFiles()`.
+ 1. Call `osvrClientAttemptServerAutoStart()` to start the OSVR server before creating any OSVR client contexts. Make sure to call `osvrClientReleaseAutoStartedServer()` before your app shuts down.
+
+One additional step that is specific to the Moverio is to use the Epson Moverio SDK to put the Moverio display into 3D mode when the application starts. Please see the [Moverio SDK Documentation](https://tech.moverio.epson.com/en/bt-300/pdf/developers_guide.pdf) for details on how to do this. Without this step, the user will need to put the display in 3D mode manually before running your app, or else they will see a side-by-side picture. Here is where to get the SDK for the Moverio BT-300 (some items are shared between multiple Moverio models, however please see the latest documentation for your device):
+ - [Developer downloads, including SDK](https://tech.moverio.epson.com/en/bt-300/sdk_download.html)
+ - [Developer Documentation PDF](https://tech.moverio.epson.com/en/bt-300/pdf/developers_guide.pdf)
