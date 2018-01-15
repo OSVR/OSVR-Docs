@@ -11,7 +11,7 @@ Server-side prediction is turned on by default for the HDK. To turn off server-s
 The path differs for other devices. Use osvr_print_tree.exe to find the unpredicted path for your device.
 
 ## Client-side prediction
-Client-side prediction works best with server-side prediction disabled (see above), and works in all RenderManager cases where linear and/or angular velocity data is present in the tracking reports for the head tracker.  When DirectMode is enabled, the time until the next presentation is added to the prediction interval specified here. The following JSON enabled client-side prediction in RenderManager:
+Client-side prediction works in all RenderManager modes when linear and/or angular velocity data is present in the tracking reports for the head tracker.  When DirectMode is enabled, the time until the next presentation is added to the prediction interval specified here.  Client-side prediction extends any server-side prediction, so it is recommended that when client-side prediction is enabled, server-side be set to predict to the time that the measurement was sent (and the time it is tagged) by the server. The following JSON enabled client-side prediction in RenderManager:
 ```json
 "prediction": {
 					"enabled": true,
