@@ -43,10 +43,15 @@ See [the firmware page](HDKFirmwareVersions.md) for the latest version and check
 
 **Note: Do not use a file if the checksum does not match.**
 
-Verify the checksum of the file (replace firmware.hex with the name of the file you downloaded):
+Verify the checksum of the file (replace firmware.hex with the name of the file you downloaded) for SHA-1 hash:
 ```bash
 sha1sum firmware.hex
 3d7f8ac7412fb9f8c11ae082c4c27e550dad8012 firmware.hex
+```
+or for SHA-256 hash
+```bash
+sha256sum firmware.hex
+36c7eb20dec518c400b8cd8eda0189c9c1622be05c4fb87ced2359f9667593a0 firmware.hex
 ```
 
 ## Updating Firmware
