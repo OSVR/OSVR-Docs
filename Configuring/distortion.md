@@ -129,7 +129,7 @@ We compute the input normalized coordinates for the mesh by normalizing the tabl
 
 We then store the unordered set of points into the **display/hmd/distortion/mono_point_samples** array, which has a vector of elements, each of which has two elements, the first of which is the 2D coordinates in normalized physical-screen coordinates and the second of which is the 2D coordinates in the canonical-screen coordinates.
 
-An example output, which is a partial description of and HMD, follows.  It provides the identity mapping.
+An example output, which is a partial description of an HMD, follows.  It provides the identity mapping.
 
     {
       "display": {
