@@ -149,6 +149,8 @@ An example output, which is a partial description of an HMD, follows.  It provid
 
 The RenderManager uses this set of unordered point samples to compute a mesh by using a bilinear fit to the nearest 3 non-coplanar points to determine each of the coordinates for each point in space that must be sampled to produce a mesh with the specified number of points.
 
+**Per-eye distortion correction** was added on 8/15/2019 in a pull request.  This allows the specifiction of a **distortion** entry inside each eye within the configuration file, which will override the **hmd** distortion entry when it is specified.
+
 ## Built-in Distortion Meshes
 Distortion meshes for HDK 1.3 and HDK 2.0 have been built-in to RenderManager. They can be loaded by name in the "distortion" section of a display config. For example, to load the HDK 2.0 distortion mesh:
 ```json
