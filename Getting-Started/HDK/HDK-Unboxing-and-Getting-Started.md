@@ -78,7 +78,7 @@ Once there, you'll want to find the download for the IR camera firmware upgrader
 
 On all versions of OSVR HDK Control utility on Windows is the best way to upgrade firmware and adjust some special features of the HMD. Go to <http://osvr.github.io/using/> to get it. It can also report the current version of firmware that you have installed, etc.
 
-Current version of latest firmware for osvr hdk 1.4 hardware is **1-92-oled**
+Current version of latest firmware for osvr hdk 1.4 hardware is **2.00**
 
 If you have an HDK 1.2, the most recent firmware you'll want to install is version **1.84** - newer versions contain code specific to the different OLED screen in the 1.3. See the instructions for a special [HDK 1.2 upgrade procedure](HDK-1.2-Firmware-Update.md) that will automatically install this firmware, as well as automating the process of updating the processor's VID/PID in case you have an early unit where these were faulty.
 
