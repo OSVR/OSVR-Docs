@@ -12,7 +12,7 @@ While the drivers should be compatible with all Vive family devices, it has only
 The OSVR-Vive driver interacts with the SteamVR driver for the Vive (`driver_lighthouse`), so the version of SteamVR matters as well. The pace of releases has slowed since earlier this year, but typically the driver is only compatible with the latest stable release of SteamVR as Valve usually makes incompatible changes to the betas shortly after each new stable. The version, listed below, can be seen in a number of places, including the SteamVR "System Report" dialog.
 
 Known-good stable release, for the current build as of the time of this writing:
-- 1467410709 (released as stable on July 5)
+- 1495066092  (confirmed as stable on June 8th 2017)
 
 ## Setup
 You'll need to first make sure the Vive is working well in SteamVR and that you have a room setup, preferably a standing or room-scale calibration, for your space. Then, download the plugin binaries that match your OSVR server in bits.
