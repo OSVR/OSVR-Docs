@@ -11,7 +11,7 @@ Server-side prediction is turned on by default for the HDK. To turn off server-s
 The path differs for other devices. Use osvr_print_tree.exe to find the unpredicted path for your device.
 
 ## Client-side prediction
-Enabling both client and server-side prediction at the same time will likely result in poor performance. Client-side prediction works best with server-side prediction disabled (see above), but it only works with Direct Mode enabled in RenderManager. The following JSON enabled client-side prediction in RenderManager:
+Client-side prediction works in all RenderManager modes when linear and/or angular velocity data is present in the tracking reports for the head tracker.  When DirectMode is enabled, the time until the next presentation is added to the prediction interval specified here.  Client-side prediction extends any server-side prediction, so it is recommended that when client-side prediction is enabled, server-side be set to predict to the time that the measurement was sent (and the time it is tagged) by the server. The following JSON enabled client-side prediction in RenderManager:
 ```json
 "prediction": {
 					"enabled": true,
@@ -25,5 +25,5 @@ Enabling both client and server-side prediction at the same time will likely res
 
 For HMDs with one physical display, it is often the case that the image for one eye appears with a delay of half a frame relative to the other eye. This is the case for HDK 1.4 or earlier. If each eye has its own display, as is the case with HDK 2.0, set each eye delay to 0.
 
-## Rendering optimzations
+## Rendering optimizations
 For more information on rendering optimizations, see: https://github.com/sensics/OSVR-RenderManager/blob/master/doc/renderingOptimization.md
